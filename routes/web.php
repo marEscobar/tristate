@@ -3,17 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/carousel', function () {
-    return view('carousel');
-});
-
-Route::get('/gallery', function () {
-    return view('gallery');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
