@@ -1,433 +1,1344 @@
-@extends('welcome')
-@section('content')
-    <div style="background-color: #000;">
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
 
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Custom</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <style type="text/tailwindcss">
+        @layer base {
+            html {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: "#003d64",
+                            light: "#005285",
+                            dark: "#002a45"
+                        },
+                        secondary: "#E5E7EB",
+                        accent: "#D1D5DB",
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#111827",
+                        "text-light": "#F9FAFB",
+                        "text-dark": "#1F2937",
+                        "text-muted-light": "#6B7280",
+                        "text-muted-dark": "#9CA3BA"
+                    },
+                    fontFamily: {
+                        sans: ["Roboto", "sans-serif"],
+                        display: ["Poppins", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.375rem",
+                        lg: "0.5rem"
+                    },
+                    transitionProperty: {
+                        height: "height",
+                        spacing: "margin, padding"
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        .hero-bg {
+            background-image: url({{ asset('img/1.webp') }});
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
 
-        <div id="home" class="relative overflow-hidden bg-primary pt-[120px] md:pt-[130px] lg:pt-[160px]"
-            style="padding-top: 250px;background-image: url('{{ asset('img/home-bg.png') }}'); background-repeat: no-repeat; background-size:cover; ">
-            <div class="container px-4 mx-auto">
-                <div class="flex flex-wrap items-center ">
-                    <div class="w-full px-4" style="display: flex;">
+        .hero-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 61, 100, 0.75);
+            z-index: 1;
+        }
 
-                        <div class="w-full px-4 lg:w-7/12 xl:w-7/12 text-center" data-wow-delay=".2s">
-                            <h1
-                                class="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
-                                Custom Signs in West Babylon, NY and <br> Surrounding Areas
-                            </h1>
-                            <p
-                                class="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-                                Five-Year Sign Warranty <br>
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
 
-                                Impossible Deadlines? No Problem—We Deliver <br>
+        .write-bg {
+            background-image: url({{ asset('img/2.webp') }});
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
 
-                                Over 40 Years Of Trusted Experience <br>
+        .write-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 61, 100, 0.75);
+            z-index: 1;
+        }
 
-                                Your Local One-stop Shop For All Signage And Awning Needs: No Job Too Big Or Too Small
-                            </p>
-                            <h2
-                                class="mb-4 text-3xl font-bold leading-snug text-white sm:text-3xl sm:leading-snug lg:text-2xl lg:leading-[1.2]">
-                                (718) 705-0333</h2>
-                            <h2 class=" text-white ">Hours: <span class="text-danger" style="color: #ff0000;">Closed</span>
-                                • Opens 08:00 am</h2>
+        .write-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+        }
+
+        /* Trazo blanco alrededor del texto negro */
+        .text-outline-white {
+            color: #000000;
+            text-shadow:
+                -1px -1px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                1px 1px 0 #ffffff;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-background-light dark:bg-background-dark text-text-dark dark:text-text-light antialiased">
+    <!-- HEADER -->
+    <header class="bg-background-light dark:bg-background-dark shadow-sm sticky top-0 z-40">
+        <!-- Top bar -->
+        <div class="border-b border-gray-200 dark:border-gray-700 bg-white">
+            <div
+                class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row md:justify-between md:items-center gap-3 md:gap-0 text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">
+                <div class="flex flex-wrap items-center gap-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="flex text-primary">
+                            <span class="material-symbols-outlined text-xs sm:text-base">star</span>
+                            <span class="material-symbols-outlined text-xs sm:text-base">star</span>
+                            <span class="material-symbols-outlined text-xs sm:text-base">star</span>
+                            <span class="material-symbols-outlined text-xs sm:text-base">star</span>
+                            <span class="material-symbols-outlined text-xs sm:text-base">star</span>
                         </div>
-
-                        <div class="w-full px-4 lg:w-5/12 xl:w-4/12" style="padding-bottom: 15px">
-                            <div class="wow fadeInUp rounded-lg bg-primary px-8 py-10 shadow-testimonial dark:bg-dark-2 dark:shadow-none sm:px-10 sm:py-12 md:p-[10px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[10px]"
-                                data-wow-delay=".2s" style="opacity: 0.95">
-                                <h4
-                                    class="mb-8 text-2xl font-semibold text-white dark:text-white md:text-[28px] md:leading-[1.42]">
-                                    <b> Request Call Back </b>
-                                </h4>
-                                <form>
-                                    <div class="mb-[22px]">
-                                        {{-- <label for="fullName"
-                                            class="block mb-4 text-sm text-white text-body-color dark:text-dark-6">Full
-                                            Name*</label> --}}
-                                        <input type="text" name="fullName" placeholder="Full Name"
-                                            class="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-white text-body-color placeholder:text-white/60 focus:border-primary focus:outline-hidden dark:border-dark-3 dark:text-dark-6" />
-                                    </div>
-                                    <div class="mb-[22px]">
-                                        {{-- <label for="email"
-                                            class="block mb-4 text-white text-sm text-body-color dark:text-dark-6">Email*</label> --}}
-                                        <input type="email" name="email" placeholder="Email"
-                                            class="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-white text-body-color placeholder:text-white/60 focus:border-primary focus:outline-hidden dark:border-dark-3 dark:text-dark-6" />
-                                    </div>
-                                    <div class="mb-[22px]">
-                                        {{-- <label for="phone"
-                                            class="block mb-4 text-sm text-white text-body-color dark:text-dark-6">Phone*</label> --}}
-                                        <input type="text" name="phone" placeholder="Phone"
-                                            class="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-white text-body-color placeholder:text-white/60 focus:border-primary focus:outline-hidden dark:border-dark-3 dark:text-dark-6" />
-                                    </div>
-                                    <div class="mb-[30px]">
-                                        <label for="message"
-                                            class="block mb-4 text-sm text-white text-body-color dark:text-dark-6">Service*</label>
-                                        <textarea name="message" rows="1" placeholder="type your message here"
-                                            class="w-full resize-none border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-body-color placeholder:text-body-color/60 focus:border-primary focus:outline-hidden dark:border-dark-3 dark:text-dark-6"></textarea>
-                                    </div>
-                                    <div class="mb-0">
-                                        <button type="submit"
-                                            class="inline-flex items-center justify-center px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out rounded-md bg-primary hover:bg-blue-dark">
-                                            Send
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
+                        <span class="font-medium text-text-dark dark:text-text-light">5.0</span>
+                        <a class="underline hover:text-primary transition-colors duration-300" href="{{ url('/reviews') }}">(4
+                            Ratings)</a>
                     </div>
-
+                    <div class="flex items-start space-x-2">
+                        <span class="material-symbols-outlined text-primary text-base sm:text-xl">location_on</span>
+                        <div class="leading-tight">
+                            <p class="font-medium text-text-dark dark:text-text-light text-xs sm:text-sm">Visit Us</p>
+                            <p class="text-xs sm:text-sm">333 Wyandanch Ave, West Babylon, NY</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between md:justify-end gap-4">
+                    <a class="inline-block px-4 sm:px-6 py-2 bg-primary text-text-light font-bold rounded-md hover:bg-primary-light transition-all duration-300 text-xs sm:text-sm shadow-sm text-center"
+                        href="{{ url('/request-call-back') }}">Request Call Back</a>
+                    <p class="text-base sm:text-lg font-bold text-text-dark dark:text-text-light whitespace-nowrap">
+                        (718) 705-0333
+                    </p>
                 </div>
             </div>
-
         </div>
-    </div>
-    <div class="relative overflow-hidden bg-primary " style="padding-top: 50px">
-        <div class="container px-4 mx-auto">
-            <div class="flex flex-wrap items-center ">
-                <div class="w-full px-4" style="display: flex;">
 
-                    <div class="w-full px-4 lg:w-5/12 xl:w-5/12 text-center" data-wow-delay=".2s"
-                        style=" display: flex;justify-content: flex-end;">
-                        <div class="w-full px-4 lg:w-5/12 xl:w-5/12"
-                            style="width: 150px; height: 150px; border-radius: 15%; padding: 20px; background-color: #406497;">
-
-                            <svg fill="white" id="1141745877" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 64 64" class="svg u_1141745877" data-icon-custom="true"
-                                data-icon-name="video-chat.svg">
-                                <title id="1129826765">A black and white icon of a person talking on a computer screen.
-                                </title>
-                                <path
-                                    d="M260.55346,282.40881h-22a1,1,0,0,1-.55469-1.832l2.55469-1.7032v-1.4648h2v2a.99947.99947,0,0,1-.44531.832l-.252.168h15.39457l-.252-.168a.99951.99951,0,0,1-.4453-.832v-2h2v1.4648l2.5547,1.7032a1,1,0,0,1-.5547,1.832Z"
-                                    transform="translate(-217.55346 -218.40881)" id="1795197966"></path>
-                                <path
-                                    d="M277.55346,275.40881h-56a4.00454,4.00454,0,0,1-4-4v-44a4.00454,4.00454,0,0,1,4-4H244.553v2H221.55346a2.002,2.002,0,0,0-2,2v44a2.002,2.002,0,0,0,2,2h56a2.002,2.002,0,0,0,2-2V245.4093h2v25.99951A4.00454,4.00454,0,0,1,277.55346,275.40881Z"
-                                    transform="translate(-217.55346 -218.40881)" id="1248999224"></path>
-                                <path
-                                    d="M274.55346,265.40881h-50a1.00011,1.00011,0,0,1-1-1v-34a1.00011,1.00011,0,0,1,1-1h20v2h-19v32h48v-18h2v19A1.00011,1.00011,0,0,1,274.55346,265.40881Z"
-                                    transform="translate(-217.55346 -218.40881)" id="1174228849"></path>
-                                <path
-                                    d="M256.55346,248.40881a1.00013,1.00013,0,0,1-1-1v-6h-2v-2h3a1.00011,1.00011,0,0,1,1,1v4.79639l6.3413-5.54879a1.00031,1.00031,0,0,1,.6587-.2476h14a1.00126,1.00126,0,0,0,1-1v-17a1.00126,1.00126,0,0,0-1-1h-27a1.00126,1.00126,0,0,0-1,1v11h-2v-11a3.00328,3.00328,0,0,1,3-3h27a3.00328,3.00328,0,0,1,3,3v17a3.00328,3.00328,0,0,1-3,3h-13.624l-7.7173,6.75244A1.00036,1.00036,0,0,1,256.55346,248.40881Z"
-                                    transform="translate(-217.55346 -218.40881)" id="1877369615"></path>
-                                <circle cx="40.5" cy="11.5" r="1.5" id="1327111970"></circle>
-                                <circle cx="47.5" cy="11.5" r="1.5" id="1116376404"></circle>
-                                <circle cx="54.5" cy="11.5" r="1.5" id="1935850170"></circle>
-                                <path
-                                    d="M259.55246,264.40881a.99933.99933,0,0,1-.9975-.9497c-.0025-.0435-.2857-4.57423-3.4488-6.15577l-6.5507-2.80566a14.18432,14.18432,0,0,1-10.00347,0l-6.60449,2.83008c-3.10986,1.55712-3.39306,6.08785-3.3955,6.13325a.98744.98744,0,0,1-1.05074.9454.9988.9988,0,0,1-.9463-1.0479c.0117-.2334.3359-5.73632,4.55123-7.84423l7.05323-3.02442a.99828.99828,0,0,1,.84131.02442,11.33072,11.33072,0,0,0,4.55273.89453,11.127,11.127,0,0,0,4.5527-.89453.998.998,0,0,1,.8413-.02442l7,3c4.2686,2.13233,4.5928,7.63525,4.6045,7.86865a.999.999,0,0,1-.9482,1.0488Q259.57811,264.40881,259.55246,264.40881Z"
-                                    transform="translate(-217.55346 -218.40881)" id="1919686550"></path>
-                                <path
-                                    d="M246.55444,250.40881a1,1,0,0,1-.55567-1.832c2.41509-1.60986,2.51319-2.44336,2.80419-4.917l.0674-.5669a7.124,7.124,0,0,0-.3989-4.11718,4.81867,4.81867,0,0,0-2.79544-2.2217,6.83311,6.83311,0,0,0-4.24512.0005,4.81139,4.81139,0,0,0-2.79492,2.2212,7.11978,7.11978,0,0,0-.39942,4.11718l.06739.5669c.291,2.47363.38916,3.30713,2.8042,4.917a1,1,0,0,1-1.10938,1.66406c-3.18408-2.12256-3.37109-3.71289-3.68115-6.34717l-.06641-.55761a8.87213,8.87213,0,0,1,.61426-5.29105,6.79734,6.79734,0,0,1,3.92578-3.1855,8.86534,8.86534,0,0,1,5.52442-.0005,6.801,6.801,0,0,1,3.92579,3.1855,8.87388,8.87388,0,0,1,.6142,5.29155l-.0664.55761c-.31,2.63428-.497,4.22461-3.68111,6.34717A.99435.99435,0,0,1,246.55444,250.40881Z"
-                                    transform="translate(-217.55346 -218.40881)" id="1643371315"></path>
-                                <path
-                                    d="M246.55346,264.40881a1.00008,1.00008,0,0,1-1-1,11.50607,11.50607,0,0,0-.91846-3.60449.99958.99958,0,0,1,.02393-.84278c.51074-1.02148.69775-3.335.1875-3.8457a.99989.99989,0,0,1,1.41406-1.41406c1.36477,1.36474.89307,4.29492.37354,5.71387a12.63762,12.63762,0,0,1,.91943,3.99316A1.00008,1.00008,0,0,1,246.55346,264.40881Z"
-                                    transform="translate(-217.55346 -218.40881)" id="1617339819"></path>
-                                <path
-                                    d="M240.55346,264.40881a1.00008,1.00008,0,0,1-1-1,12.63762,12.63762,0,0,1,.91943-3.99316c-.51953-1.419-.99121-4.34913.37354-5.71387a.99989.99989,0,0,1,1.41406,1.41406c-.51025.51074-.32324,2.82422.1875,3.8457a1.00388,1.00388,0,0,1,.02442.84229,11.55323,11.55323,0,0,0-.91895,3.605A1.00008,1.00008,0,0,1,240.55346,264.40881Z"
-                                    transform="translate(-217.55346 -218.40881)" id="1985815100"></path>
-                            </svg>
-                        </div>
+        <!-- Main nav: barra blanca letras azules -->
+        <div class="bg-white border-b border-gray-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16 sm:h-20">
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <img alt="TriState Signs &amp; Awnings logo" class="h-8 sm:h-10 w-auto"
+                            src="{{ asset('img/logo.png') }}" />
                     </div>
 
-                    <div class="w-full px-4 lg:w-6/12 xl:w-6/12" style="padding-bottom: 15px">
-                        <div class="w-full  justify-center mb-4 text-white">
-                            <h3 style="font-size: 20px"><b>Now Offering</b></h3>
-                            <div class="text-left">
-                                <h1 class=" text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]"
-                                    style="font-size: 34px">
-                                    <b>Virtual Consultations</b>
-                                </h1>
-                                <p>Submit your request today to set up a live video consultation with Tri State Signs &
-                                    Awnings
-                                    from your smartphone, tablet, or computer! Get 5% off a service when you request a
-                                    virtual
-                                    call!</p>
-                            </div>
-                        </div>
-                        <button
-                            class="px-6 py-2 text-base font-small text-white duration-300 ease-in-out rounded-md bg-white/20 signUpBtn hover:bg-white/100 hover:text-white"
-                            style="background-color: grey; padding: 1rem;border: 1px solid #fff;">Request
-                            Consultation</button>
-                    </div>
+                    <!-- Desktop nav -->
+                    <nav class="hidden lg:flex">
+                        <ul class="flex items-center space-x-6 xl:space-x-8 text-primary font-medium text-sm">
+                            <li><a class="py-5 inline-block border-b-2 border-primary text-primary"
+                                    href="{{ url('/') }}">Home</a></li>
+                            <li class="group relative">
+                                <a class="py-5 inline-flex items-center group-hover:text-primary-light transition-colors duration-300"
+                                    href="#">
+                                    Sign Services
+                                    <span
+                                        class="material-symbols-outlined text-base ml-1 transform group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+                                    <div
+                                        class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                                        <a href="{{ url('/exterior-signs') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-secondary dark:text-dark-6 dark:hover:text-secondary">
+                                            Exterior Signs
+                                        </a>
+                                        <a href="{{ url('/interior-signs') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-secondary dark:text-dark-6 dark:hover:text-secondary">
+                                            Interior Signs
+                                        </a>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="group relative">
+                                <a class="py-5 inline-flex items-center group-hover:text-primary-light transition-colors duration-300"
+                                    href="#">
+                                    Awning Services
+                                    <span
+                                        class="material-symbols-outlined text-base ml-1 transform group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+                                    <div
+                                        class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                                        <a href="{{ url('/commercial-awnings') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-secondary dark:text-dark-6 dark:hover:text-secondary">
+                                            Commercial Awnings
+                                        </a>
+                                        <a href="{{ url('/residential-awnings') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-secondary dark:text-dark-6 dark:hover:text-secondary">
+                                            Residential Awnings
+                                        </a>
+                                    </div>
+                                </a>
+                            </li>
 
+                            <li><a class="py-5 inline-block hover:text-primary-light transition-colors duration-300"
+                                    href="{{ url('/installations') }}">Installations</a></li>
+                            <li><a class="py-5 inline-block hover:text-primary-light transition-colors duration-300"
+                                    href="{{ url('/led-displays') }}">LED Displays</a></li>
+                            <li><a class="py-5 inline-block hover:text-primary-light transition-colors duration-300"
+                                    href="{{ url('/permits') }}">Permits</a></li>
+                            <li class="group relative">
+                                <a class="py-5 inline-flex items-center group-hover:text-primary-light transition-colors duration-300"
+                                    href="#">
+                                    About
+                                    <span
+                                        class="material-symbols-outlined text-base ml-1 transform group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+                                    <div
+                                        class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                                        <a href="{{ url('/gallery') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-secondary dark:text-dark-6 dark:hover:text-secondary">
+                                            Gallery
+                                        </a>
+                                        <a href="{{ url('/reviews') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-secondary dark:text-dark-6 dark:hover:text-secondary">
+                                            Reviews
+                                        </a>
+                                        <a href="{{ url('/blog') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-secondary dark:text-dark-6 dark:hover:text-secondary">
+                                            Blog
+                                        </a>
+                                        <a href="{{ url('/faqs') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-secondary dark:text-dark-6 dark:hover:text-secondary">
+                                            FAQs
+                                        </a>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="group relative">
+                                <a class="py-5 inline-flex items-center group-hover:text-primary-light transition-colors duration-300"
+                                    href="#">
+                                    Contact
+                                    <span
+                                        class="material-symbols-outlined text-base ml-1 transform group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+                                    <div
+                                        class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                                        <a href="{{ url('/request-call-back') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-secondary dark:text-dark-6 dark:hover:text-secondary">
+                                            Request Call Back
+                                        </a>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Mobile button -->
+                    <button id="nav-toggle"
+                        class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
                 </div>
 
+                <!-- Mobile menu -->
+                <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 pb-4">
+                    <nav class="pt-2">
+                        <ul class="flex flex-col space-y-1 text-sm text-primary font-medium">
+                            <li><a class="block px-2 py-2 rounded hover:bg-secondary"
+                                    href="{{ url('/') }}">Home</a></li>
+                            <li class="relative">
+                                <button type="button"
+                                    class="mobile-submenu-toggle w-full text-left block px-2 py-2 rounded hover:bg-secondary flex items-center justify-between"
+                                    data-target="sign-services-submenu">
+                                    <span>Sign Services</span>
+                                    <span
+                                        class="mobile-submenu-icon material-symbols-outlined text-base ml-1 transform transition-transform duration-300">expand_more</span>
+                                </button>
+                                <div id="sign-services-submenu"
+                                    class="hidden mt-1 ml-4 pl-4 border-l-2 border-primary/20 space-y-1">
+                                    <a href="{{ url('/exterior-signs') }}"
+                                        class="block rounded-sm px-4 py-[10px] text-sm text-text-dark dark:text-text-light hover:bg-secondary dark:hover:text-secondary">
+                                        Exterior Signs
+                                    </a>
+                                    <a href="{{ url('/interior-signs') }}"
+                                        class="block rounded-sm px-4 py-[10px] text-sm text-text-dark dark:text-text-light hover:bg-secondary dark:hover:text-secondary">
+                                        Interior Signs
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <button type="button"
+                                    class="mobile-submenu-toggle w-full text-left block px-2 py-2 rounded hover:bg-secondary flex items-center justify-between"
+                                    data-target="awning-services-submenu">
+                                    <span>Awning Services</span>
+                                    <span
+                                        class="mobile-submenu-icon material-symbols-outlined text-base ml-1 transform transition-transform duration-300">expand_more</span>
+                                </button>
+                                <div id="awning-services-submenu"
+                                    class="hidden mt-1 ml-4 pl-4 border-l-2 border-primary/20 space-y-1">
+                                    <a href="{{ url('/commercial-awnings') }}"
+                                        class="block rounded-sm px-4 py-[10px] text-sm text-text-dark dark:text-text-light hover:bg-secondary dark:hover:text-secondary">
+                                        Commercial Awnings
+                                    </a>
+                                    <a href="{{ url('/residential-awnings') }}"
+                                        class="block rounded-sm px-4 py-[10px] text-sm text-text-dark dark:text-text-light hover:bg-secondary dark:hover:text-secondary">
+                                        Residential Awnings
+                                    </a>
+                                </div>
+                            </li>
+                            <li><a class="block px-2 py-2 rounded hover:bg-secondary"
+                                    href="{{ url('/installations') }}">Installations</a>
+                            </li>
+                            <li><a class="block px-2 py-2 rounded hover:bg-secondary"
+                                    href="{{ url('/led-displays') }}">LED Displays</a>
+                            </li>
+                            <li><a class="block px-2 py-2 rounded hover:bg-secondary"
+                                    href="{{ url('/permits') }}">Permits</a></li>
+                            <li class="relative">
+                                <button type="button"
+                                    class="mobile-submenu-toggle w-full text-left block px-2 py-2 rounded hover:bg-secondary flex items-center justify-between"
+                                    data-target="about-services-submenu">
+                                    <span>About</span>
+                                    <span
+                                        class="mobile-submenu-icon material-symbols-outlined text-base ml-1 transform transition-transform duration-300">expand_more</span>
+                                </button>
+                                <div id="about-services-submenu"
+                                    class="hidden mt-1 ml-4 pl-4 border-l-2 border-primary/20 space-y-1">
+                                    <a href="{{ url('/gallery') }}"
+                                        class="block rounded-sm px-4 py-[10px] text-sm text-text-dark dark:text-text-light hover:bg-secondary dark:hover:text-secondary">
+                                        Gallery
+                                    </a>
+                                    <a href="{{ url('/reviews') }}"
+                                        class="block rounded-sm px-4 py-[10px] text-sm text-text-dark dark:text-text-light hover:bg-secondary dark:hover:text-secondary">
+                                        Reviews
+                                    </a>
+                                    <a href="{{ url('/blog') }}"
+                                        class="block rounded-sm px-4 py-[10px] text-sm text-text-dark dark:text-text-light hover:bg-secondary dark:hover:text-secondary">
+                                        Blog
+                                    </a>
+                                    <a href="{{ url('/faqs') }}"
+                                        class="block rounded-sm px-4 py-[10px] text-sm text-text-dark dark:text-text-light hover:bg-secondary dark:hover:text-secondary">
+                                        FAQs
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <button type="button"
+                                    class="mobile-submenu-toggle w-full text-left block px-2 py-2 rounded hover:bg-secondary flex items-center justify-between"
+                                    data-target="contact-services-submenu">
+                                    <span>Contact</span>
+                                    <span
+                                        class="mobile-submenu-icon material-symbols-outlined text-base ml-1 transform transition-transform duration-300">expand_more</span>
+                                </button>
+                                <div id="contact-services-submenu"
+                                    class="hidden mt-1 ml-4 pl-4 border-l-2 border-primary/20 space-y-1">
+                                    <a href="{{ url('/request-call-back') }}"
+                                        class="block rounded-sm px-4 py-[10px] text-sm text-text-dark dark:text-text-light hover:bg-secondary dark:hover:text-secondary">
+                                        Request Call Back
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
+    </header>
 
-    </div>
-    <div class="relative overflow-hidden bg-white " style="padding-top: 50px">
-        <div class="container px-4 mx-auto">
-            <div class="flex flex-wrap items-center ">
-                <div class="w-full px-4" style="display: flex;">
-                    <div class="w-full px-4  text-center" data-wow-delay=".2s">
-                        <h1
-                            class="mb-6 text-3xl font-bold leading-snug text-grey sm:text-4xl sm:leading-snug lg:text-2xl lg:leading-[1.2]">
-                            Your Trusted Partner in Signage Solutions
-                        </h1>
-                        <p class="mx-auto mb-9 text-base font-medium text-grey sm:text-lg sm:leading-[1.44]"
-                            style="font-size: 14px; max-width: 850px;">
+    <!-- MAIN -->
 
-                            Tri State Signs & Awnings has been a cornerstone in the tri-state area for over three decades,
-                            delivering exceptional signage solutions tailored to your business needs. We are committed to
-                            providing 100% customer satisfaction through our concierge-level service, ensuring every project
-                            exceeds expectations.
-                        </p>
-                        <p class="mx-auto mb-9 text-base font-medium text-grey sm:text-lg sm:leading-[1.44]"
-                            style="font-size: 14px; max-width: 850px;">
+    <main>
+        <!-- HERO -->
+        <section class="hero-bg text-text-light">
+            <div class="hero-content max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-10 lg:gap-16 items-center">
+                    <div class="md:col-span-3 space-y-6 sm:space-y-8">
+                        <h1 class="text-5xl font-display font-bold leading-tight">Custom Signs in West Babylon, NY and
+                            Surrounding
+                            Areas</h1>
 
-
-
-                            Our team of experts handles all permitting on behalf of our clients, making the process seamless
-                            and hassle-free. As a UL-listed company, we guarantee the quality and durability of our
-                            materials and craftsmanship. Whether you need exterior signs, interior signs, awe-inspiring
-                            awnings, or cutting-edge LED displays, we’ve got you covered.
-                        </p>
-                        <p class="mx-auto mb-9 text-base font-medium text-grey sm:text-lg sm:leading-[1.44]"
-                            style="font-size: 14px; max-width: 850px;">
-
-
-
-                            Trust us to bring your brand to life with signs that not only capture attention but also stand
-                            the test of time.
-                        </p>
-                        <h1
-                            class="mb-6 text-3xl font-bold leading-snug text-grey sm:text-4xl sm:leading-snug lg:text-2xl lg:leading-[1.2]">
-                            Learn More Today
-                        </h1>
-                        <p class="mx-auto mb-9 text-base font-medium text-grey sm:text-lg sm:leading-[1.44]"
-                            style="font-size: 14px; max-width:1150px;">
-
-                            To get started with custom signs in West Babylon, NY and the nearby areas, reach out to our team
-                            today. We look forward to hearing from you and discussing your vision for your custom signage.
-                            We’re here to learn more about how we can assist you. If you have any questions or concerns,
-                            don’t hesitate to contact our professionals. Whatever you need, we’re here to help. Want to
-                            learn more about the services we offer? Check out the rest of our website! Whether you’re
-                            looking for interior or exterior custom signs in Babylon, NY or the surrounding areas, our
-                            experts have got you covered. Reach out to our team today to discover how we can help you take
-                            your branding to the next level.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="relative overflow-hidden bg-primary " style="padding-top: 50px">
-        <div class="container px-4 mx-auto">
-            <div class="flex flex-wrap items-center  ">
-                <div class="text-center" style="text-align: center; width: 100%;">
-                    <h1
-                        class="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-2xl lg:leading-[1.2] text-center">
-                        Why Choose Tri State Signs & Awnings?
-                    </h1>
-                </div>
-                <div class="w-full px-4" style="display: flex;">
-
-
-                    <div class="w-full px-4 lg:w-5/12 xl:w-5/12 text-left" data-wow-delay=".2s"
-                        style=" display: flex;justify-content: flex-end; margin-left:6rem">
-                        <ul>
-                            <li class="text-white"
-                                style="display: flex; align-items: center; justify-content: flex-start;">
-                                <svg fill="white" width="7%" height="7%" version="1.1" viewBox="0 0 100 100"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="m39.207 67.863-14.219-15.688c-2.3984-2.6445-2.4375-5.8125-1.1836-8.4375 0.47266-0.98047 1.1328-1.8906 1.9648-2.6992 0.87109-0.82812 1.8438-1.4688 2.8945-1.8906 2.6289-1.0547 5.6836-0.79688 8.1914 1.7773l8.6172 8.8516c3.4258-7.1836 11.625-17.387 21.289-26.438 9.1992-8.6133 19.785-16.246 28.914-19.312 0.60938-0.19922 1.3047 0.007812 1.6914 0.55469 0.47266 0.67188 0.31641 1.6055-0.35547 2.0781-9.7188 6.8789-19.09 18.77-26.75 30.391-7.6758 11.645-13.652 23.055-16.551 28.859-0.48828 0.98438-1.1484 1.8281-1.9219 2.5273-1.3633 1.2344-3.0625 1.9766-4.8242 2.2031-1.7617 0.23047-3.5938-0.046875-5.2148-0.85547-0.92578-0.46094-1.793-1.1055-2.543-1.9336zm28.391-53.293c1.6758 0.95703 2.2578 3.0977 1.3008 4.7695-0.95703 1.6758-3.0977 2.2578-4.7695 1.3008-2.7266-1.5586-5.6641-2.7812-8.7461-3.5977-2.9844-0.79297-6.1406-1.2148-9.4141-1.2148-10.105 0-19.262 4.0977-25.883 10.723-6.625 6.625-10.723 15.777-10.723 25.883 0 10.105 4.0977 19.262 10.723 25.883 6.6211 6.625 15.777 10.723 25.883 10.723s19.262-4.0977 25.883-10.723c6.625-6.6211 10.723-15.777 10.723-25.883 0-3.4883-0.48438-6.8555-1.3828-10.027-0.93359-3.293-2.3164-6.3945-4.0664-9.2266-1.0117-1.6367-0.50391-3.7891 1.1328-4.8008 1.6367-1.0117 3.7891-0.50391 4.8008 1.1328 2.1016 3.3945 3.75 7.0898 4.8594 11 1.0781 3.8008 1.6562 7.8008 1.6562 11.914 0 12.043-4.8828 22.945-12.77 30.836-7.8906 7.8906-18.793 12.77-30.836 12.77s-22.945-4.8828-30.836-12.77c-7.8906-7.8906-12.77-18.793-12.77-30.836 0-12.039 4.8828-22.945 12.77-30.836 7.8906-7.8906 18.793-12.77 30.836-12.77 3.8477 0 7.6016 0.51172 11.191 1.4609 3.7031 0.98047 7.2109 2.4336 10.441 4.2812z">
-                                    </path>
-                                </svg>
-                                <p style="font-size: 18px;">
-
-                                    &nbsp;Five-Year Sign Warranty
-                                </p>
+                        <ul class="space-y-3 sm:space-y-4 text-base sm:text-lg">
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
+                                <span>Five-Year Sign Warranty</span>
                             </li>
-                            <li class="text-white"
-                                style="display: flex; align-items: center; justify-content: flex-start;">
-                                <svg fill="white" width="7%" height="7%" version="1.1" viewBox="0 0 100 100"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="m39.207 67.863-14.219-15.688c-2.3984-2.6445-2.4375-5.8125-1.1836-8.4375 0.47266-0.98047 1.1328-1.8906 1.9648-2.6992 0.87109-0.82812 1.8438-1.4688 2.8945-1.8906 2.6289-1.0547 5.6836-0.79688 8.1914 1.7773l8.6172 8.8516c3.4258-7.1836 11.625-17.387 21.289-26.438 9.1992-8.6133 19.785-16.246 28.914-19.312 0.60938-0.19922 1.3047 0.007812 1.6914 0.55469 0.47266 0.67188 0.31641 1.6055-0.35547 2.0781-9.7188 6.8789-19.09 18.77-26.75 30.391-7.6758 11.645-13.652 23.055-16.551 28.859-0.48828 0.98438-1.1484 1.8281-1.9219 2.5273-1.3633 1.2344-3.0625 1.9766-4.8242 2.2031-1.7617 0.23047-3.5938-0.046875-5.2148-0.85547-0.92578-0.46094-1.793-1.1055-2.543-1.9336zm28.391-53.293c1.6758 0.95703 2.2578 3.0977 1.3008 4.7695-0.95703 1.6758-3.0977 2.2578-4.7695 1.3008-2.7266-1.5586-5.6641-2.7812-8.7461-3.5977-2.9844-0.79297-6.1406-1.2148-9.4141-1.2148-10.105 0-19.262 4.0977-25.883 10.723-6.625 6.625-10.723 15.777-10.723 25.883 0 10.105 4.0977 19.262 10.723 25.883 6.6211 6.625 15.777 10.723 25.883 10.723s19.262-4.0977 25.883-10.723c6.625-6.6211 10.723-15.777 10.723-25.883 0-3.4883-0.48438-6.8555-1.3828-10.027-0.93359-3.293-2.3164-6.3945-4.0664-9.2266-1.0117-1.6367-0.50391-3.7891 1.1328-4.8008 1.6367-1.0117 3.7891-0.50391 4.8008 1.1328 2.1016 3.3945 3.75 7.0898 4.8594 11 1.0781 3.8008 1.6562 7.8008 1.6562 11.914 0 12.043-4.8828 22.945-12.77 30.836-7.8906 7.8906-18.793 12.77-30.836 12.77s-22.945-4.8828-30.836-12.77c-7.8906-7.8906-12.77-18.793-12.77-30.836 0-12.039 4.8828-22.945 12.77-30.836 7.8906-7.8906 18.793-12.77 30.836-12.77 3.8477 0 7.6016 0.51172 11.191 1.4609 3.7031 0.98047 7.2109 2.4336 10.441 4.2812z">
-                                    </path>
-                                </svg>
-                                <p style="font-size: 18px;">
-                                    &nbsp;40+ Years of Experience
-                                </p>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
+                                <span>Impossible Deadlines? No Problem—We Deliver</span>
                             </li>
-                            <li class="text-white"
-                                style="display: flex; align-items: center; justify-content: flex-start;">
-                                <svg fill="white" width="7%" height="7%" version="1.1" viewBox="0 0 100 100"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="m39.207 67.863-14.219-15.688c-2.3984-2.6445-2.4375-5.8125-1.1836-8.4375 0.47266-0.98047 1.1328-1.8906 1.9648-2.6992 0.87109-0.82812 1.8438-1.4688 2.8945-1.8906 2.6289-1.0547 5.6836-0.79688 8.1914 1.7773l8.6172 8.8516c3.4258-7.1836 11.625-17.387 21.289-26.438 9.1992-8.6133 19.785-16.246 28.914-19.312 0.60938-0.19922 1.3047 0.007812 1.6914 0.55469 0.47266 0.67188 0.31641 1.6055-0.35547 2.0781-9.7188 6.8789-19.09 18.77-26.75 30.391-7.6758 11.645-13.652 23.055-16.551 28.859-0.48828 0.98438-1.1484 1.8281-1.9219 2.5273-1.3633 1.2344-3.0625 1.9766-4.8242 2.2031-1.7617 0.23047-3.5938-0.046875-5.2148-0.85547-0.92578-0.46094-1.793-1.1055-2.543-1.9336zm28.391-53.293c1.6758 0.95703 2.2578 3.0977 1.3008 4.7695-0.95703 1.6758-3.0977 2.2578-4.7695 1.3008-2.7266-1.5586-5.6641-2.7812-8.7461-3.5977-2.9844-0.79297-6.1406-1.2148-9.4141-1.2148-10.105 0-19.262 4.0977-25.883 10.723-6.625 6.625-10.723 15.777-10.723 25.883 0 10.105 4.0977 19.262 10.723 25.883 6.6211 6.625 15.777 10.723 25.883 10.723s19.262-4.0977 25.883-10.723c6.625-6.6211 10.723-15.777 10.723-25.883 0-3.4883-0.48438-6.8555-1.3828-10.027-0.93359-3.293-2.3164-6.3945-4.0664-9.2266-1.0117-1.6367-0.50391-3.7891 1.1328-4.8008 1.6367-1.0117 3.7891-0.50391 4.8008 1.1328 2.1016 3.3945 3.75 7.0898 4.8594 11 1.0781 3.8008 1.6562 7.8008 1.6562 11.914 0 12.043-4.8828 22.945-12.77 30.836-7.8906 7.8906-18.793 12.77-30.836 12.77s-22.945-4.8828-30.836-12.77c-7.8906-7.8906-12.77-18.793-12.77-30.836 0-12.039 4.8828-22.945 12.77-30.836 7.8906-7.8906 18.793-12.77 30.836-12.77 3.8477 0 7.6016 0.51172 11.191 1.4609 3.7031 0.98047 7.2109 2.4336 10.441 4.2812z">
-                                    </path>
-                                </svg>
-                                <p style="font-size: 18px;">
-
-                                    &nbsp;One-Year Electrical Warranty
-                                </p>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
+                                <span>Over 40 Years Of Trusted Experience</span>
                             </li>
-                            <li class="text-white"
-                                style="display: flex; align-items: center; justify-content: flex-start;">
-                                <svg fill="white" width="7%" height="7%" version="1.1" viewBox="0 0 100 100"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="m39.207 67.863-14.219-15.688c-2.3984-2.6445-2.4375-5.8125-1.1836-8.4375 0.47266-0.98047 1.1328-1.8906 1.9648-2.6992 0.87109-0.82812 1.8438-1.4688 2.8945-1.8906 2.6289-1.0547 5.6836-0.79688 8.1914 1.7773l8.6172 8.8516c3.4258-7.1836 11.625-17.387 21.289-26.438 9.1992-8.6133 19.785-16.246 28.914-19.312 0.60938-0.19922 1.3047 0.007812 1.6914 0.55469 0.47266 0.67188 0.31641 1.6055-0.35547 2.0781-9.7188 6.8789-19.09 18.77-26.75 30.391-7.6758 11.645-13.652 23.055-16.551 28.859-0.48828 0.98438-1.1484 1.8281-1.9219 2.5273-1.3633 1.2344-3.0625 1.9766-4.8242 2.2031-1.7617 0.23047-3.5938-0.046875-5.2148-0.85547-0.92578-0.46094-1.793-1.1055-2.543-1.9336zm28.391-53.293c1.6758 0.95703 2.2578 3.0977 1.3008 4.7695-0.95703 1.6758-3.0977 2.2578-4.7695 1.3008-2.7266-1.5586-5.6641-2.7812-8.7461-3.5977-2.9844-0.79297-6.1406-1.2148-9.4141-1.2148-10.105 0-19.262 4.0977-25.883 10.723-6.625 6.625-10.723 15.777-10.723 25.883 0 10.105 4.0977 19.262 10.723 25.883 6.6211 6.625 15.777 10.723 25.883 10.723s19.262-4.0977 25.883-10.723c6.625-6.6211 10.723-15.777 10.723-25.883 0-3.4883-0.48438-6.8555-1.3828-10.027-0.93359-3.293-2.3164-6.3945-4.0664-9.2266-1.0117-1.6367-0.50391-3.7891 1.1328-4.8008 1.6367-1.0117 3.7891-0.50391 4.8008 1.1328 2.1016 3.3945 3.75 7.0898 4.8594 11 1.0781 3.8008 1.6562 7.8008 1.6562 11.914 0 12.043-4.8828 22.945-12.77 30.836-7.8906 7.8906-18.793 12.77-30.836 12.77s-22.945-4.8828-30.836-12.77c-7.8906-7.8906-12.77-18.793-12.77-30.836 0-12.039 4.8828-22.945 12.77-30.836 7.8906-7.8906 18.793-12.77 30.836-12.77 3.8477 0 7.6016 0.51172 11.191 1.4609 3.7031 0.98047 7.2109 2.4336 10.441 4.2812z">
-                                    </path>
-                                </svg>
-                                <p style="font-size: 18px;">
-
-                                    &nbsp;Service Provided Within 48 Hours
-                                </p>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
+                                <span>Your Local One-stop Shop For All Signage Needs</span>
                             </li>
-                            <li class="text-white"
-                                style="display: flex; align-items: center; justify-content: flex-start;">
-                                <svg fill="white" width="7%" height="7%" version="1.1" viewBox="0 0 100 100"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="m39.207 67.863-14.219-15.688c-2.3984-2.6445-2.4375-5.8125-1.1836-8.4375 0.47266-0.98047 1.1328-1.8906 1.9648-2.6992 0.87109-0.82812 1.8438-1.4688 2.8945-1.8906 2.6289-1.0547 5.6836-0.79688 8.1914 1.7773l8.6172 8.8516c3.4258-7.1836 11.625-17.387 21.289-26.438 9.1992-8.6133 19.785-16.246 28.914-19.312 0.60938-0.19922 1.3047 0.007812 1.6914 0.55469 0.47266 0.67188 0.31641 1.6055-0.35547 2.0781-9.7188 6.8789-19.09 18.77-26.75 30.391-7.6758 11.645-13.652 23.055-16.551 28.859-0.48828 0.98438-1.1484 1.8281-1.9219 2.5273-1.3633 1.2344-3.0625 1.9766-4.8242 2.2031-1.7617 0.23047-3.5938-0.046875-5.2148-0.85547-0.92578-0.46094-1.793-1.1055-2.543-1.9336zm28.391-53.293c1.6758 0.95703 2.2578 3.0977 1.3008 4.7695-0.95703 1.6758-3.0977 2.2578-4.7695 1.3008-2.7266-1.5586-5.6641-2.7812-8.7461-3.5977-2.9844-0.79297-6.1406-1.2148-9.4141-1.2148-10.105 0-19.262 4.0977-25.883 10.723-6.625 6.625-10.723 15.777-10.723 25.883 0 10.105 4.0977 19.262 10.723 25.883 6.6211 6.625 15.777 10.723 25.883 10.723s19.262-4.0977 25.883-10.723c6.625-6.6211 10.723-15.777 10.723-25.883 0-3.4883-0.48438-6.8555-1.3828-10.027-0.93359-3.293-2.3164-6.3945-4.0664-9.2266-1.0117-1.6367-0.50391-3.7891 1.1328-4.8008 1.6367-1.0117 3.7891-0.50391 4.8008 1.1328 2.1016 3.3945 3.75 7.0898 4.8594 11 1.0781 3.8008 1.6562 7.8008 1.6562 11.914 0 12.043-4.8828 22.945-12.77 30.836-7.8906 7.8906-18.793 12.77-30.836 12.77s-22.945-4.8828-30.836-12.77c-7.8906-7.8906-12.77-18.793-12.77-30.836 0-12.039 4.8828-22.945 12.77-30.836 7.8906-7.8906 18.793-12.77 30.836-12.77 3.8477 0 7.6016 0.51172 11.191 1.4609 3.7031 0.98047 7.2109 2.4336 10.441 4.2812z">
-                                    </path>
-                                </svg>
-                                <p style="font-size: 18px;">
-
-                                    &nbsp;Handle All Permitting on Your Behalf
-                                </p>
-                            </li>
-                            <li class="text-white"
-                                style="display: flex; align-items: center; justify-content: flex-start;">
-                                <svg fill="white" width="7%" height="7%" version="1.1" viewBox="0 0 100 100"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="m39.207 67.863-14.219-15.688c-2.3984-2.6445-2.4375-5.8125-1.1836-8.4375 0.47266-0.98047 1.1328-1.8906 1.9648-2.6992 0.87109-0.82812 1.8438-1.4688 2.8945-1.8906 2.6289-1.0547 5.6836-0.79688 8.1914 1.7773l8.6172 8.8516c3.4258-7.1836 11.625-17.387 21.289-26.438 9.1992-8.6133 19.785-16.246 28.914-19.312 0.60938-0.19922 1.3047 0.007812 1.6914 0.55469 0.47266 0.67188 0.31641 1.6055-0.35547 2.0781-9.7188 6.8789-19.09 18.77-26.75 30.391-7.6758 11.645-13.652 23.055-16.551 28.859-0.48828 0.98438-1.1484 1.8281-1.9219 2.5273-1.3633 1.2344-3.0625 1.9766-4.8242 2.2031-1.7617 0.23047-3.5938-0.046875-5.2148-0.85547-0.92578-0.46094-1.793-1.1055-2.543-1.9336zm28.391-53.293c1.6758 0.95703 2.2578 3.0977 1.3008 4.7695-0.95703 1.6758-3.0977 2.2578-4.7695 1.3008-2.7266-1.5586-5.6641-2.7812-8.7461-3.5977-2.9844-0.79297-6.1406-1.2148-9.4141-1.2148-10.105 0-19.262 4.0977-25.883 10.723-6.625 6.625-10.723 15.777-10.723 25.883 0 10.105 4.0977 19.262 10.723 25.883 6.6211 6.625 15.777 10.723 25.883 10.723s19.262-4.0977 25.883-10.723c6.625-6.6211 10.723-15.777 10.723-25.883 0-3.4883-0.48438-6.8555-1.3828-10.027-0.93359-3.293-2.3164-6.3945-4.0664-9.2266-1.0117-1.6367-0.50391-3.7891 1.1328-4.8008 1.6367-1.0117 3.7891-0.50391 4.8008 1.1328 2.1016 3.3945 3.75 7.0898 4.8594 11 1.0781 3.8008 1.6562 7.8008 1.6562 11.914 0 12.043-4.8828 22.945-12.77 30.836-7.8906 7.8906-18.793 12.77-30.836 12.77s-22.945-4.8828-30.836-12.77c-7.8906-7.8906-12.77-18.793-12.77-30.836 0-12.039 4.8828-22.945 12.77-30.836 7.8906-7.8906 18.793-12.77 30.836-12.77 3.8477 0 7.6016 0.51172 11.191 1.4609 3.7031 0.98047 7.2109 2.4336 10.441 4.2812z">
-                                    </path>
-                                </svg>
-                                <p style="font-size: 18px;">
-
-                                    &nbsp;100% Customer Satisfaction Guaranteed
-                                </p>
-                            </li>
-
                         </ul>
 
-                    </div>
-
-                    <div class="w-full px-4 lg:w-5/12 xl:w-5/12" style="padding-bottom: 15px">
-                        <div class="w-full  justify-center mb-4 text-white">
-
-                            <p style="font-size: 14px">With over 40 years of experience, Tri State Signs & Awnings stands
-                                out for its unwavering
-                                commitment to quality and customer satisfaction. We offer a comprehensive range of services
-                                from design to installation, ensuring your signage journey is smooth and efficient.
+                        <div>
+                            <p class="text-3xl sm:text-4xl font-display font-bold tracking-tight">(718) 705-0333</p>
+                            <p class="mt-2 text-secondary text-sm sm:text-base">
+                                Hours: <span class="text-red-300 font-medium">Closed</span> • Opens 08:00 am
                             </p>
-                            <br>
-                            <p style="font-size: 14px">
-                                Our team goes above and beyond, managing all permitting processes and guaranteeing that
-                                every project is UL-listed for safety and durability. Choose us for our expertise,
-                                dedication to exceeding expectations, and the peace of mind that comes with knowing your
-                                signage is crafted to the highest standards.</p>
                         </div>
-
-
                     </div>
+
+                    <!-- Form -->
+                    <div class="md:col-span-2 bg-white text-text-dark p-6 sm:p-8 rounded-lg shadow-2xl">
+                        <h2 class="text-xl sm:text-2xl font-display font-bold text-center mb-6">Request a Call Back
+                        </h2>
+                        <form class="space-y-4 sm:space-y-5">
+                            <div>
+                                <label class="sr-only" for="full-name">Full Name</label>
+                                <input
+                                    class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
+                                    id="full-name" placeholder="Full Name*" type="text" />
+                            </div>
+                            <div>
+                                <label class="sr-only" for="phone">Phone</label>
+                                <input
+                                    class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
+                                    id="phone" placeholder="Phone*" type="tel" />
+                            </div>
+                            <div>
+                                <label class="sr-only" for="email">Email</label>
+                                <input
+                                    class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
+                                    id="email" placeholder="Email*" type="email" />
+                            </div>
+                            <div>
+                                <label class="sr-only" for="service">Service</label>
+                                <select
+                                    class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
+                                    id="service">
+                                    <option class="text-text-muted-light">Service*</option>
+                                    <option>Sign Services</option>
+                                    <option>Awning Services</option>
+                                    <option>Installation</option>
+                                </select>
+                            </div>
+                            <p class="text-[11px] sm:text-xs text-text-muted-light text-center pt-1 sm:pt-2">
+                                This site is protected by reCAPTCHA.
+                            </p>
+                            <button
+                                class="w-full bg-primary text-text-light font-bold py-2.5 sm:py-3 rounded-md hover:bg-primary-light transform hover:-translate-y-0.5 transition-all duration-300 shadow-md text-sm sm:text-base"
+                                type="submit">
+                                Request Call Back
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESTO DE SECCIONES (ajuste mínimo, ya son responsivas) -->
+        <section class="bg-primary text-text-light py-16 sm:py-20 lg:py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-12">
+                    <div class="flex-shrink-0">
+                        <div
+                            class="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 border-4 border-secondary rounded-lg flex items-center justify-center bg-primary-light shadow-lg mx-auto md:mx-0">
+                            <span class="material-symbols-outlined" style="font-size: 48px;">video_chat</span>
+                        </div>
+                    </div>
+                    <div class="text-left md:max-w-2xl">
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-3 sm:mb-4">
+                            Now Offering Virtual Consultations
+                        </h2>
+                        <p class="text-text-muted-dark mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg">
+                            Submit your request today to set up a live video consultation
+                            from your smartphone, tablet, or computer! Get 5% off a service when you request a virtual
+                            call!
+                        </p>
+                        <a class="inline-block bg-accent text-primary-dark font-bold px-6 sm:px-10 py-3 rounded-md hover:bg-gray-400 transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg text-sm sm:text-base"
+                            href="{{ url('/request-call-back') }}">Request Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-20 lg:py-24 bg-background-light dark:bg-background-dark">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2
+                    class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark dark:text-text-light mb-4 sm:mb-6">
+                    Your Trusted Partner in Signage Solutions
+                </h2>
+                <div
+                    class="space-y-4 sm:space-y-6 text-text-muted-light dark:text-text-muted-dark text-sm sm:text-base lg:text-lg leading-relaxed">
+                    <p>
+                        Tri State Signs &amp; Awnings has been a cornerstone in the tri-state area for over three
+                        decades,
+                        delivering exceptional signage solutions tailored to your business needs. We are committed to
+                        providing 100%
+                        customer satisfaction through our concierge-level service, ensuring every project exceeds
+                        expectations.
+                    </p>
+                    <p>
+                        Our team of experts handles all permitting on behalf of our clients, making the process seamless
+                        and
+                        hassle-free. As a UL-listed company, we guarantee the quality and durability of our materials
+                        and
+                        craftsmanship. Whether you need exterior signs, interior signs, awe-inspiring awnings, or
+                        cutting-edge LED
+                        displays, we've got you covered.
+                    </p>
+                    <p>
+                        Trust us to bring your brand to life with signs that not only capture attention but also stand
+                        the test of
+                        time.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-20 lg:py-24 bg-gray-100 dark:bg-primary-dark">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2
+                    class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark dark:text-text-light mb-4 sm:mb-6">
+                    Learn More Today
+                </h2>
+                <p
+                    class="text-text-muted-light dark:text-text-muted-dark text-sm sm:text-base lg:text-lg leading-relaxed">
+                    To get started with custom signs in West Babylon, NY, reach out to our team today. We look forward
+                    to hearing
+                    from you and discussing your vision. If you have any questions, we're here to help. Want to learn
+                    more about
+                    our services? Explore our website! Whether you're looking for interior or exterior custom signs, our
+                    experts
+                    have you covered. Let us help you take your branding to the next level.
+                </p>
+            </div>
+        </section>
+
+        <section class="bg-primary py-16 sm:py-20 lg:py-24 text-text-light">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-center mb-10 sm:mb-12">
+                    Why Choose Tri State Signs &amp; Awnings?
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 items-center">
+                    <div class="md:col-span-1">
+                        <ul class="space-y-3 sm:space-y-4 text-sm sm:text-base lg:text-lg">
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
+                                <span>Five-Year Sign Warranty</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
+                                <span>40+ Years of Experience</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
+                                <span>One-Year Electrical Warranty</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
+                                <span>Service Provided Within 48 Hours</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
+                                <span>Handle All Permitting on Your Behalf</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
+                                <span>100% Customer Satisfaction Guaranteed</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="md:col-span-2 text-text-muted-dark text-sm sm:text-base lg:text-lg space-y-4 sm:space-y-6">
+                        <p>
+                            With over 40 years of experience, Tri State Signs &amp; Awnings stands out for its
+                            unwavering commitment
+                            to quality and customer satisfaction. We offer a comprehensive range of services from design
+                            to
+                            installation, ensuring your signage journey is smooth and efficient.
+                        </p>
+                        <p>
+                            Our team goes above and beyond, managing all permitting processes and providing prompt
+                            service when you
+                            need it most. Our dedication to meeting expectations, and the peace of mind that comes with
+                            knowing your
+                            signage is crafted to the highest standards.
+                        </p>
+                        <div class="pt-2 sm:pt-4">
+                            <a class="inline-block bg-accent text-primary-dark font-bold px-6 sm:px-8 py-2.5 sm:py-3 rounded-md hover:bg-gray-400 transform hover:-translate-y-0.5 transition-all duration-300 shadow-md text-sm sm:text-base"
+                                href="{{ url('/contact-us') }}">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-20 lg:py-24 bg-background-light dark:bg-background-dark">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+                    <h2
+                        class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark dark:text-text-light">
+                        Our Services
+                    </h2>
+                    <p
+                        class="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-text-muted-light dark:text-text-muted-dark">
+                        From eye-catching exterior signs to functional and elegant awnings, we offer a comprehensive
+                        suite of
+                        services to meet all your signage needs.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
+                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
+                            <span class="material-symbols-outlined" style="font-size: 40px;">store</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3
+                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
+                                Exterior Signs
+                            </h3>
+                            <p
+                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
+                                Exterior signs are the first impression customers have of your business. We create
+                                eye-catching,
+                                durable signs to enhance visibility and attract your target audience.
+                            </p>
+                        </div>
+                        <div class="mt-auto">
+                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
+                                href="{{ url('/exterior-signs') }}">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
+                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
+                            <span class="material-symbols-outlined" style="font-size: 40px;">meeting_room</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3
+                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
+                                Interior Signs
+                            </h3>
+                            <p
+                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
+                                Enhance your customer experience with our functional and aesthetically pleasing interior
+                                signs, from
+                                wayfinding to reception logos, all aligned with your brand image.
+                            </p>
+                        </div>
+                        <div class="mt-auto">
+                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
+                                href="{{ url('/interior-signs') }}">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
+                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
+                            <span class="material-symbols-outlined" style="font-size: 40px;">storefront</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3
+                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
+                                Commercial Awnings
+                            </h3>
+                            <p
+                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
+                                Our high-quality, custom-designed awnings provide shade and shelter while serving as a
+                                visually
+                                appealing extension of your brand and storefront aesthetic.
+                            </p>
+                        </div>
+                        <div class="mt-auto">
+                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
+                                href="{{ url('/commercial-awnings') }}">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
+                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
+                            <span class="material-symbols-outlined" style="font-size: 40px;">villa</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3
+                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
+                                Residential Awnings
+                            </h3>
+                            <p
+                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
+                                We offer a diverse range of residential awnings, from durable metal options to elegant
+                                fabric designs
+                                in various colors, adding style to patios and entrances.
+                            </p>
+                        </div>
+                        <div class="mt-auto">
+                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
+                                href="{{ url('/residential-awnings') }}">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
+                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
+                            <span class="material-symbols-outlined" style="font-size: 40px;">description</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3
+                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
+                                Sign Permit Expediting
+                            </h3>
+                            <p
+                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
+                                Navigating the permit process is easy with us. Our team handles all aspects of permit
+                                expediting,
+                                ensuring your project is compliant and approved without delays.
+                            </p>
+                        </div>
+                        <div class="mt-auto">
+                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
+                                href="{{ url('/sign-permit-expediting') }}">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div
+                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
+                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
+                            <span class="material-symbols-outlined" style="font-size: 40px;">construction</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3
+                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
+                                Sign Installation Services
+                            </h3>
+                            <p
+                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
+                                Our skilled technicians ensure your signs are installed correctly and safely, using
+                                state-of-the-art
+                                equipment for secure mounting and maximum visibility.
+                            </p>
+                        </div>
+                        <div class="mt-auto">
+                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
+                                href="{{ url('/installation') }}">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  gap-6 lg:gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
+                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
+                            {{-- <span class="material-symbols-outlined" style="font-size: 40px;">store</span> --}}
+                            <span class="material-symbols-outlined" style="font-size: 40px;"> desktop_windows</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3
+                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
+                                LED Display
+                            </h3>
+                            <p
+                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
+                                LED displays offer dynamic and engaging ways to communicate with your audience. At Tri
+                                State Signs & Awnings, we provide cutting-edge LED displays that captivate attention and
+                                convey your message effectively. Our LED solutions are energy-efficient, customizable,
+                                and designed to suit various business needs. Whether for advertising, announcements, or
+                                informational purposes, we've got you covered.
+                            </p>
+                        </div>
+                        <div class="mt-auto">
+                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
+                                href="{{ url('/led-displays') }}">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
+                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
+                            <span class="material-symbols-outlined" style="font-size: 40px;"> wallpaper_slideshow
+                            </span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3
+                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
+                                Gallery of Our Work
+                            </h3>
+                            <p
+                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
+                                Check out our gallery that showcases our exceptional craftsmanship and innovative
+                                designs in signage, LED lights, awnings, and canopies. Each product comes in various
+                                styles and materials, so give us your idea, and we'll bring it to life. Our team will
+                                enhance your brand presence while providing practical solutions that stand the test of
+                                time. Give us a call today to get started. Our services to you are second to none.
+                            </p>
+                        </div>
+                        <div class="mt-auto">
+                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
+                                href="{{ url('/gallery') }}">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-20 lg:py-24 bg-gray-100 dark:bg-primary-dark/40">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+                    <h2
+                        class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark dark:text-text-light">
+                        Our Commitment to You
+                    </h2>
+                    <p
+                        class="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-text-muted-light dark:text-text-muted-dark">
+                        At Tri State Signs &amp; Awnings, customer satisfaction is at the heart of everything we do. We
+                        strive to
+                        deliver solutions that exceed their expectations. Backed by a high level of skill and know-how,
+                        we provide
+                        high-quality products that effectively communicate your brand's message while maintaining a high
+                        standard.
+                        Our extensive range of materials and our professional and skilled staff offer a range of stylish
+                        and durable
+                        options to meet all your needs.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <div class="bg-white dark:bg-primary-dark/80 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img alt="A storefront with a sign" class="w-full h-48 sm:h-56 object-cover"
+                            src="{{ asset('img/img1.png') }}" />
+                        <div class="p-5 sm:p-6 flex flex-col flex-grow text-center">
+                            <h3
+                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
+                                Same-Day Appointments
+                            </h3>
+                            <p
+                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 flex-grow text-sm sm:text-base">
+                                Tri State Signs &amp; Awnings understands the urgency of planning your signage and
+                                awning needs. We
+                                address this promptly, which is why we offer same-day appointments for consultations and
+                                assessments.
+                            </p>
+                            <a class="mt-auto inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm w-full sm:w-auto"
+                                href="{{ url('contact-us')}}">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-primary-dark/80 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img alt="A modern building with a distinct sign" class="w-full h-48 sm:h-56 object-cover"
+                            src="{{ asset('img/img2.png') }}" />
+                        <div class="p-5 sm:p-6 flex flex-col flex-grow text-center">
+                            <h3
+                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
+                                Concierge-Level Service
+                            </h3>
+                            <p
+                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 flex-grow text-sm sm:text-base">
+                                Concierge means much more than that you receive personal attention and expert guidance
+                                throughout your
+                                project. From the initial consultation to the final installation, we've got it handled.
+                            </p>
+                            <a class="mt-auto inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm w-full sm:w-auto"
+                                href="{{ url('contact-us')}}">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-primary-dark/80 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img alt="A large retail store sign at night" class="w-full h-48 sm:h-56 object-cover"
+                            src="{{ asset('img/img3.png') }}" />
+                        <div class="p-5 sm:p-6 flex flex-col flex-grow text-center">
+                            <h3
+                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
+                                UL Listed
+                            </h3>
+                            <p
+                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 flex-grow text-sm sm:text-base">
+                                As a UL listed business, Tri State Signs &amp; Awnings prioritizes safety and quality in
+                                every product
+                                we create, adhering to industry standards for performance and reliability. We deliver
+                                exceptional
+                                results.
+                            </p>
+                            <a class="mt-auto inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm w-full sm:w-auto"
+                                href="{{ url('contact-us')}}">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="write-bg py-16 sm:py-20 lg:py-24 bg-background-light dark:bg-background-dark">
+            <div class="write-content max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-center mb-10 sm:mb-12 text-text-light dark:text-text-dark">
+                        Here's what our satisfied customers are saying...
+                    </h2>
                     <br>
-
-                </div>
-                <div class="w-full text-center" style="padding-bottom: 2rem">
-
-                    <button
-                        class="px-6 py-2 text-base font-small text-white duration-300 ease-in-out rounded-md bg-white/20 signUpBtn hover:bg-white/100 hover:text-white"
-                        style="background-color: grey; padding: 1rem;border: 1px solid #fff;">Contact Us</button>
-
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-    <div class="relative overflow-hidden bg-white " style="padding-top: 50px; padding-bottom:50px">
-        <div class="container px-4 mx-auto">
-            <div class="flex flex-wrap items-center ">
-                <div class="w-full px-4" style="display: flex;">
-                    <div class="w-full px-4 lg:w-2/12 xl:w-2/12 text-center" data-wow-delay=".2s">
-                        <svg fill="grey" width="80%" height="80%" version="1.1" viewBox="0 0 100 100"
-                            xmlns="http://www.w3.org/2000/svg" id="1827187220" class="svg u_1827187220"
-                            data-icon-custom="true">
-                            <title id="1246187856">A black and white icon of a hospital building with a cross on it.
-                            </title>
-                            <g>
-                                <path
-                                    d="m90.844 89.062h-81.688c-0.91406-0.085938-1.6133-0.85547-1.6133-1.7734 0-0.91797 0.69922-1.6875 1.6133-1.7734h81.688c0.91406 0.085937 1.6133 0.85547 1.6133 1.7734 0 0.91797-0.69922 1.6875-1.6133 1.7734z">
-                                </path>
-                                <path
-                                    d="m89.062 89.062h-78.125c-0.98438 0-1.7812-0.79688-1.7812-1.7812v-49.703c0-0.47266 0.1875-0.92578 0.52344-1.2578 0.33203-0.33594 0.78516-0.52344 1.2578-0.52344h17.75c0.98438 0 1.7812 0.79688 1.7812 1.7812v40.828h39.062v-40.828c0-0.98438 0.79688-1.7812 1.7812-1.7812h17.75c0.98438 0 1.7812 0.79688 1.7812 1.7812v49.703c0 0.47266-0.1875 0.92578-0.52344 1.2578-0.33203 0.33594-0.78516 0.52344-1.2578 0.52344zm-76.344-3.5469h74.562v-46.172h-14.203v40.844c0 0.97656-0.78906 1.7656-1.7656 1.7656h-42.625c-0.97656 0-1.7656-0.78906-1.7656-1.7656v-40.844h-14.203z">
-                                </path>
-                                <path
-                                    d="m71.312 81.953h-42.625c-0.97656 0-1.7656-0.78906-1.7656-1.7656v-67.469c0-0.97656 0.78906-1.7734 1.7656-1.7812h42.625c0.97656 0.007812 1.7656 0.80469 1.7656 1.7812v67.469c0 0.46875-0.1875 0.91797-0.51562 1.25-0.33203 0.32812-0.78125 0.51562-1.25 0.51562zm-40.844-3.5469h39.062v-63.922h-39.062z">
-                                </path>
-                                <path
-                                    d="m60.656 81.953h-21.312c-0.46875 0.003906-0.92188-0.17969-1.2539-0.51172-0.33203-0.33203-0.51562-0.78516-0.51172-1.2539v-15.984c0.035156-0.94922 0.8125-1.7031 1.7656-1.7031h21.312c0.47266-0.019531 0.92969 0.14844 1.2773 0.46875 0.34766 0.31641 0.55078 0.76172 0.56641 1.2344v15.984c0.003906 0.48438-0.19141 0.94922-0.53906 1.2812-0.35156 0.33594-0.82031 0.51172-1.3047 0.48438zm-19.531-3.5469h17.75v-12.5h-17.75z">
-                                </path>
-                                <path
-                                    d="m53.547 34.016h-7.0938c-0.97656 0-1.7734-0.78906-1.7812-1.7656v-1.7812h-1.7812c-0.97656-0.007812-1.7656-0.80469-1.7656-1.7812v-7.0938c0-0.97656 0.78906-1.7734 1.7656-1.7812h1.7812v-1.7656c0-0.98438 0.79688-1.7812 1.7812-1.7812h7.0938c0.98438 0 1.7812 0.79688 1.7812 1.7812v1.7656h1.7812c0.97656 0.007812 1.7656 0.80469 1.7656 1.7812v7.0938c0 0.97656-0.78906 1.7734-1.7656 1.7812h-1.7812v1.7812c-0.007813 0.97656-0.80469 1.7656-1.7812 1.7656zm-5.3281-3.5469h3.5625v-1.7812c0-0.97656 0.78906-1.7656 1.7656-1.7656h1.7812v-3.4844h-1.7812c-0.46875 0.003906-0.92188-0.17969-1.2539-0.51172s-0.51562-0.78516-0.51172-1.2539v-1.8594h-3.5625v1.7812c0.027344 0.48438-0.14844 0.95312-0.48438 1.3047-0.33203 0.34766-0.79688 0.54297-1.2812 0.53906h-1.7812v3.5625h1.7812c0.97656 0 1.7656 0.78906 1.7656 1.7656z">
-                                </path>
-                                <path
-                                    d="m89.062 89.062h-78.125c-0.98438 0-1.7812-0.79688-1.7812-1.7812v-7.0938c0-0.47266 0.1875-0.92578 0.52344-1.2578 0.33203-0.33594 0.78516-0.52344 1.2578-0.52344h78.125c0.98438 0 1.7812 0.79688 1.7812 1.7812v7.0938c0 0.47266-0.1875 0.92578-0.52344 1.2578-0.33203 0.33594-0.78516 0.52344-1.2578 0.52344zm-76.344-3.5469h74.562v-3.5625h-74.562z">
-                                </path>
-                                <path
-                                    d="m28.688 57.109h-10.641c-0.98438 0-1.7812-0.79688-1.7812-1.7812v-10.656c0-0.98438 0.79688-1.7812 1.7812-1.7812h10.641c0.98438 0 1.7812 0.79688 1.7812 1.7812v10.656c0 0.47266-0.1875 0.92578-0.52344 1.2578-0.33203 0.33594-0.78516 0.52344-1.2578 0.52344zm-8.875-3.5625h7.1094v-7.0938h-7.1094z">
-                                </path>
-                                <path
-                                    d="m46.453 57.109h-10.656c-0.98438 0-1.7812-0.79688-1.7812-1.7812v-10.656c0-0.98438 0.79688-1.7812 1.7812-1.7812h10.656c0.47266 0 0.92188 0.1875 1.2539 0.52344 0.33203 0.33203 0.51562 0.78516 0.51172 1.2578v10.656c0.003906 0.47266-0.17969 0.92578-0.51172 1.2578-0.33203 0.33594-0.78125 0.52344-1.2539 0.52344zm-8.875-3.5625h7.0938v-7.0938h-7.0938z">
-                                </path>
-                                <path
-                                    d="m64.203 57.109h-10.656c-0.47266 0-0.92188-0.1875-1.2539-0.52344-0.33203-0.33203-0.51562-0.78516-0.51172-1.2578v-10.656c-0.003906-0.47266 0.17969-0.92578 0.51172-1.2578 0.33203-0.33594 0.78125-0.52344 1.2539-0.52344h10.656c0.98438 0 1.7812 0.79688 1.7812 1.7812v10.656c0 0.47266-0.1875 0.92578-0.52344 1.2578-0.33203 0.33594-0.78516 0.52344-1.2578 0.52344zm-8.875-3.5625h7.1719v-7.0938h-7.1719z">
-                                </path>
-                                <path
-                                    d="m81.953 57.109h-10.641c-0.98438 0-1.7812-0.79688-1.7812-1.7812v-10.656c0-0.98438 0.79688-1.7812 1.7812-1.7812h10.641c0.98438 0 1.7812 0.79688 1.7812 1.7812v10.656c0 0.47266-0.1875 0.92578-0.52344 1.2578-0.33203 0.33594-0.78516 0.52344-1.2578 0.52344zm-8.875-3.5625h7.1094v-7.0938h-7.1094z">
-                                </path>
-                            </g>
-                        </svg>
+                    <p class="sm:mb-6 text-sm sm:text-base text-center text-text-light dark:text-text-dark">
+                        At Tri State Signs & Awnings, we take pride in providing exceptional sign and awning services to
+                        our customers. We would be grateful if you could share your thoughts about our business with
+                        others. Your feedback helps us improve and helps others make informed decisions. Please take a
+                        moment to leave a review of Tri State Signs & Awnings and let others know what you think.</p>
+                        <button id="openReviewModal" class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm">Write a Review</button>
                     </div>
-                    <div class="w-full px-4 lg:w-4/12 xl:w-4/12 text-left" data-wow-delay=".2s">
-                        <p style="font-size: 18px; color:grey"><b>Exterior Signs</b></p>
-                        <p style="color:grey">
-                            Exterior signs are the first impression customers have of your business. At Tri State Signs &
-                            Awnings, we create eye-catching and durable exterior signs that enhance your brand's visibility.
-                            Our designs are tailored to your specific needs, ensuring they resonate with your target
-                            audience and comply with local regulations. From illuminated signs to monument signs, we do it
-                            all.
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                    <div
+                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md p-6 sm:p-8 flex flex-col">
+                        <div class="flex items-center justify-between mb-3 sm:mb-4">
+                            <div>
+                                <h3 class="font-bold text-base sm:text-lg text-text-dark dark:text-text-light">Brittany
+                                    D</h3>
+                                <p class="text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">5/1/2025
+                                </p>
+                            </div>
+                            <div class="flex text-primary dark:text-yellow-400">
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                            </div>
+                        </div>
+                        <p
+                            class="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-sm sm:text-base">
+                            Super easy to work with and they really know their stuff. When it comes to permits, custom
+                            vinyl turned out
+                            awesome, and the awning looking good too -- totally transforms the front of storefront.
+                            Definitely recommend!
                         </p>
-                        <br>
-                        <button
-                            class="px-6 py-2 text-base font-small text-white duration-300 ease-in-out rounded-md bg-white/20 signUpBtn hover:bg-white/100 hover:text-white"
-                            style=" padding: 1rem; background-color: var(--color-primary);">Learn More</button>
                     </div>
-
-                    <div class="w-full px-4 lg:w-2/12 xl:w-2/12 text-center" data-wow-delay=".2s">
-                        <svg fill="grey" width="80%" height="80%" version="1.1" viewBox="0 0 100 100"
-                            xmlns="http://www.w3.org/2000/svg" id="1021036837" class="svg u_1021036837"
-                            data-icon-custom="true">
-                            <title id="1279533755">A black and white drawing of a square with dots on it.</title>
-                            <path
-                                d="m43.316 59.668h-0.019531c-0.38672 0-0.75781 0.15625-1.0312 0.42969-0.27344 0.27344-0.42578 0.64844-0.42188 1.0352-0.003906 0.59375 0.35547 1.1328 0.90234 1.3594 0.54688 0.23047 1.1797 0.10547 1.6016-0.3125 0.42188-0.41797 0.55078-1.0508 0.32422-1.6016-0.22656-0.54688-0.76172-0.91016-1.3555-0.91016zm-16.754-26.367h0.019531c0.39062 0 0.76172-0.15625 1.0352-0.42969 0.27344-0.27344 0.42578-0.64844 0.42187-1.0352 0.003907-0.59375-0.35547-1.1328-0.90234-1.3594-0.54688-0.23047-1.1797-0.10547-1.6016 0.3125-0.42188 0.41797-0.55078 1.0508-0.32422 1.6016 0.22656 0.54688 0.76172 0.91016 1.3555 0.91016zm5.5781 0h0.019531c0.39062 0 0.76172-0.15625 1.0352-0.42969 0.27344-0.27344 0.42578-0.64844 0.42188-1.0352 0-0.59375-0.35547-1.1328-0.90234-1.3594-0.55078-0.23047-1.1797-0.10547-1.6016 0.3125-0.42188 0.41797-0.55078 1.0508-0.32422 1.6016 0.22656 0.54688 0.75781 0.91016 1.3555 0.91016zm0.019531 26.367h-0.019531 0.003906c-0.39062 0-0.76172 0.15625-1.0352 0.42969-0.27344 0.27344-0.42578 0.64844-0.42188 1.0352-0.003906 0.59375 0.35547 1.1328 0.90234 1.3594 0.54688 0.23047 1.1797 0.10547 1.6016-0.3125 0.42188-0.41797 0.55078-1.0508 0.32422-1.6016-0.22656-0.54688-0.75781-0.91016-1.3555-0.91016zm11.137-26.367h0.019531c0.38672 0 0.76172-0.15625 1.0312-0.42969 0.27344-0.27344 0.42578-0.64844 0.42578-1.0352 0-0.59375-0.35547-1.1328-0.90234-1.3594-0.55078-0.23047-1.1836-0.10547-1.6055 0.3125-0.41797 0.41797-0.54688 1.0508-0.32031 1.6016 0.22266 0.54688 0.75781 0.91016 1.3516 0.91016zm-5.5781 0h0.019531c0.38672 0 0.76172-0.15625 1.0352-0.42969 0.26953-0.27344 0.42187-0.64844 0.42187-1.0352 0-0.59375-0.35547-1.1328-0.90234-1.3594-0.55078-0.23047-1.1836-0.10547-1.6016 0.3125-0.42188 0.41797-0.55078 1.0508-0.32422 1.6016 0.22656 0.54688 0.75781 0.91016 1.3555 0.91016zm0.019531 26.367h-0.019531 0.003906c-0.39062 0-0.76172 0.15625-1.0352 0.42969-0.27344 0.27344-0.42578 0.64844-0.42188 1.0352-0.003906 0.59375 0.35547 1.1328 0.90234 1.3594 0.54688 0.23047 1.1797 0.10547 1.6016-0.3125 0.42188-0.41797 0.55078-1.0508 0.32422-1.6016-0.22656-0.54688-0.76172-0.91016-1.3555-0.91016zm33.449-26.367h0.019531c0.38672 0 0.75781-0.15625 1.0312-0.42969 0.27344-0.27344 0.42578-0.64844 0.42578-1.0352 0-0.59375-0.35547-1.1328-0.90625-1.3594-0.54687-0.23047-1.1797-0.10547-1.6016 0.3125-0.42188 0.41797-0.54688 1.0508-0.32422 1.6016 0.22656 0.54688 0.76172 0.91016 1.3555 0.91016zm0.019531 26.367h-0.019531c-0.38672 0-0.75781 0.15625-1.0312 0.42969-0.27344 0.27344-0.42578 0.64844-0.42188 1.0352-0.003906 0.59375 0.35156 1.1328 0.90234 1.3594 0.54688 0.23047 1.1797 0.10547 1.6016-0.3125 0.42188-0.41797 0.55078-1.0508 0.32422-1.6016-0.22656-0.54688-0.76172-0.91016-1.3555-0.91016zm-5.5977-26.367h0.019531c0.38672 0 0.75781-0.15625 1.0312-0.42969 0.27344-0.27344 0.42578-0.64844 0.42578-1.0352 0-0.59375-0.35547-1.1328-0.90234-1.3594-0.55078-0.23047-1.1836-0.10547-1.6055 0.3125-0.42188 0.41797-0.54688 1.0508-0.32422 1.6016 0.22656 0.54688 0.76172 0.91016 1.3555 0.91016zm0.019531 26.367h-0.019531c-0.38672 0-0.75781 0.15625-1.0312 0.42969-0.27344 0.27344-0.42578 0.64844-0.42188 1.0352-0.003906 0.59375 0.35156 1.1328 0.90234 1.3594 0.54688 0.23047 1.1797 0.10547 1.6016-0.3125 0.42188-0.41797 0.55078-1.0508 0.32422-1.6016-0.22656-0.54688-0.76172-0.91016-1.3555-0.91016zm-39.047 0h-0.019531 0.003906c-0.39062 0-0.76172 0.15625-1.0352 0.42969-0.26953 0.27344-0.42188 0.64844-0.42188 1.0352 0 0.59375 0.35547 1.1328 0.90234 1.3594 0.55078 0.23047 1.1797 0.10547 1.6016-0.3125 0.42188-0.41797 0.55078-1.0508 0.32422-1.6016-0.22656-0.54688-0.75781-0.91016-1.3555-0.91016zm22.312 0h-0.019531c-0.38672 0-0.75781 0.15625-1.0312 0.42969-0.27344 0.27344-0.42578 0.64844-0.42188 1.0352-0.003906 0.59375 0.35547 1.1328 0.90234 1.3594 0.54688 0.23047 1.1797 0.10547 1.6016-0.3125 0.42188-0.41797 0.55078-1.0508 0.32422-1.6016-0.22656-0.54688-0.76172-0.91016-1.3555-0.91016zm-0.019531-26.367h0.019531c0.38672 0 0.75781-0.15625 1.0312-0.42969 0.27344-0.27344 0.42578-0.64844 0.42578-1.0352 0-0.59375-0.35547-1.1328-0.90234-1.3594-0.55078-0.23047-1.1836-0.10547-1.6055 0.3125-0.42188 0.41797-0.54688 1.0508-0.32031 1.6016 0.22266 0.54688 0.75781 0.91016 1.3516 0.91016zm5.5781 0h0.019531c0.38672 0 0.75781-0.15625 1.0312-0.42969 0.27344-0.27344 0.42578-0.64844 0.42578-1.0352 0-0.59375-0.35547-1.1328-0.90234-1.3594-0.55078-0.23047-1.1836-0.10547-1.6055 0.3125-0.42188 0.41797-0.54688 1.0508-0.32031 1.6016 0.22266 0.54688 0.75781 0.91016 1.3516 0.91016zm5.5781 0h0.019531c0.38672 0 0.75781-0.15625 1.0312-0.42969 0.27344-0.27344 0.42578-0.64844 0.42578-1.0352 0-0.59375-0.35547-1.1328-0.90234-1.3594-0.55078-0.23047-1.1836-0.10547-1.6055 0.3125-0.42188 0.41797-0.54688 1.0508-0.32422 1.6016 0.22656 0.54688 0.76172 0.91016 1.3555 0.91016zm0.019531 26.367h-0.019531c-0.38672 0-0.75781 0.15625-1.0312 0.42969-0.27344 0.27344-0.42578 0.64844-0.42188 1.0352-0.003906 0.59375 0.35156 1.1328 0.90234 1.3594 0.54688 0.23047 1.1797 0.10547 1.6016-0.3125 0.42188-0.41797 0.55078-1.0508 0.32422-1.6016-0.22656-0.54688-0.76172-0.91016-1.3555-0.91016zm-5.5781 0h-0.019531c-0.38672 0-0.75781 0.15625-1.0312 0.42969-0.27344 0.27344-0.42578 0.64844-0.42188 1.0352-0.003906 0.59375 0.35156 1.1328 0.90234 1.3594 0.54688 0.23047 1.1797 0.10547 1.6016-0.3125 0.42188-0.41797 0.55078-1.0508 0.32422-1.6016-0.22656-0.54688-0.76172-0.91016-1.3555-0.91016zm-33.477-26.363c0.8125 0 1.4688-0.65625 1.4688-1.4688 0-0.59375-0.35938-1.1289-0.90625-1.3555-0.54688-0.22656-1.1797-0.097657-1.5977 0.32031-0.41797 0.41797-0.54688 1.0508-0.32031 1.5977 0.22656 0.54687 0.76172 0.90625 1.3555 0.90625zm55.781 14.633c-0.39062 0-0.76172 0.15625-1.0391 0.42969-0.27344 0.27734-0.42578 0.64844-0.42578 1.0352v0.019531c0 0.39062 0.15234 0.76172 0.42969 1.0352 0.27344 0.27344 0.64453 0.42578 1.0352 0.42188 0.80859-0.003906 1.4648-0.66016 1.4648-1.4688 0-0.8125-0.65625-1.4688-1.4648-1.4727zm0-11.719c-0.39062 0-0.76172 0.15625-1.0391 0.42969-0.27344 0.27734-0.42578 0.64844-0.42578 1.0352v0.019531c0 0.39062 0.15234 0.76172 0.42969 1.0352 0.27344 0.27344 0.64453 0.42578 1.0352 0.42188 0.80859-0.003906 1.4648-0.66016 1.4648-1.4688 0-0.8125-0.65625-1.4688-1.4648-1.4727zm0 23.441v0.003906c-0.8125 0-1.4688 0.65625-1.4727 1.4688 0.003906 0.59375 0.35937 1.1289 0.91016 1.3555 0.54688 0.22656 1.1758 0.097657 1.5977-0.32031 0.41797-0.41797 0.54297-1.0508 0.31641-1.5977-0.22656-0.54687-0.76172-0.90625-1.3516-0.90625zm0-5.8633c-0.39062 0-0.76172 0.15625-1.0391 0.42969-0.27344 0.27734-0.42578 0.64844-0.42578 1.0352v0.019531c0 0.39062 0.15234 0.76172 0.42969 1.0352 0.27344 0.27344 0.64453 0.42578 1.0352 0.42188 0.80859-0.003906 1.4648-0.66016 1.4648-1.4688 0-0.8125-0.65625-1.4688-1.4648-1.4727zm15.898-36.902h-85.352c-4.043 0.003907-7.3203 3.2812-7.3242 7.3242v51.562c0.0039062 4.043 3.2812 7.3203 7.3242 7.3242h85.352c4.043-0.003907 7.3203-3.2812 7.3242-7.3242v-51.562c-0.003906-4.043-3.2812-7.3203-7.3242-7.3242zm4.3945 58.887c-0.003906 2.4258-1.9688 4.3906-4.3945 4.3945h-85.352c-2.4258-0.003906-4.3906-1.9688-4.3945-4.3945v-51.562c0.003906-2.4258 1.9688-4.3906 4.3945-4.3945h85.352c2.4258 0.003906 4.3906 1.9688 4.3945 4.3945zm-7.3242-53.027c-1.7773 0-3.3789 1.0703-4.0586 2.7109-0.67969 1.6445-0.30469 3.5352 0.95312 4.793 1.2539 1.2539 3.1445 1.6328 4.7891 0.94922 1.6406-0.67969 2.7109-2.2812 2.7109-4.0586-0.003906-2.4258-1.9688-4.3906-4.3945-4.3945zm0 5.8594c-0.59375 0-1.125-0.35547-1.3516-0.90234-0.22656-0.55078-0.10156-1.1797 0.31641-1.5977 0.41797-0.41797 1.0469-0.54297 1.5977-0.31641 0.54688 0.22656 0.90234 0.75781 0.90234 1.3516 0 0.80859-0.65625 1.4648-1.4648 1.4648zm-12.98 1.7578c-0.59375 0.003906-1.125 0.36328-1.3516 0.91016-0.22266 0.55078-0.09375 1.1797 0.32422 1.5977 0.42188 0.41797 1.0547 0.54297 1.6016 0.3125 0.54688-0.22656 0.90234-0.76172 0.90234-1.3555 0-0.39063-0.15625-0.76563-0.43359-1.0391-0.27734-0.27734-0.65234-0.42969-1.043-0.42578zm12.98 38.086c-1.7773 0-3.3789 1.0703-4.0586 2.7109-0.67969 1.6445-0.30469 3.5352 0.95312 4.793 1.2539 1.2539 3.1445 1.6328 4.7891 0.94922 1.6406-0.67969 2.7109-2.2812 2.7109-4.0586-0.003906-2.4258-1.9688-4.3906-4.3945-4.3945zm0 5.8594c-0.59375 0-1.125-0.35547-1.3516-0.90234-0.22656-0.55078-0.10156-1.1797 0.31641-1.5977 0.41797-0.41797 1.0469-0.54297 1.5977-0.31641 0.54688 0.22656 0.90234 0.75781 0.90234 1.3516 0 0.80859-0.65625 1.4648-1.4648 1.4648zm-12.969-32.238c-0.39062 0-0.76172 0.15625-1.0391 0.42969-0.27344 0.27734-0.42578 0.64844-0.42578 1.0352v0.019531c0 0.39062 0.15234 0.76172 0.42969 1.0352 0.27344 0.27344 0.64453 0.42578 1.0352 0.42188 0.80859-0.003906 1.4648-0.66016 1.4648-1.4688 0-0.8125-0.65625-1.4688-1.4648-1.4727zm-55.781 14.668c0.38672 0 0.76172-0.15234 1.0352-0.42578 0.27344-0.27734 0.42969-0.64844 0.42969-1.0391v-0.019531c0-0.38672-0.15625-0.75781-0.42969-1.0312-0.27344-0.27344-0.64844-0.42578-1.0352-0.42188-0.80859 0.003906-1.4648 0.66016-1.4648 1.4688 0 0.8125 0.65625 1.4688 1.4648 1.4688zm0-5.8594c0.38672 0 0.76172-0.15234 1.0352-0.42578 0.27344-0.27734 0.42969-0.64844 0.42969-1.0391v-0.019531c0-0.38672-0.15625-0.75781-0.42969-1.0312-0.27344-0.27344-0.64844-0.42578-1.0352-0.42188-0.80859 0.003906-1.4648 0.66016-1.4648 1.4688 0 0.8125 0.65625 1.4688 1.4648 1.4688zm55.781 17.57h-55.781c-0.80859 0-1.4648 0.65625-1.4648 1.4648s0.65625 1.4648 1.4648 1.4648h55.781c0.80859 0 1.4648-0.65625 1.4648-1.4648s-0.65625-1.4648-1.4648-1.4648zm-55.781-29.289c0.38672 0 0.76172-0.15234 1.0352-0.42578 0.27344-0.27734 0.42969-0.64844 0.42969-1.0391v-0.019531c0-0.38672-0.15625-0.75781-0.42969-1.0312-0.27344-0.27344-0.64844-0.42578-1.0352-0.42188-0.80859 0.003906-1.4648 0.66016-1.4648 1.4688 0 0.8125 0.65625 1.4688 1.4648 1.4688zm0 5.8594c0.38672 0 0.76172-0.15234 1.0352-0.42578 0.27344-0.27734 0.42969-0.64844 0.42969-1.0391v-0.019531c0-0.38672-0.15625-0.75781-0.42969-1.0312-0.27344-0.27344-0.64844-0.42578-1.0352-0.42188-0.80859 0.003906-1.4648 0.66016-1.4648 1.4688 0 0.8125 0.65625 1.4688 1.4648 1.4688zm-10.742-22.273c-1.7773 0-3.3789 1.0703-4.0586 2.7109-0.67969 1.6445-0.30469 3.5352 0.95313 4.793 1.2539 1.2539 3.1445 1.6328 4.7891 0.94922 1.6406-0.67969 2.7109-2.2812 2.7109-4.0586-0.003907-2.4258-1.9688-4.3906-4.3945-4.3945zm0 5.8594c-0.59375 0-1.125-0.35547-1.3516-0.90234-0.22656-0.55078-0.10156-1.1797 0.31641-1.5977s1.0469-0.54297 1.5977-0.31641c0.54688 0.22656 0.90234 0.75781 0.90234 1.3516 0 0.80859-0.65625 1.4648-1.4648 1.4648zm0 39.844c-1.7773 0-3.3789 1.0703-4.0586 2.7109-0.67969 1.6445-0.30469 3.5352 0.95313 4.793 1.2539 1.2539 3.1445 1.6328 4.7891 0.94922 1.6406-0.67969 2.7109-2.2812 2.7109-4.0586-0.003907-2.4258-1.9688-4.3906-4.3945-4.3945zm0 5.8594c-0.59375 0-1.125-0.35547-1.3516-0.90234-0.22656-0.55078-0.10156-1.1797 0.31641-1.5977 0.41797-0.41797 1.0469-0.54297 1.5977-0.31641 0.54688 0.22656 0.90234 0.75781 0.90234 1.3516 0 0.80859-0.65625 1.4648-1.4648 1.4648zm10.75-11.719c0.59375-0.003906 1.1289-0.36328 1.3516-0.91016 0.22656-0.55078 0.097656-1.1797-0.32422-1.5977-0.41797-0.41797-1.0508-0.54297-1.5977-0.3125-0.54688 0.22656-0.90234 0.76172-0.90234 1.3555 0 0.39063 0.15234 0.76563 0.42969 1.0391 0.27734 0.27734 0.65625 0.42969 1.043 0.42578z">
-                            </path>
-                        </svg>
-                    </div>
-
-                    <div class="w-full px-4 lg:w-4/12 xl:w-4/12 text-left" data-wow-delay=".2s">
-                        <p style="font-size: 18px; color:grey"><b>Interior Signs</b></p>
-                        <p style="color:grey">
-                            Interior signs play a crucial role in guiding and informing your customers. Our team specializes
-                            in creating interior signage that enhances the customer experience. Whether it's directional
-                            signs, office plaques, or promotional displays, we ensure they are both functional and
-                            aesthetically pleasing. Trust us to design interior signs that align with your brand’s image and
-                            improve overall customer interaction.
+                    <div
+                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md p-6 sm:p-8 flex flex-col">
+                        <div class="flex items-center justify-between mb-3 sm:mb-4">
+                            <div>
+                                <h3 class="font-bold text-base sm:text-lg text-text-dark dark:text-text-light">Brit
+                                </h3>
+                                <p class="text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">5/1/2025
+                                </p>
+                            </div>
+                            <div class="flex text-primary dark:text-yellow-400">
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                            </div>
+                        </div>
+                        <p
+                            class="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-sm sm:text-base">
+                            Melvin, Dennis and the whole crew at TriState are professional, creative, and reliable--they
+                            delivered a
+                            custom sign and awning that was high-quality and eye-catching. Excellent customer service
+                            and timely
+                            installation. Highly recommended these guys for a storefront side that will set apart your
+                            business apart.
                         </p>
-                        <br>
-                        <button
-                            class="px-6 py-2 text-base font-small text-white duration-300 ease-in-out rounded-md bg-white/20 signUpBtn hover:bg-white/100 hover:text-white"
-                            style=" padding: 1rem; background-color: var(--color-primary);">Learn More</button>
                     </div>
                 </div>
             </div>
+        </section>
 
+        <section class="py-16 sm:py-20 lg:py-24 bg-gray-100 dark:bg-primary-dark/40">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                    <div class="lg:w-1/2 text-center lg:text-left">
+                        <h2
+                            class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark dark:text-text-light mb-4">
+                            Learn More About Tri State Signs &amp; Awnings
+                        </h2>
+                        <p
+                            class="text-text-muted-light dark:text-text-muted-dark mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg">
+                            Located in West Babylon, NY, Tri State Signs &amp; Awnings specializes in signs, awnings,
+                            and LED
+                            displays. 40+ years of trusted experience. Five-year sign warranty. With same-day
+                            appointments, call for
+                            your free estimate!
+                        </p>
+                        <a class="inline-flex items-center bg-primary text-text-light font-bold px-6 sm:px-8 py-2.5 sm:py-3 rounded-md hover:bg-primary-light transition-colors duration-300 shadow-md text-sm sm:text-base"
+                            href="#">
+                            <span class="material-symbols-outlined mr-2 text-base sm:text-lg">play_circle</span>
+                            Watch Video
+                        </a>
+                    </div>
+                    <div class="lg:w-1/2 w-full mt-6 lg:mt-0">
+                        <div class="relative aspect-video w-full">
+                            <iframe class="absolute inset-0 w-full h-full rounded-lg shadow-lg"
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Review Modal -->
+    <div id="reviewModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <!-- Backdrop -->
+        <div id="modalBackdrop" class="fixed inset-0 bg-black bg-opacity-50 transition-opacity"></div>
+
+        <!-- Modal Container -->
+        <div class="flex min-h-full items-center justify-center p-4">
+            <div class="relative bg-white dark:bg-primary-dark rounded-lg shadow-xl max-w-lg w-full transform transition-all">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+                    <h5 class="text-xl font-display font-bold text-text-dark dark:text-text-light" id="reviewModalLabel">Write a Review</h5>
+                    <button id="closeReviewModal" type="button" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="p-6">
+                    <form id="reviewForm">
+                        <div class="mb-4">
+                            <label for="reviewerName" class="block text-sm font-medium text-text-dark dark:text-text-light mb-2">Your Name</label>
+                            <input type="text" id="reviewerName" name="name"
+                                class="w-full bg-gray-100 dark:bg-primary-light/20 border border-gray-300 dark:border-gray-600 rounded-md text-text-dark dark:text-text-light placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
+                                placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="reviewRating" class="block text-sm font-medium text-text-dark dark:text-text-light mb-2">Rating</label>
+                            <div class="flex items-center space-x-2" id="ratingStars">
+                                <button type="button" class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors" data-rating="1">
+                                    <span class="material-symbols-outlined text-2xl">star</span>
+                                </button>
+                                <button type="button" class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors" data-rating="2">
+                                    <span class="material-symbols-outlined text-2xl">star</span>
+                                </button>
+                                <button type="button" class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors" data-rating="3">
+                                    <span class="material-symbols-outlined text-2xl">star</span>
+                                </button>
+                                <button type="button" class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors" data-rating="4">
+                                    <span class="material-symbols-outlined text-2xl">star</span>
+                                </button>
+                                <button type="button" class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors" data-rating="5">
+                                    <span class="material-symbols-outlined text-2xl">star</span>
+                                </button>
+                            </div>
+                            <input type="hidden" id="reviewRating" name="rating" value="0" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="review" class="block text-sm font-medium text-text-dark dark:text-text-light mb-2">Your Review</label>
+                            <textarea id="review" name="review" rows="4"
+                                class="w-full bg-gray-100 dark:bg-primary-light/20 border border-gray-300 dark:border-gray-600 rounded-md text-text-dark dark:text-text-light placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
+                                placeholder="Share your experience with us..." required></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="flex items-center justify-end gap-3 p-6 border-t border-gray-200 dark:border-gray-700">
+                    <button id="cancelReviewModal" type="button"
+                        class="px-4 py-2 text-sm font-medium text-text-dark dark:text-text-light bg-gray-100 dark:bg-primary-light/20 rounded-md hover:bg-gray-200 dark:hover:bg-primary-light/30 transition-colors duration-300">
+                        Cancel
+                    </button>
+                    <button id="submitReview" type="button"
+                        class="px-4 py-2 text-sm font-medium text-text-light bg-primary rounded-md hover:bg-primary-light transition-colors duration-300">
+                        Submit Review
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
-@endsection
+
+    <!-- Barra lateral fija -->
+    <div
+        class="hidden sm:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col items-center bg-primary-dark shadow-lg rounded-l-md z-30">
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center rounded-tl-md group"
+            href="#" title="Call Us"><span
+                class="material-symbols-outlined text-base sm:text-lg">phone</span></a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group"
+            href="{{ url('/reviews') }}" title="Reviews"><span
+                class="material-symbols-outlined text-base sm:text-lg">star</span></a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group"
+            href="{{ url('request-call-back')}}" title="Email Us"><span
+                class="material-symbols-outlined text-base sm:text-lg">email</span></a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group"
+            href="#" title="Our Location"><span
+                class="material-symbols-outlined text-base sm:text-lg">location_on</span></a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center rounded-bl-md group"
+            href="#" title="Share"><span
+                class="material-symbols-outlined text-base sm:text-lg">share</span></a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary-dark text-text-muted-dark pt-16 sm:pt-20 pb-8 sm:pb-10 mt-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 text-xs sm:text-sm">
+                <div>
+                    <h3 class="font-bold text-base sm:text-lg text-text-light mb-3 sm:mb-4">Visit Us</h3>
+                    <p>333 Wyandanch Avenue</p>
+                    <p>West Babylon, NY 11704</p>
+                    <a class="mt-4 inline-block bg-transparent border border-secondary text-secondary font-bold px-5 sm:px-6 py-2 rounded-md hover:bg-secondary hover:text-primary-dark transition-colors duration-300 text-[11px] sm:text-xs"
+                        href="#">Get Directions</a>
+                </div>
+                <div>
+                    <h3 class="font-bold text-base sm:text-lg text-text-light mb-3 sm:mb-4">Serving Area</h3>
+                    <ul class="space-y-1 sm:space-y-2 columns-2 gap-4">
+                        <li>Hoboken, NJ</li>
+                        <li>Jersey City, NJ</li>
+                        <li>West New York</li>
+                        <li>Rochelle Park</li>
+                        <li>Union City, NJ</li>
+                        <li>Great Neck, NY</li>
+                        <li>New York, NY</li>
+                        <li>Westbury, NY</li>
+                        <li>Nassau County, NY</li>
+                        <li>Queens County, NY</li>
+                        <li>Suffolk County, NY</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-base sm:text-lg text-text-light mb-3 sm:mb-4">Contact Us</h3>
+                    <p class="font-bold text-base sm:text-lg text-text-light">(718) 705-0333</p>
+                    <a class="mt-4 mb-5 inline-block bg-accent text-primary-dark font-bold px-5 sm:px-6 py-2 rounded-md hover:bg-gray-400 transition-colors duration-300 text-[11px] sm:text-xs"
+                        href="{{ url('contact-us')}}">Send a Message</a>
+                    <div class="flex items-center space-x-3 sm:space-x-4">
+                        <a class="text-secondary hover:text-white transition-colors duration-300" href="#">
+                            <svg aria-hidden="true" class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a class="text-secondary hover:text-white transition-colors duration-300" href="#">
+                            <svg aria-hidden="true" class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.039c-5.485 0-9.961 4.476-9.961 9.961 0 5.485 4.476 9.961 9.961 9.961 5.485 0 9.961-4.476 9.961-9.961 0-5.485-4.476-9.961-9.961-9.961zm0 17.93c-4.4 0-7.969-3.569-7.969-7.969 0-4.4 3.569-7.969 7.969-7.969s7.969 3.569 7.969 7.969c0 4.4-3.569 7.969-7.969 7.969zm3.844-7.969c0 2.122-1.722 3.844-3.844 3.844s-3.844-1.722-3.844-3.844 1.722-3.844 3.844-3.844 3.844 1.722 3.844 3.844zm-1.281 0c0-1.414-1.147-2.563-2.563-2.563s-2.563 1.148-2.563 2.563 1.147 2.563 2.563 2.563 2.563-1.148 2.563-2.563zm3.172-4.102c-.352 0-.637.285-.637.637s.285.637.637.637.637-.285.637-.637c0-.352-.285-.637-.637-.637zm-7.734 1.25h2.531c-.131-.83-.787-1.486-1.615-1.617v2.531c.001 0 .001 0 0 0z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-base sm:text-lg text-text-light mb-3 sm:mb-4">Business Hours</h3>
+                    <div class="flex justify-between">
+                        <span>Mon - Fri</span>
+                        <span>8:00am - 5:00pm</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Sat - Sun</span>
+                        <span>Closed</span>
+                    </div>
+                    <p class="mt-4 text-[11px] sm:text-xs">Same-Day Appointments</p>
+                </div>
+            </div>
+            <div class="border-t border-primary-light/20 mt-8 sm:mt-12 pt-4 sm:pt-6 text-center">
+                <p class="text-[11px] sm:text-xs">
+                    © 2024 TriState Signs &amp; Awnings. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle menú móvil
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (navToggle && mobileMenu) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+                navToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
+
+        // Toggle submenús en móvil
+        const submenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
+        submenuToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const targetId = toggle.getAttribute('data-target');
+                const submenu = document.getElementById(targetId);
+                const icon = toggle.querySelector('.mobile-submenu-icon');
+
+                if (submenu) {
+                    submenu.classList.toggle('hidden');
+                    if (icon) {
+                        icon.classList.toggle('rotate-180');
+                    }
+                }
+            });
+        });
+
+        // Review Modal Functionality
+        const reviewModal = document.getElementById('reviewModal');
+        const openReviewModalBtn = document.getElementById('openReviewModal');
+        const closeReviewModalBtn = document.getElementById('closeReviewModal');
+        const cancelReviewModalBtn = document.getElementById('cancelReviewModal');
+        const modalBackdrop = document.getElementById('modalBackdrop');
+        const ratingStars = document.querySelectorAll('.rating-star');
+        const ratingInput = document.getElementById('reviewRating');
+        let selectedRating = 0;
+
+        // Open modal
+        if (openReviewModalBtn) {
+            openReviewModalBtn.addEventListener('click', () => {
+                reviewModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        // Close modal function
+        const closeModal = () => {
+            reviewModal.classList.add('hidden');
+            document.body.style.overflow = '';
+            // Reset form
+            document.getElementById('reviewForm').reset();
+            selectedRating = 0;
+            ratingInput.value = '0';
+            // Reset stars
+            ratingStars.forEach(star => {
+                star.querySelector('span').style.fontVariationSettings = "'FILL' 0";
+                star.classList.remove('text-primary', 'text-yellow-400');
+                star.classList.add('text-gray-300');
+            });
+        };
+
+        // Close modal on button click
+        if (closeReviewModalBtn) {
+            closeReviewModalBtn.addEventListener('click', closeModal);
+        }
+
+        if (cancelReviewModalBtn) {
+            cancelReviewModalBtn.addEventListener('click', closeModal);
+        }
+
+        // Close modal on backdrop click
+        if (modalBackdrop) {
+            modalBackdrop.addEventListener('click', closeModal);
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !reviewModal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+
+        // Rating stars functionality
+        ratingStars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = parseInt(star.getAttribute('data-rating'));
+                selectedRating = rating;
+                ratingInput.value = rating;
+
+                // Update star display
+                ratingStars.forEach((s, index) => {
+                    const starIcon = s.querySelector('span');
+                    if (index < rating) {
+                        starIcon.style.fontVariationSettings = "'FILL' 1";
+                        s.classList.remove('text-gray-300');
+                        s.classList.add('text-primary', 'dark:text-yellow-400');
+                    } else {
+                        starIcon.style.fontVariationSettings = "'FILL' 0";
+                        s.classList.remove('text-primary', 'text-yellow-400');
+                        s.classList.add('text-gray-300');
+                    }
+                });
+            });
+
+            // Hover effect
+            star.addEventListener('mouseenter', () => {
+                const rating = parseInt(star.getAttribute('data-rating'));
+                ratingStars.forEach((s, index) => {
+                    const starIcon = s.querySelector('span');
+                    if (index < rating) {
+                        s.classList.add('text-primary', 'dark:text-yellow-400');
+                        s.classList.remove('text-gray-300');
+                    }
+                });
+            });
+
+            star.addEventListener('mouseleave', () => {
+                if (selectedRating === 0) {
+                    ratingStars.forEach(s => {
+                        s.classList.remove('text-primary', 'text-yellow-400');
+                        s.classList.add('text-gray-300');
+                    });
+                } else {
+                    ratingStars.forEach((s, index) => {
+                        if (index >= selectedRating) {
+                            s.classList.remove('text-primary', 'text-yellow-400');
+                            s.classList.add('text-gray-300');
+                        }
+                    });
+                }
+            });
+        });
+
+        // Submit review
+        const submitReviewBtn = document.getElementById('submitReview');
+        if (submitReviewBtn) {
+            submitReviewBtn.addEventListener('click', () => {
+                const form = document.getElementById('reviewForm');
+                const formData = new FormData(form);
+                const name = formData.get('name');
+                const rating = ratingInput.value;
+                const review = formData.get('review');
+
+                if (!name || rating === '0' || !review) {
+                    alert('Please fill in all fields and select a rating.');
+                    return;
+                }
+
+                // Here you would typically send the data to your server
+                console.log('Review submitted:', { name, rating, review });
+
+                // Show success message
+                alert('Thank you for your review!');
+                closeModal();
+            });
+        }
+    </script>
+</body>
+
+</html>
