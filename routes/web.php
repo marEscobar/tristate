@@ -57,3 +57,28 @@ Route::get('/request-call-back', function () {
 Route::get('/contact-us', function () {
     return view('contact-us');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+// Blog post routes
+Route::get('/blog/choosing-exterior-signage', function () {
+    return view('blog.choosing-exterior-signage');
+});
+
+Route::get('/blog/led-display-technology', function () {
+    return view('blog.led-display-technology');
+});
+
+Route::get('/blog/commercial-awnings-guide', function () {
+    return view('blog.commercial-awnings-guide');
+});
+
+Route::get('/blog/sign-permits-guide', function () {
+    return view('blog.sign-permits-guide');
+});
+
+Route::get('/blog/sign-maintenance-tips', function () {
+    return view('blog.sign-maintenance-tips');
+});

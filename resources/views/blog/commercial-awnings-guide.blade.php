@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Commercial Awnings: Combining Functionality with Aesthetic Appeal | Tri State Signs & Awnings</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <style type="text/tailwindcss">
+        @layer base {
+            html {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: "#003d64",
+                            light: "#005285",
+                            dark: "#002a45"
+                        },
+                        secondary: "#E5E7EB",
+                        accent: "#D1D5DB",
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#111827",
+                        "text-light": "#F9FAFB",
+                        "text-dark": "#1F2937",
+                        "text-muted-light": "#6B7280",
+                        "text-muted-dark": "#9CA3BA"
+                    },
+                    fontFamily: {
+                        sans: ["Roboto", "sans-serif"],
+                        display: ["Poppins", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.375rem",
+                        lg: "0.5rem"
+                    },
+                    transitionProperty: {
+                        height: "height",
+                        spacing: "margin, padding"
+                    },
+                    maxWidth: {
+                        '6xl': '72rem',
+                        '7xl': '80rem',
+                        '8xl': '88rem',
+                        '9xl': '96rem',
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        .hero-bg {
+            background-image: url({{ asset('img/exterior/ext3.JPG') }});
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 61, 100, 0.75);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-background-light dark:bg-background-dark text-text-dark dark:text-text-light antialiased">
+    <!-- HEADER -->
+    <header class="bg-background-light dark:bg-background-dark shadow-sm sticky top-0 z-40">
+        <!-- Top bar -->
+        <div class="border-b border-gray-200 dark:border-gray-700 bg-white">
+            <div
+                class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row md:justify-between md:items-center gap-3 md:gap-0 text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">
+                <div class="flex flex-wrap items-center gap-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="flex text-primary">
+                            <span class="material-symbols-outlined text-xs sm:text-base">star</span>
+                            <span class="material-symbols-outlined text-xs sm:text-base">star</span>
+                            <span class="material-symbols-outlined text-xs sm:text-base">star</span>
+                            <span class="material-symbols-outlined text-xs sm:text-base">star</span>
+                            <span class="material-symbols-outlined text-xs sm:text-base">star</span>
+                        </div>
+                        <span class="font-medium text-text-dark dark:text-text-light">5.0</span>
+                        <a class="underline hover:text-primary transition-colors duration-300"
+                            href="{{ url('/reviews') }}">(4 Ratings)</a>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                        <span class="material-symbols-outlined text-primary text-base sm:text-xl">location_on</span>
+                        <div class="leading-tight">
+                            <p class="font-medium text-text-dark dark:text-text-light text-xs sm:text-sm">Visit Us</p>
+                            <p class="text-xs sm:text-sm">333 Wyandanch Ave, West Babylon, NY</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between md:justify-end gap-4">
+                    <a class="inline-block px-4 sm:px-6 py-2 bg-primary text-text-light font-bold rounded-md hover:bg-primary-light transition-all duration-300 text-xs sm:text-sm shadow-sm text-center"
+                        href="{{ url('/request-call-back') }}">Request Call Back</a>
+                    <p class="text-base sm:text-lg font-bold text-text-dark dark:text-text-light whitespace-nowrap">
+                        (718) 705-0333
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main nav -->
+        <div class="bg-white border-b border-gray-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16 sm:h-20">
+                    <div class="flex items-center">
+                        <a href="{{ url('/') }}">
+                            <img alt="TriState Signs &amp; Awnings logo" class="h-8 sm:h-10 w-auto"
+                                src="{{ asset('img/logo.png') }}" />
+                        </a>
+                    </div>
+
+                    <nav class="hidden lg:flex">
+                        <ul class="flex items-center space-x-6 xl:space-x-8 text-primary font-medium text-sm">
+                            <li><a class="py-5 inline-flex {{ request()->is('/') ? 'border-b-2 border-primary text-primary' : 'hover:text-primary-light' }} transition-colors duration-300"
+                                    href="{{ url('/') }}">Home</a></li>
+                            <li class="group relative">
+                                <a class="py-5 inline-flex items-center {{ request()->is('exterior-signs') || request()->is('interior-signs') ? 'border-b-2 border-primary text-primary' : 'group-hover:text-primary-light' }} transition-colors duration-300"
+                                    href="#">
+                                    Sign Services
+                                    <span
+                                        class="material-symbols-outlined text-base ml-1 transform group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+                                    <div
+                                        class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                                        <a href="{{ url('/exterior-signs') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('exterior-signs') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
+                                            Exterior Signs
+                                        </a>
+                                        <a href="{{ url('/interior-signs') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('interior-signs') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
+                                            Interior Signs
+                                        </a>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="group relative">
+                                <a class="py-5 inline-flex items-center {{ request()->is('commercial-awnings') || request()->is('residential-awnings') ? 'border-b-2 border-primary text-primary' : 'group-hover:text-primary-light' }} transition-colors duration-300"
+                                    href="#">
+                                    Awning Services
+                                    <span
+                                        class="material-symbols-outlined text-base ml-1 transform group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+                                    <div
+                                        class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                                        <a href="{{ url('/commercial-awnings') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('commercial-awnings') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
+                                            Commercial Awnings
+                                        </a>
+                                        <a href="{{ url('/residential-awnings') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('residential-awnings') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
+                                            Residential Awnings
+                                        </a>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a class="py-5 inline-flex {{ request()->is('installations') ? 'border-b-2 border-primary text-primary' : 'hover:text-primary-light' }} transition-colors duration-300"
+                                    href="{{ url('/installations') }}">Installations</a></li>
+                            <li><a class="py-5 inline-flex {{ request()->is('led-displays') ? 'border-b-2 border-primary text-primary' : 'hover:text-primary-light' }} transition-colors duration-300"
+                                    href="{{ url('/led-displays') }}">LED Displays</a></li>
+                            <li><a class="py-5 inline-flex {{ request()->is('permits') ? 'border-b-2 border-primary text-primary' : 'hover:text-primary-light' }} transition-colors duration-300"
+                                    href="{{ url('/permits') }}">Permits</a></li>
+                            <li class="group relative">
+                                <a class="py-5 inline-flex items-center {{ request()->is('about') || request()->is('gallery') || request()->is('reviews') || request()->is('blog') || request()->is('faqs') ? 'border-b-2 border-primary text-primary' : 'group-hover:text-primary-light' }} transition-colors duration-300"
+                                    href="{{ url('/about') }}">
+                                    About
+                                    <span
+                                        class="material-symbols-outlined text-base ml-1 transform group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+                                    <div
+                                        class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                                        <a href="{{ url('/gallery') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('gallery') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
+                                            Gallery
+                                        </a>
+                                        <a href="{{ url('/reviews') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('reviews') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
+                                            Reviews
+                                        </a>
+                                        <a href="{{ url('/blog') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('blog') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
+                                            Blog
+                                        </a>
+                                        <a href="{{ url('/faqs') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('faqs') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
+                                            FAQs
+                                        </a>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="group relative">
+                                <a class="py-5 inline-flex items-center {{ request()->is('request-call-back') || request()->is('contact-us') ? 'border-b-2 border-primary text-primary' : 'group-hover:text-primary-light' }} transition-colors duration-300"
+                                    href="#">
+                                    Contact
+                                    <span
+                                        class="material-symbols-outlined text-base ml-1 transform group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+                                    <div
+                                        class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                                        <a href="{{ url('/request-call-back') }}"
+                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('request-call-back') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
+                                            Request Call Back
+                                        </a>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <button id="nav-toggle"
+                        class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+
+                <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 pb-4">
+                    <nav class="pt-2">
+                        <ul class="flex flex-col space-y-1 text-sm text-primary font-medium">
+                            <li><a class="block px-2 py-2 rounded hover:bg-secondary"
+                                    href="{{ url('/') }}">Home</a></li>
+                            <li><a class="block px-2 py-2 rounded hover:bg-secondary"
+                                    href="{{ url('/blog') }}">Back to Blog</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Blog Post Header -->
+        <section class="hero-bg text-text-light">
+            <div class="hero-content max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+                <div class="text-center">
+                    <a href="{{ url('/blog') }}" class="inline-flex items-center text-secondary hover:text-white mb-6 transition-colors">
+                        <span class="material-symbols-outlined mr-2">arrow_back</span>
+                        <span>Back to Blog</span>
+                    </a>
+                    <p class="text-sm sm:text-base mb-4 text-secondary">January 5, 2025</p>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold leading-tight mb-6">
+                        Commercial Awnings: Combining Functionality with Aesthetic Appeal
+                    </h1>
+                    <p class="text-lg sm:text-xl text-secondary max-w-3xl mx-auto">
+                        Learn how commercial awnings can enhance your storefront's appearance while providing practical benefits like weather protection, energy savings, and increased curb appeal.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="bg-white py-16 sm:py-20 lg:py-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <article class="prose prose-lg max-w-none">
+                    <div class="mb-8">
+                        <img src="{{ asset('img/exterior/ext3.JPG') }}" alt="Commercial Awnings" class="w-full h-auto rounded-lg shadow-lg">
+                    </div>
+
+                    <p class="text-lg text-text-muted-light dark:text-text-muted-dark mb-6 leading-relaxed">
+                        Commercial awnings are more than just decorative elements for your business facade. They represent a smart investment that combines aesthetic appeal with practical functionality, offering protection from the elements while enhancing your building's visual presence and potentially reducing energy costs.
+                    </p>
+
+                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-text-dark dark:text-text-light mb-4 mt-8">
+                        The Functional Benefits of Commercial Awnings
+                    </h2>
+
+                    <p class="text-base text-text-muted-light dark:text-text-muted-dark mb-6 leading-relaxed">
+                        One of the primary benefits of commercial awnings is weather protection. They shield your storefront, windows, and entryways from rain, snow, and harsh sunlight, protecting both your building and your customers. This protection extends the life of your building materials and creates a more comfortable environment for customers entering your business.
+                    </p>
+
+                    <p class="text-base text-text-muted-light dark:text-text-muted-dark mb-6 leading-relaxed">
+                        Energy efficiency is another significant advantage. By blocking direct sunlight from entering your building, awnings can reduce cooling costs during hot summer months. Studies have shown that properly installed awnings can reduce solar heat gain by up to 77%, leading to substantial energy savings over time.
+                    </p>
+
+                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-text-dark dark:text-text-light mb-4 mt-8">
+                        Enhancing Curb Appeal and Brand Identity
+                    </h2>
+
+                    <p class="text-base text-text-muted-light dark:text-text-muted-dark mb-6 leading-relaxed">
+                        Awnings serve as a powerful branding tool, allowing you to display your business name, logo, and colors prominently. Custom-designed awnings can reinforce your brand identity and make your business more memorable to potential customers. The right awning design can transform an ordinary storefront into an eye-catching destination.
+                    </p>
+
+                    <p class="text-base text-text-muted-light dark:text-text-muted-dark mb-6 leading-relaxed">
+                        The aesthetic appeal of well-designed awnings can significantly impact customer perception. A professional, attractive awning suggests quality and attention to detail, which can influence customers' decisions to enter your business. It's an investment in your business's first impression.
+                    </p>
+
+                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-text-dark dark:text-text-light mb-4 mt-8">
+                        Types of Commercial Awnings
+                    </h2>
+
+                    <p class="text-base text-text-muted-light dark:text-text-muted-dark mb-6 leading-relaxed">
+                        There are several types of commercial awnings to choose from, each suited to different applications. Retractable awnings offer flexibility, allowing you to extend or retract them based on weather conditions. Fixed awnings provide permanent protection and branding. Dome awnings offer a classic, elegant appearance, while modern flat awnings provide a sleek, contemporary look.
+                    </p>
+
+                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-text-dark dark:text-text-light mb-4 mt-8">
+                        Material Selection and Durability
+                    </h2>
+
+                    <p class="text-base text-text-muted-light dark:text-text-muted-dark mb-6 leading-relaxed">
+                        The materials used in commercial awnings directly impact their durability and appearance. Acrylic fabrics offer excellent fade resistance and durability. Vinyl provides cost-effective protection with good weather resistance. Metal awnings offer maximum durability and a more permanent solution. At Tri State Signs & Awnings, we help you select the right materials based on your specific needs, location, and budget.
+                    </p>
+
+                    <p class="text-base text-text-muted-light dark:text-text-muted-dark mb-8 leading-relaxed">
+                        Ready to enhance your storefront with commercial awnings? <a href="{{ url('/contact-us') }}" class="text-primary hover:underline font-semibold">Contact Tri State Signs & Awnings</a> today to discuss your awning needs and discover how we can combine functionality with aesthetic appeal for your business.
+                    </p>
+                </article>
+
+                <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+                    <a href="{{ url('/blog') }}" class="inline-flex items-center text-primary hover:text-primary-light transition-colors font-semibold">
+                        <span class="material-symbols-outlined mr-2">arrow_back</span>
+                        <span>Back to All Blog Posts</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary-dark text-text-muted-dark pt-16 sm:pt-20 pb-8 sm:pb-10 mt-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 text-xs sm:text-sm">
+                <div>
+                    <h3 class="font-bold text-base sm:text-lg text-text-light mb-3 sm:mb-4">Visit Us</h3>
+                    <p>333 Wyandanch Avenue</p>
+                    <p>West Babylon, NY 11704</p>
+                    <a class="mt-4 inline-block bg-transparent border border-secondary text-secondary font-bold px-5 sm:px-6 py-2 rounded-md hover:bg-secondary hover:text-primary-dark transition-colors duration-300 text-[11px] sm:text-xs"
+                        href="#">Get Directions</a>
+                </div>
+                <div>
+                    <h3 class="font-bold text-base sm:text-lg text-text-light mb-3 sm:mb-4">Serving Area</h3>
+                    <ul class="space-y-1 sm:space-y-2 columns-2 gap-4">
+                        <li>Hoboken, NJ</li>
+                        <li>Jersey City, NJ</li>
+                        <li>West New York</li>
+                        <li>Rochelle Park</li>
+                        <li>Union City, NJ</li>
+                        <li>Great Neck, NY</li>
+                        <li>New York, NY</li>
+                        <li>Westbury, NY</li>
+                        <li>Nassau County, NY</li>
+                        <li>Queens County, NY</li>
+                        <li>Suffolk County, NY</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-base sm:text-lg text-text-light mb-3 sm:mb-4">Contact Us</h3>
+                    <p class="font-bold text-base sm:text-lg text-text-light">(718) 705-0333</p>
+                    <a class="mt-4 mb-5 inline-block bg-accent text-primary-dark font-bold px-5 sm:px-6 py-2 rounded-md hover:bg-gray-400 transition-colors duration-300 text-[11px] sm:text-xs"
+                        href="{{ url('contact-us') }}">Send a Message</a>
+                    <div class="flex items-center space-x-3 sm:space-x-4">
+                        <a class="text-secondary hover:text-white transition-colors duration-300"
+                            href="https://www.facebook.com/tristatesigns">
+                            <svg aria-hidden="true" class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a class="text-secondary hover:text-white transition-colors duration-300"
+                            href="https://www.facebook.com/TriSignsNY">
+                            <svg aria-hidden="true" class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.039c-5.485 0-9.961 4.476-9.961 9.961 0 5.485 4.476 9.961 9.961 9.961 5.485 0 9.961-4.476 9.961-9.961 0-5.485-4.476-9.961-9.961-9.961zm0 17.93c-4.4 0-7.969-3.569-7.969-7.969 0-4.4 3.569-7.969 7.969-7.969s7.969 3.569 7.969 7.969c0 4.4-3.569 7.969-7.969 7.969zm3.844-7.969c0 2.122-1.722 3.844-3.844 3.844s-3.844-1.722-3.844-3.844 1.722-3.844 3.844-3.844 3.844 1.722 3.844 3.844zm-1.281 0c0-1.414-1.147-2.563-2.563-2.563s-2.563 1.148-2.563 2.563 1.147 2.563 2.563 2.563 2.563-1.148 2.563-2.563zm3.172-4.102c-.352 0-.637.285-.637.637s.285.637.637.637.637-.285.637-.637c0-.352-.285-.637-.637-.637zm-7.734 1.25h2.531c-.131-.83-.787-1.486-1.615-1.617v2.531c.001 0 .001 0 0 0z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-base sm:text-lg text-text-light mb-3 sm:mb-4">Business Hours</h3>
+                    <div class="flex justify-between">
+                        <span>Mon - Fri</span>
+                        <span>8:00am - 5:00pm</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Sat - Sun</span>
+                        <span>Closed</span>
+                    </div>
+                    <p class="mt-4 text-[11px] sm:text-xs">Same-Day Appointments</p>
+                </div>
+            </div>
+            <div class="border-t border-primary-light/20 mt-8 sm:mt-12 pt-4 sm:pt-6 text-center">
+                <p class="text-[11px] sm:text-xs">
+                    © 2024 TriState Signs &amp; Awnings. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (navToggle && mobileMenu) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+                navToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
+    </script>
+</body>
+
+</html>
+
