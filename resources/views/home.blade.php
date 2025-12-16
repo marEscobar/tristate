@@ -312,21 +312,39 @@
 
 
 
-                            <li class="group relative">
-                                <a class="py-5 inline-flex items-center {{ request()->is('request-call-back') || request()->is('contact-us') ? 'border-b-2 border-primary text-primary' : 'group-hover:text-primary-light' }} transition-colors duration-300"
-                                    href="#">
-                                    Contact
-                                    <span
-                                        class="material-symbols-outlined text-base ml-1 transform group-hover:rotate-180 transition-transform duration-300">expand_more</span>
-                                    <div
-                                        class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
-                                        <a href="{{ url('/request-call-back') }}"
-                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('request-call-back') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
-                                            Request Call Back
-                                        </a>
-                                    </div>
-                                </a>
-                            </li>
+                           <li class="group relative">
+
+    <!-- LINK PRINCIPAL -->
+    <a
+        href="#"
+        class="py-5 inline-flex items-center transition-colors duration-300
+               {{ request()->is('request-call-back') || request()->is('contact-us')
+                    ? 'border-b-2 border-primary text-primary'
+                    : 'group-hover:text-primary-light' }}">
+        Contact
+        <span
+            class="material-symbols-outlined text-base ml-1
+                   transform group-hover:rotate-180 transition-transform duration-300">
+            expand_more
+        </span>
+    </a>
+
+    <!-- SUBMENU (FUERA DEL <a>) -->
+    <div
+        class="submenu absolute left-0 top-full w-[250px]               bg-white rounded-md shadow-lg               opacity-0 invisible               group-hover:visible group-hover:opacity-100               px-2 py-1 z-50">
+
+        <a href="{{ url('/request-call-back') }}"           class="block rounded-sm px-4 py-2 text-sm                  {{ request()->is('request-call-back')                        ? 'text-primary font-semibold'                        : 'text-body-color hover:bg-secondary hover:text-primary' }}">
+            Request Call Back
+        </a>
+    </div>
+
+</li>
+
+
+
+
+
+
                         </ul>
                     </nav>
 
