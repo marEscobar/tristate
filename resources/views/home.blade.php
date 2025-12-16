@@ -53,10 +53,10 @@
                         spacing: "margin, padding"
                     },
                     maxWidth: {
-                        '6xl': '72rem',      // 1152px - Valor actual explícito
-                        '7xl': '80rem',       // 1280px - Nuevo tamaño
-                        '8xl': '88rem',       // 1408px - Nuevo tamaño
-                        '9xl': '96rem',       // 1536px - Nuevo tamaño
+                        '6xl': '72rem', // 1152px - Valor actual explícito
+                        '7xl': '80rem', // 1280px - Nuevo tamaño
+                        '8xl': '88rem', // 1408px - Nuevo tamaño
+                        '9xl': '96rem', // 1536px - Nuevo tamaño
                     }
                 }
             }
@@ -140,7 +140,8 @@
                             <span class="material-symbols-outlined text-xs sm:text-base">star</span>
                         </div>
                         <span class="font-medium text-text-dark dark:text-text-light">5.0</span>
-                        <a class="underline hover:text-primary transition-colors duration-300" href="{{ url('/reviews') }}">(4
+                        <a class="underline hover:text-primary transition-colors duration-300"
+                            href="{{ url('/reviews') }}">(4
                             Ratings)</a>
                     </div>
                     <div class="flex items-start space-x-2">
@@ -176,44 +177,78 @@
                         <ul class="flex items-center space-x-6 xl:space-x-8 text-primary font-medium text-sm">
                             <li><a class="py-5 inline-flex {{ request()->is('/') ? 'border-b-2 border-primary text-primary' : 'hover:text-primary-light' }} transition-colors duration-300"
                                     href="{{ url('/') }}">Home</a></li>
+
+
+
+
                             <li class="group relative">
-                                <a class="py-5 inline-flex items-center {{ request()->is('exterior-signs') || request()->is('interior-signs') ? 'border-b-2 border-primary text-primary' : 'group-hover:text-primary-light' }} transition-colors duration-300"
-                                    href="#">
+
+                                <a href="#"
+                                    class="py-5 inline-flex items-center transition-colors duration-300               {{ request()->is('exterior-signs') || request()->is('interior-signs') ? 'border-b-2 border-primary text-primary' : 'group-hover:text-primary-light' }}">
                                     Sign Services
                                     <span
-                                        class="material-symbols-outlined text-base ml-1 transform group-hover:rotate-180 transition-transform duration-300">expand_more</span>
-                                    <div
-                                        class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
-                                        <a href="{{ url('/exterior-signs') }}"
-                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('exterior-signs') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
-                                            Exterior Signs
-                                        </a>
-                                        <a href="{{ url('/interior-signs') }}"
-                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('interior-signs') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
-                                            Interior Signs
-                                        </a>
-                                    </div>
+                                        class="material-symbols-outlined ml-1                   transform group-hover:rotate-180 transition-transform duration-300">
+                                        expand_more
+                                    </span>
                                 </a>
+
+                                <div
+                                    class="submenu absolute left-0 top-full w-[250px]               bg-white rounded-md shadow-lg               opacity-0 invisible               group-hover:visible group-hover:opacity-100               px-2 py-1 z-50">
+
+                                    <a href="{{ url('/exterior-signs') }}"
+                                        class="block px-4 py-2 text-sm hover:bg-secondary">
+                                        Exterior Signs
+                                    </a>
+
+                                    <a href="{{ url('/interior-signs') }}"
+                                        class="block px-4 py-2 text-sm hover:bg-secondary">
+                                        Interior Signs
+                                    </a>
+                                </div>
+
                             </li>
+
+
+
+
+
+
+
+
+
                             <li class="group relative">
-                                <a class="py-5 inline-flex items-center {{ request()->is('commercial-awnings') || request()->is('residential-awnings') ? 'border-b-2 border-primary text-primary' : 'group-hover:text-primary-light' }} transition-colors duration-300"
-                                    href="#">
+
+                                <!-- LINK PRINCIPAL -->
+                                <a href="#"
+                                    class="py-5 inline-flex items-center transition-colors duration-300
+               {{ request()->is('commercial-awnings') || request()->is('residential-awnings')
+                   ? 'border-b-2 border-primary text-primary'
+                   : 'group-hover:text-primary-light' }}">
                                     Awning Services
                                     <span
-                                        class="material-symbols-outlined text-base ml-1 transform group-hover:rotate-180 transition-transform duration-300">expand_more</span>
-                                    <div
-                                        class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
-                                        <a href="{{ url('/commercial-awnings') }}"
-                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('commercial-awnings') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
-                                            Commercial Awnings
-                                        </a>
-                                        <a href="{{ url('/residential-awnings') }}"
-                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('residential-awnings') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
-                                            Residential Awnings
-                                        </a>
-                                    </div>
+                                        class="material-symbols-outlined text-base ml-1
+                   transform group-hover:rotate-180 transition-transform duration-300">
+                                        expand_more
+                                    </span>
                                 </a>
+
+                                <!-- SUBMENU (FUERA DEL <a>) -->
+                                <div
+                                    class="submenu absolute left-0 top-full w-[250px]               bg-white rounded-md shadow-lg               opacity-0 invisible               group-hover:visible group-hover:opacity-100               px-2 py-1 z-50">
+
+                                    <a href="{{ url('/commercial-awnings') }}"
+                                        class="block rounded-sm px-4 py-2 text-sm                  {{ request()->is('commercial-awnings') ? 'text-primary font-semibold' : 'text-body-color hover:bg-secondary hover:text-primary' }}">
+                                        Commercial Awnings
+                                    </a>
+
+                                    <a href="{{ url('/residential-awnings') }}"
+                                        class="block rounded-sm px-4 py-2 text-sm                  {{ request()->is('residential-awnings') ? 'text-primary font-semibold' : 'text-body-color hover:bg-secondary hover:text-primary' }}">
+                                        Residential Awnings
+                                    </a>
+                                </div>
+
                             </li>
+
 
                             <li><a class="py-5 inline-flex {{ request()->is('installations') ? 'border-b-2 border-primary text-primary' : 'hover:text-primary-light' }} transition-colors duration-300"
                                     href="{{ url('/installations') }}">Installations</a></li>
@@ -221,33 +256,62 @@
                                     href="{{ url('/led-displays') }}">LED Displays</a></li>
                             <li><a class="py-5 inline-flex {{ request()->is('permits') ? 'border-b-2 border-primary text-primary' : 'hover:text-primary-light' }} transition-colors duration-300"
                                     href="{{ url('/permits') }}">Permits</a></li>
+
+
+
+
+
+
+
                             <li class="group relative">
-                                <a class="py-5 inline-flex items-center {{ request()->is('about') || request()->is('gallery') || request()->is('reviews') || request()->is('blog') || request()->is('faqs') ? 'border-b-2 border-primary text-primary' : 'group-hover:text-primary-light' }} transition-colors duration-300"
-                                    href="{{ url('/about') }}">
+
+                                <!-- LINK PRINCIPAL -->
+                                <a href="{{ url('/about') }}"
+                                    class="py-5 inline-flex items-center transition-colors duration-300               {{ request()->is('about') || request()->is('gallery') || request()->is('reviews') || request()->is('blog') || request()->is('faqs') ? 'border-b-2 border-primary text-primary' : 'group-hover:text-primary-light' }}">
                                     About
                                     <span
-                                        class="material-symbols-outlined text-base ml-1 transform group-hover:rotate-180 transition-transform duration-300">expand_more</span>
-                                    <div
-                                        class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
-                                        <a href="{{ url('/gallery') }}"
-                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('gallery') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
-                                            Gallery
-                                        </a>
-                                        <a href="{{ url('/reviews') }}"
-                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('reviews') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
-                                            Reviews
-                                        </a>
-                                        <a href="{{ url('/blog') }}"
-                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('blog') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
-                                            Blog
-                                        </a>
-                                        <a href="{{ url('/faqs') }}"
-                                            class="block rounded-sm px-4 py-[10px] text-sm {{ request()->is('faqs') ? 'text-primary font-semibold' : 'text-body-color hover:text-secondary' }} dark:text-dark-6 dark:hover:text-secondary">
-                                            FAQs
-                                        </a>
-                                    </div>
+                                        class="material-symbols-outlined text-base ml-1                   transform group-hover:rotate-180 transition-transform duration-300">
+                                        expand_more
+                                    </span>
                                 </a>
+
+                                <!-- SUBMENU (FUERA DEL <a>) -->
+                                <div
+                                    class="submenu absolute left-0 top-full w-[250px]               bg-white rounded-md shadow-lg               opacity-0 invisible               group-hover:visible group-hover:opacity-100               px-2 py-1 z-50">
+
+                                    <a href="{{ url('/gallery') }}"
+                                        class="block rounded-sm px-4 py-2 text-sm                  {{ request()->is('gallery') ? 'text-primary font-semibold' : 'text-body-color hover:bg-secondary hover:text-primary' }}">
+                                        Gallery
+                                    </a>
+
+                                    <a href="{{ url('/reviews') }}"
+                                        class="block rounded-sm px-4 py-2 text-sm                  {{ request()->is('reviews') ? 'text-primary font-semibold' : 'text-body-color hover:bg-secondary hover:text-primary' }}">
+                                        Reviews
+                                    </a>
+
+                                    <a href="{{ url('/blog') }}"
+                                        class="block rounded-sm px-4 py-2 text-sm                  {{ request()->is('blog') ? 'text-primary font-semibold' : 'text-body-color hover:bg-secondary hover:text-primary' }}">
+                                        Blog
+                                    </a>
+
+                                    <a href="{{ url('/faqs') }}"
+                                        class="block rounded-sm px-4 py-2 text-sm                  {{ request()->is('faqs') ? 'text-primary font-semibold' : 'text-body-color hover:bg-secondary hover:text-primary' }}">
+                                        FAQs
+                                    </a>
+                                </div>
+
                             </li>
+
+
+
+
+
+
+
+
+
+
+
                             <li class="group relative">
                                 <a class="py-5 inline-flex items-center {{ request()->is('request-call-back') || request()->is('contact-us') ? 'border-b-2 border-primary text-primary' : 'group-hover:text-primary-light' }} transition-colors duration-300"
                                     href="#">
@@ -414,7 +478,8 @@
                         <div>
                             <p class="text-3xl sm:text-4xl font-display font-bold tracking-tight">(718) 705-0333</p>
                             <p class="mt-2 text-secondary text-sm sm:text-base">
-                                Hours: <span id="businessStatus" class="font-medium">Loading...</span> • Opens 08:00 am
+                                Hours: <span id="businessStatus" class="font-medium">Loading...</span> • Opens 08:00
+                                am
                             </p>
                         </div>
                     </div>
@@ -861,7 +926,7 @@
                                 assessments.
                             </p>
                             <a class="mt-auto inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm w-full sm:w-auto"
-                                href="{{ url('contact-us')}}">Learn More</a>
+                                href="{{ url('contact-us') }}">Learn More</a>
                         </div>
                     </div>
                     <div class="bg-white dark:bg-primary-dark/80 rounded-lg shadow-lg overflow-hidden flex flex-col">
@@ -879,7 +944,7 @@
                                 project. From the initial consultation to the final installation, we've got it handled.
                             </p>
                             <a class="mt-auto inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm w-full sm:w-auto"
-                                href="{{ url('contact-us')}}">Learn More</a>
+                                href="{{ url('contact-us') }}">Learn More</a>
                         </div>
                     </div>
                     <div class="bg-white dark:bg-primary-dark/80 rounded-lg shadow-lg overflow-hidden flex flex-col">
@@ -899,7 +964,7 @@
                                 results.
                             </p>
                             <a class="mt-auto inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm w-full sm:w-auto"
-                                href="{{ url('contact-us')}}">Learn More</a>
+                                href="{{ url('contact-us') }}">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -909,7 +974,8 @@
         <section class="write-bg py-16 sm:py-20 lg:py-24 bg-background-light dark:bg-background-dark">
             <div class="write-content max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-center mb-10 sm:mb-12 text-text-light dark:text-text-dark">
+                    <h2
+                        class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-center mb-10 sm:mb-12 text-text-light dark:text-text-dark">
                         Here's what our satisfied customers are saying...
                     </h2>
                     <br>
@@ -918,8 +984,10 @@
                         our customers. We would be grateful if you could share your thoughts about our business with
                         others. Your feedback helps us improve and helps others make informed decisions. Please take a
                         moment to leave a review of Tri State Signs & Awnings and let others know what you think.</p>
-                        <button id="openReviewModal" class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm">Write a Review</button>
-                    </div>
+                    <button id="openReviewModal"
+                        class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm">Write
+                        a Review</button>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                     <div
                         class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md p-6 sm:p-8 flex flex-col">
@@ -1024,17 +1092,21 @@
         </section>
     </main>
     <!-- Review Modal -->
-    <div id="reviewModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="reviewModalLabel" aria-hidden="true">
+    <div id="reviewModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="reviewModalLabel"
+        aria-hidden="true">
         <!-- Backdrop -->
         <div id="modalBackdrop" class="fixed inset-0 bg-black bg-opacity-50 transition-opacity"></div>
 
         <!-- Modal Container -->
         <div class="flex min-h-full items-center justify-center p-4">
-            <div class="relative bg-white dark:bg-primary-dark rounded-lg shadow-xl max-w-lg w-full transform transition-all">
+            <div
+                class="relative bg-white dark:bg-primary-dark rounded-lg shadow-xl max-w-lg w-full transform transition-all">
                 <!-- Modal Header -->
                 <div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
-                    <h5 class="text-xl font-display font-bold text-text-dark dark:text-text-light" id="reviewModalLabel">Write a Review</h5>
-                    <button id="closeReviewModal" type="button" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    <h5 class="text-xl font-display font-bold text-text-dark dark:text-text-light"
+                        id="reviewModalLabel">Write a Review</h5>
+                    <button id="closeReviewModal" type="button"
+                        class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
                         <span class="material-symbols-outlined">close</span>
                     </button>
                 </div>
@@ -1043,34 +1115,49 @@
                 <div class="p-6">
                     <form id="reviewForm">
                         <div class="mb-4">
-                            <label for="reviewerName" class="block text-sm font-medium text-text-dark dark:text-text-light mb-2">Your Name</label>
+                            <label for="reviewerName"
+                                class="block text-sm font-medium text-text-dark dark:text-text-light mb-2">Your
+                                Name</label>
                             <input type="text" id="reviewerName" name="name"
                                 class="w-full bg-gray-100 dark:bg-primary-light/20 border border-gray-300 dark:border-gray-600 rounded-md text-text-dark dark:text-text-light placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
                                 placeholder="Enter your name" required>
                         </div>
                         <div class="mb-4">
-                            <label for="reviewRating" class="block text-sm font-medium text-text-dark dark:text-text-light mb-2">Rating</label>
+                            <label for="reviewRating"
+                                class="block text-sm font-medium text-text-dark dark:text-text-light mb-2">Rating</label>
                             <div class="flex items-center space-x-2" id="ratingStars">
-                                <button type="button" class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors" data-rating="1">
+                                <button type="button"
+                                    class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors"
+                                    data-rating="1">
                                     <span class="material-symbols-outlined text-2xl">star</span>
                                 </button>
-                                <button type="button" class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors" data-rating="2">
+                                <button type="button"
+                                    class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors"
+                                    data-rating="2">
                                     <span class="material-symbols-outlined text-2xl">star</span>
                                 </button>
-                                <button type="button" class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors" data-rating="3">
+                                <button type="button"
+                                    class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors"
+                                    data-rating="3">
                                     <span class="material-symbols-outlined text-2xl">star</span>
                                 </button>
-                                <button type="button" class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors" data-rating="4">
+                                <button type="button"
+                                    class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors"
+                                    data-rating="4">
                                     <span class="material-symbols-outlined text-2xl">star</span>
                                 </button>
-                                <button type="button" class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors" data-rating="5">
+                                <button type="button"
+                                    class="rating-star text-gray-300 hover:text-primary dark:hover:text-yellow-400 transition-colors"
+                                    data-rating="5">
                                     <span class="material-symbols-outlined text-2xl">star</span>
                                 </button>
                             </div>
                             <input type="hidden" id="reviewRating" name="rating" value="0" required>
                         </div>
                         <div class="mb-4">
-                            <label for="review" class="block text-sm font-medium text-text-dark dark:text-text-light mb-2">Your Review</label>
+                            <label for="review"
+                                class="block text-sm font-medium text-text-dark dark:text-text-light mb-2">Your
+                                Review</label>
                             <textarea id="review" name="review" rows="4"
                                 class="w-full bg-gray-100 dark:bg-primary-light/20 border border-gray-300 dark:border-gray-600 rounded-md text-text-dark dark:text-text-light placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
                                 placeholder="Share your experience with us..." required></textarea>
@@ -1103,7 +1190,7 @@
             href="{{ url('/reviews') }}" title="Reviews"><span
                 class="material-symbols-outlined text-base sm:text-lg">star</span></a>
         <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group"
-            href="{{ url('request-call-back')}}" title="Email Us"><span
+            href="{{ url('request-call-back') }}" title="Email Us"><span
                 class="material-symbols-outlined text-base sm:text-lg">email</span></a>
         <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group"
             href="#" title="Our Location"><span
@@ -1144,9 +1231,10 @@
                     <h3 class="font-bold text-base sm:text-lg text-text-light mb-3 sm:mb-4">Contact Us</h3>
                     <p class="font-bold text-base sm:text-lg text-text-light">(718) 705-0333</p>
                     <a class="mt-4 mb-5 inline-block bg-accent text-primary-dark font-bold px-5 sm:px-6 py-2 rounded-md hover:bg-gray-400 transition-colors duration-300 text-[11px] sm:text-xs"
-                        href="{{ url('contact-us')}}">Send a Message</a>
+                        href="{{ url('contact-us') }}">Send a Message</a>
                     <div class="flex items-center space-x-3 sm:space-x-4">
-                        <a class="text-secondary hover:text-white transition-colors duration-300" href="https://www.facebook.com/tristatesigns">
+                        <a class="text-secondary hover:text-white transition-colors duration-300"
+                            href="https://www.facebook.com/tristatesigns">
                             <svg aria-hidden="true" class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor"
                                 viewBox="0 0 24 24">
                                 <path clip-rule="evenodd"
@@ -1154,7 +1242,8 @@
                                     fill-rule="evenodd"></path>
                             </svg>
                         </a>
-                        <a class="text-secondary hover:text-white transition-colors duration-300" href="https://www.facebook.com/TriSignsNY">
+                        <a class="text-secondary hover:text-white transition-colors duration-300"
+                            href="https://www.facebook.com/TriSignsNY">
                             <svg aria-hidden="true" class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor"
                                 viewBox="0 0 24 24">
                                 <path
@@ -1337,7 +1426,11 @@
                 }
 
                 // Here you would typically send the data to your server
-                console.log('Review submitted:', { name, rating, review });
+                console.log('Review submitted:', {
+                    name,
+                    rating,
+                    review
+                });
 
                 // Show success message
                 alert('Thank you for your review!');
@@ -1356,9 +1449,9 @@
             const currentTime = currentHour * 60 + currentMinute; // Convert to minutes for easier comparison
 
             // Business hours: 8am (480 min) to 5pm (1020 min)
-            const openTime = 8 * 60;      // 8:00 AM = 480 minutes
+            const openTime = 8 * 60; // 8:00 AM = 480 minutes
             const closingSoonTime = 16 * 60; // 4:00 PM = 960 minutes
-            const closeTime = 17 * 60;    // 5:00 PM = 1020 minutes
+            const closeTime = 17 * 60; // 5:00 PM = 1020 minutes
 
             // Remove all status classes
             statusElement.classList.remove('text-green-300', 'text-yellow-400', 'text-orange-400', 'text-red-300');
