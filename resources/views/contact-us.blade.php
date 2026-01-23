@@ -125,9 +125,9 @@
 
 <body class="font-sans bg-background-light dark:bg-background-dark text-text-dark dark:text-text-light antialiased">
     <!-- HEADER -->
-    <header class="bg-background-light dark:bg-background-dark shadow-sm sticky top-0 z-40">
+    <header class="bg-white dark:bg-background-dark shadow-md sticky top-0 z-40 backdrop-blur-sm bg-white/95">
         <!-- Top bar -->
-        <div class="border-b border-gray-200 dark:border-gray-700 bg-white">
+        <div class="border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-gray-50 to-white">
             <div
                 class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row md:justify-between md:items-center gap-3 md:gap-0 text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">
                 <div class="flex flex-wrap items-center gap-4">
@@ -153,11 +153,15 @@
                     </div>
                 </div>
                 <div class="flex items-center justify-between md:justify-end gap-4">
-                    <a class="inline-block px-4 sm:px-6 py-2 bg-primary text-text-light font-bold rounded-md hover:bg-primary-light transition-all duration-300 text-xs sm:text-sm shadow-sm text-center"
-                        href="{{ url('/request-call-back') }}">Request Call Back</a>
-                    <p class="text-base sm:text-lg font-bold text-text-dark dark:text-text-light whitespace-nowrap">
+                    <a class="inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 bg-gradient-to-r from-primary to-primary-light text-text-light font-bold rounded-lg hover:from-primary-light hover:to-primary transform hover:scale-105 transition-all duration-300 text-xs sm:text-sm shadow-md hover:shadow-lg text-center"
+                        href="{{ url('/request-call-back') }}">
+                        <span class="material-symbols-outlined text-sm">phone_in_talk</span>
+                        Request Call Back
+                    </a>
+                    <a href="tel:7187050333" class="flex items-center gap-2 text-base sm:text-lg font-bold text-text-dark dark:text-text-light whitespace-nowrap hover:text-primary transition-colors duration-300">
+                        <span class="material-symbols-outlined text-primary">call</span>
                         (718) 705-0333
-                    </p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -382,124 +386,142 @@
     </header>
 
     <!-- MAIN -->
-
     <main>
-        <section class="bg-primary py-2 sm:py-6 lg:py-6 text-text-light">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-center mb-8 sm:mb-6">
-                    Contact
-                </h2>
-                <h4 class="text-lg sm:text-lg lg:text-lg font-display font-bold text-center mb-8 sm:mb-6">
-                    Tri State Signs & Awnings
-                </h4>
+        <!-- HERO SECTION -->
+        <section class="hero-bg text-text-light">
+            <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
+                <div class="text-center max-w-4xl mx-auto space-y-6">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight">
+                        Contact Us
+                    </h1>
+                    <p class="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto">
+                        Get in Touch with Tri State Signs & Awnings
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- RESTO DE SECCIONES (ajuste mínimo, ya son responsivas) -->
-        <section class="bg-white py-16 sm:py-10 lg:py-14 text-text-primary">
-            <div class=" mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+        <!-- CONTACT SECTION -->
+        <section class="bg-white py-16 sm:py-20 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <!-- Contact Form -->
+                    <div class="bg-gray-50 rounded-lg p-8 sm:p-10 shadow-lg">
+                        <h2 class="text-3xl font-display font-bold text-text-dark mb-4">Send us a message</h2>
+                        <p class="text-text-muted-light mb-6">Please fill out this short form, and we'll contact you shortly.</p>
+                        <form class="space-y-5" id="contactForm">
+                            <div>
+                                <label for="contact-name" class="block text-sm font-semibold text-text-dark mb-2">
+                                    Full Name <span class="text-red-500">*</span>
+                                </label>
+                                <input type="text" id="contact-name" name="name" required
+                                    class="w-full bg-white border-2 border-gray-200 rounded-md text-text-dark placeholder-text-muted-light focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 px-4 py-3"
+                                    placeholder="Your full name" />
+                            </div>
+                            <div>
+                                <label for="contact-phone" class="block text-sm font-semibold text-text-dark mb-2">
+                                    Phone <span class="text-red-500">*</span>
+                                </label>
+                                <input type="tel" id="contact-phone" name="phone" required
+                                    class="w-full bg-white border-2 border-gray-200 rounded-md text-text-dark placeholder-text-muted-light focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 px-4 py-3"
+                                    placeholder="(555) 123-4567" />
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-sm font-semibold text-text-dark mb-2">
+                                    Email <span class="text-red-500">*</span>
+                                </label>
+                                <input type="email" id="contact-email" name="email" required
+                                    class="w-full bg-white border-2 border-gray-200 rounded-md text-text-dark placeholder-text-muted-light focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 px-4 py-3"
+                                    placeholder="your.email@example.com" />
+                            </div>
+                            <div>
+                                <label for="contact-message" class="block text-sm font-semibold text-text-dark mb-2">
+                                    Message <span class="text-red-500">*</span>
+                                </label>
+                                <textarea id="contact-message" name="message" rows="6" required
+                                    class="w-full bg-white border-2 border-gray-200 rounded-md text-text-dark placeholder-text-muted-light focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 px-4 py-3 resize-none"
+                                    placeholder="Tell us about your project..."></textarea>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-text-muted-light">
+                                <span class="material-symbols-outlined text-primary text-sm">security</span>
+                                <span>This site is protected by reCAPTCHA.</span>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-primary text-white font-bold py-4 rounded-md hover:bg-primary-light transform hover:scale-[1.02] transition-all duration-300 shadow-lg text-lg">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="space-y-8">
+                        <div>
+                            <h2 class="text-3xl font-display font-bold text-text-dark mb-6">Contact Information</h2>
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-primary text-2xl">business</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-text-dark mb-1">Tri State Signs & Awnings</h3>
+                                        <p class="text-text-muted-light">333 Wyandanch Avenue</p>
+                                        <p class="text-text-muted-light">West Babylon, NY 11704</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-primary text-2xl">phone</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-text-dark mb-1">Phone</h3>
+                                        <a href="tel:7187050333" class="text-primary hover:underline text-lg font-semibold">(718) 705-0333</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-text-dark mb-1">Business Hours</h3>
+                                        <p class="text-text-muted-light">Mon - Fri: 8:00 am - 5:00 pm</p>
+                                        <p class="text-text-muted-light">Sat - Sun: Closed</p>
+                                        <p class="text-primary font-semibold mt-2">Same-Day Appointments Available</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Area -->
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="text-xl font-display font-bold text-text-dark mb-4">Service Area</h3>
+                            <div class="grid grid-cols-2 gap-2 text-sm text-text-muted-light">
+                                <div>✓ Hoboken, NJ</div>
+                                <div>✓ Jersey City, NJ</div>
+                                <div>✓ New Jersey</div>
+                                <div>✓ Connecticut</div>
+                                <div>✓ Union City, NJ</div>
+                                <div>✓ Great Neck, NY</div>
+                                <div>✓ New York, NY</div>
+                                <div>✓ Northport, NY</div>
+                                <div>✓ Nassau County, NY</div>
+                                <div>✓ Suffolk County, NY</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAP SECTION -->
+        <section class="bg-gray-50 py-16 sm:py-20 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-display font-bold text-text-dark mb-8 text-center">Find Us</h2>
+                <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3790.4841963418253!2d-73.35318614490798!3d40.74133106263205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28150b289a2e1%3A0x9f55f2d3a5aecee6!2sTri%20State%20Signs%20%26%20Awnings!5e1!3m2!1ses!2ssv!4v1765501259497!5m2!1ses!2ssv"
                         class="absolute inset-0 w-full h-full border-0" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                </div>
-            </div>
-        </section>
-        <section class="bg-white py-16 sm:py-10 lg:py-14 text-text-primary">
-            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 lg:gap-8">
-                    <div class="col-span-1">
-                        <div class="md:col-span-2 bg-white text-text-dark p-6 sm:p-8 rounded-lg shadow-2xl">
-                            <h2 class="text-xl sm:text-2xl font-display font-bold text-center mb-6">Send us a message
-                            </h2>
-                            <p>Please fill out this short form, and we'll contact you shortly. </p>
-                            <form class="space-y-4 sm:space-y-5">
-                                <div>
-                                    <label class="sr-only" for="full-name">Full Name</label>
-                                    <input
-                                        class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
-                                        id="full-name" placeholder="Full Name*" type="text" />
-                                </div>
-                                <div>
-                                    <label class="sr-only" for="phone">Phone</label>
-                                    <input
-                                        class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
-                                        id="phone" placeholder="Phone*" type="tel" />
-                                </div>
-                                <div>
-                                    <label class="sr-only" for="email">Email</label>
-                                    <input
-                                        class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
-                                        id="email" placeholder="Email*" type="email" />
-                                </div>
-                                <div>
-                                    <label class="sr-only" for="message">Message</label>
-                                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Message*" class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"></textarea>
-                                </div>
-                                <p class="text-[11px] sm:text-xs text-text-muted-light text-center pt-1 sm:pt-2">
-                                    This site is protected by reCAPTCHA.
-                                </p>
-                                <button
-                                    class="w-full bg-primary text-text-light font-bold py-2.5 sm:py-3 rounded-md hover:bg-primary-light transform hover:-translate-y-0.5 transition-all duration-300 shadow-md text-sm sm:text-base"
-                                    type="submit">
-                                    Send Message
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-span-1">
-                        <p><b>Tri State Signs & Awnings</b>
-                            <br>
-                            333 Wyandanch Avenue
-                            <br>
-                            West Babylon , NY 11704
-                        </p>
-                        <br>
-                        <br>
-                        <p>
-                            <b>Service Area:</b>
-                        </p>
-                        <ul>
-                            <li>Hoboken, NJ</li>
-                            <li>Jersey City, NJ</li>
-                            <li>New Jersey</li>
-                            <li>Connecticut</li>
-                            <li>Union City, NJ 07087</li>
-                            <li>Great Neck, NY</li>
-                            <li>New York, NY</li>
-                            <li>Northport, NY 11768</li>
-                            <li>Nassau County, NY</li>
-                            <li>Suffolk County, NY</li>
-                        </ul>
-                        <br><br>
-                        <p>
-                            <b>Mon - Fri</b> 8:00 am - 5:00 pm
-                            <br>
-                            <b>Sat - Sun</b> Closed
-                            <br>
-                            <b>Same-Day Appointments</b>
-                            <br>
-                            <b>Holiday Hours</b>
-                        </p>
-                    </div>
-                    <div class="col-span-1">
-                        <br>
-                        <p>Main Phone: (718) 705-0333 <br>
-
-                            Alt Phone: (718) 705-0333 <br>
-                            <br><br>
-                            <b>Email Us</b> <br>
-                            ACH <br>
-                            Cash <br>
-                            Check <br>
-                            Discover <br>
-                            Mastercard <br>
-                            Invoice <br>
-                            Visa
-                        </p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -657,22 +679,32 @@
 
     <!-- Barra lateral fija -->
     <div
-        class="hidden sm:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col items-center bg-primary-dark shadow-lg rounded-l-md z-30">
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center rounded-tl-md group"
-            href="#" title="Call Us"><span
-                class="material-symbols-outlined text-base sm:text-lg">phone</span></a>
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group"
-            href="{{ url('/reviews') }}" title="Reviews"><span
-                class="material-symbols-outlined text-base sm:text-lg">star</span></a>
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group"
-            href="{{ url('request-call-back') }}" title="Email Us"><span
-                class="material-symbols-outlined text-base sm:text-lg">email</span></a>
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group"
-            href="#" title="Our Location"><span
-                class="material-symbols-outlined text-base sm:text-lg">location_on</span></a>
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center rounded-bl-md group"
-            href="#" title="Share"><span
-                class="material-symbols-outlined text-base sm:text-lg">share</span></a>
+        class="hidden sm:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col items-center bg-gradient-to-b from-primary-dark to-primary-light shadow-lg rounded-l-md z-30">
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center rounded-tl-md group relative flex items-center justify-center"
+            href="tel:7187050333" title="Call Us">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">phone</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Call Us</span>
+        </a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group relative flex items-center justify-center"
+            href="{{ url('/reviews') }}" title="Reviews">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">star</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Reviews</span>
+        </a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group relative flex items-center justify-center"
+            href="{{ url('request-call-back') }}" title="Email Us">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">email</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Email Us</span>
+        </a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group relative flex items-center justify-center"
+            href="https://www.google.com/maps/search/333+Wyandanch+Ave,+West+Babylon,+NY" target="_blank" title="Our Location">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">location_on</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Our Location</span>
+        </a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center rounded-bl-md group relative flex items-center justify-center"
+            href="#" title="Share">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">share</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Share</span>
+        </a>
     </div>
 
     <!-- FOOTER -->

@@ -386,108 +386,43 @@
     <main>
         <!-- HERO -->
         <section class="hero-bg text-text-light">
-            <div class="hero-content max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-10 lg:gap-16 items-center">
-                    <div class="md:col-span-3 space-y-6 sm:space-y-8">
-                        <h1 class="text-5xl font-display font-bold leading-tight">Exterior Custom Signs in Deer Park,
-                            NY and Surrounding Areas</h1>
-
-                        <ul class="space-y-3 sm:space-y-4 text-base sm:text-lg">
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
-                                <span>Five-Year Sign Warranty</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
-                                <span>Impossible Deadlines? No Problem—We Deliver</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
-                                <span>Over 40 Years Of Trusted Experience</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
-                                <span>Your Local One-stop Shop For All Signage And Awning Needs: No Job Too Big Or Too
-                                    Small</span>
-                            </li>
-                        </ul>
-
-                        <div>
-                            <p class="text-3xl sm:text-4xl font-display font-bold tracking-tight">(718) 705-0333</p>
-                            <p class="mt-2 text-secondary text-sm sm:text-base">
-                                Hours: <span id="businessStatus" class="font-medium">Loading...</span> • Opens 08:00 am
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Form -->
-                    <div class="md:col-span-2 bg-white text-text-dark p-6 sm:p-8 rounded-lg shadow-2xl">
-                        <h2 class="text-xl sm:text-2xl font-display font-bold text-center mb-6">Request a Call Back
-                        </h2>
-                        <form class="space-y-4 sm:space-y-5">
-                            <div>
-                                <label class="sr-only" for="full-name">Full Name</label>
-                                <input
-                                    class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
-                                    id="full-name" placeholder="Full Name*" type="text" />
-                            </div>
-                            <div>
-                                <label class="sr-only" for="phone">Phone</label>
-                                <input
-                                    class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
-                                    id="phone" placeholder="Phone*" type="tel" />
-                            </div>
-                            <div>
-                                <label class="sr-only" for="email">Email</label>
-                                <input
-                                    class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
-                                    id="email" placeholder="Email*" type="email" />
-                            </div>
-                            <div>
-                                <label class="sr-only" for="service">Service</label>
-                                <select
-                                    class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
-                                    id="service">
-                                    <option class="text-text-muted-light">Service*</option>
-                                    <option>Sign Services</option>
-                                    <option>Awning Services</option>
-                                    <option>Installation</option>
-                                </select>
-                            </div>
-                            <p class="text-[11px] sm:text-xs text-text-muted-light text-center pt-1 sm:pt-2">
-                                This site is protected by reCAPTCHA.
-                            </p>
-                            <button
-                                class="w-full bg-primary text-text-light font-bold py-2.5 sm:py-3 rounded-md hover:bg-primary-light transform hover:-translate-y-0.5 transition-all duration-300 shadow-md text-sm sm:text-base"
-                                type="submit">
-                                Request Call Back
-                            </button>
-                        </form>
+            <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
+                <div class="text-center max-w-4xl mx-auto space-y-6">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight">
+                        Exterior Custom Signs
+                    </h1>
+                    <p class="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto">
+                        Transform Your Business With Professional Exterior Signage in Deer Park, NY and Surrounding Areas
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+                        <a href="tel:7187050333"
+                            class="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg text-lg">
+                            <span class="material-symbols-outlined">phone</span>
+                            (718) 705-0333
+                        </a>
+                        <a href="{{ url('/request-call-back') }}"
+                            class="inline-flex items-center gap-2 px-8 py-4 bg-primary-light text-white font-bold rounded-lg hover:bg-primary transform hover:scale-105 transition-all duration-300 shadow-lg text-lg">
+                            <span class="material-symbols-outlined">phone_in_talk</span>
+                            Request Call Back
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- RESTO DE SECCIONES (ajuste mínimo, ya son responsivas) -->
-        <section class="bg-white py-16 sm:py-20 lg:py-24 text-text-primary">
-            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 ">
-                    <div class="md:col-span-2">
-
-                        <ul class="space-y-3 sm:space-y-4 text-sm sm:text-base lg:text-lg">
-                            <li class="flex items-start">
-                                <span
-                                    class="material-symbols-outlined text-primary mr-3 mt-0.5">arrow_circle_right</span>
-                                <span class="text-3xl"><b>Transform Your Business With Exterior Signs</b></span>
-                            </li>
-                        </ul>
-                        <p>
-                            Our team goes above and beyond, managing all permitting processes and providing prompt
-                            service when you
-                            need it most. Our dedication to meeting expectations, and the peace of mind that comes with
-                            knowing your
-                            signage is crafted to the highest standards.
-                        </p>
+        <!-- CONTENT SECTION -->
+        <section class="bg-white py-16 sm:py-20 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <div class="lg:col-span-2 space-y-8">
+                        <div>
+                            <h2 class="text-3xl sm:text-4xl font-display font-bold text-text-dark mb-6">
+                                Transform Your Business With Exterior Signs
+                            </h2>
+                            <p class="text-lg text-text-muted-light leading-relaxed">
+                                Our team goes above and beyond, managing all permitting processes and providing prompt service when you need it most. Our dedication to meeting expectations, and the peace of mind that comes with knowing your signage is crafted to the highest standards.
+                            </p>
+                        </div>
                         <br>
                         <ul class="space-y-3 sm:space-y-4 text-sm sm:text-base lg:text-lg">
                             <li class="flex items-start">
@@ -982,22 +917,32 @@
 
     <!-- Barra lateral fija -->
     <div
-        class="hidden sm:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col items-center bg-primary-dark shadow-lg rounded-l-md z-30">
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center rounded-tl-md group"
-            href="#" title="Call Us"><span
-                class="material-symbols-outlined text-base sm:text-lg">phone</span></a>
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group"
-            href="{{ url('/reviews') }}" title="Reviews"><span
-                class="material-symbols-outlined text-base sm:text-lg">star</span></a>
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group"
-            href="{{ url('request-call-back') }}" title="Email Us"><span
-                class="material-symbols-outlined text-base sm:text-lg">email</span></a>
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group"
-            href="#" title="Our Location"><span
-                class="material-symbols-outlined text-base sm:text-lg">location_on</span></a>
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center rounded-bl-md group"
-            href="#" title="Share"><span
-                class="material-symbols-outlined text-base sm:text-lg">share</span></a>
+        class="hidden sm:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col items-center bg-gradient-to-b from-primary-dark to-primary-light shadow-lg rounded-l-md z-30">
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center rounded-tl-md group relative flex items-center justify-center"
+            href="tel:7187050333" title="Call Us">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">phone</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Call Us</span>
+        </a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group relative flex items-center justify-center"
+            href="{{ url('/reviews') }}" title="Reviews">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">star</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Reviews</span>
+        </a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group relative flex items-center justify-center"
+            href="{{ url('request-call-back') }}" title="Email Us">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">email</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Email Us</span>
+        </a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group relative flex items-center justify-center"
+            href="https://www.google.com/maps/search/333+Wyandanch+Ave,+West+Babylon,+NY" target="_blank" title="Our Location">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">location_on</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Our Location</span>
+        </a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center rounded-bl-md group relative flex items-center justify-center"
+            href="#" title="Share">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">share</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Share</span>
+        </a>
     </div>
 
     <!-- FOOTER -->

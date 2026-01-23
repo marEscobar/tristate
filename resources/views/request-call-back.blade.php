@@ -125,9 +125,9 @@
 
 <body class="font-sans bg-background-light dark:bg-background-dark text-text-dark dark:text-text-light antialiased">
     <!-- HEADER -->
-    <header class="bg-background-light dark:bg-background-dark shadow-sm sticky top-0 z-40">
+    <header class="bg-white dark:bg-background-dark shadow-md sticky top-0 z-40 backdrop-blur-sm bg-white/95">
         <!-- Top bar -->
-        <div class="border-b border-gray-200 dark:border-gray-700 bg-white">
+        <div class="border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-gray-50 to-white">
             <div
                 class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row md:justify-between md:items-center gap-3 md:gap-0 text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">
                 <div class="flex flex-wrap items-center gap-4">
@@ -153,11 +153,15 @@
                     </div>
                 </div>
                 <div class="flex items-center justify-between md:justify-end gap-4">
-                    <a class="inline-block px-4 sm:px-6 py-2 bg-primary text-text-light font-bold rounded-md hover:bg-primary-light transition-all duration-300 text-xs sm:text-sm shadow-sm text-center"
-                        href="{{ url('/request-call-back') }}">Request Call Back</a>
-                    <p class="text-base sm:text-lg font-bold text-text-dark dark:text-text-light whitespace-nowrap">
+                    <a class="inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 bg-gradient-to-r from-primary to-primary-light text-text-light font-bold rounded-lg hover:from-primary-light hover:to-primary transform hover:scale-105 transition-all duration-300 text-xs sm:text-sm shadow-md hover:shadow-lg text-center"
+                        href="{{ url('/request-call-back') }}">
+                        <span class="material-symbols-outlined text-sm">phone_in_talk</span>
+                        Request Call Back
+                    </a>
+                    <a href="tel:7187050333" class="flex items-center gap-2 text-base sm:text-lg font-bold text-text-dark dark:text-text-light whitespace-nowrap hover:text-primary transition-colors duration-300">
+                        <span class="material-symbols-outlined text-primary">call</span>
                         (718) 705-0333
-                    </p>
+                    </a>
                 </div>
             </div>
         </div>

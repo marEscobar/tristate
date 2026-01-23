@@ -381,647 +381,328 @@
     </header>
 
     <!-- MAIN -->
-
     <main>
-        <!-- HERO -->
+        <!-- HERO SECTION - Similar to Valle Signs -->
         <section class="hero-bg text-text-light">
-            <div class="hero-content max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-10 lg:gap-16 items-center">
-                    <div class="md:col-span-3 space-y-6 sm:space-y-8">
-                        <h1 class="text-5xl font-display font-bold leading-tight">Custom Signs in West Babylon, NY and
-                            Surrounding
-                            Areas</h1>
-
-                        <ul class="space-y-3 sm:space-y-4 text-base sm:text-lg">
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
-                                <span>Five-Year Sign Warranty</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
-                                <span>Impossible Deadlines? No Problem—We Deliver</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
-                                <span>Over 40 Years Of Trusted Experience</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
-                                <span>Your Local One-stop Shop For All Signage Needs</span>
-                            </li>
-                        </ul>
-
-                        <div>
-                            <p class="text-3xl sm:text-4xl font-display font-bold tracking-tight">(718) 705-0333</p>
-                            <p class="mt-2 text-secondary text-sm sm:text-base">
-                                Hours: <span id="businessStatus" class="font-medium">Loading...</span> • Opens 08:00 am
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Form -->
-                    <div class="md:col-span-2 bg-white text-text-dark p-6 sm:p-8 rounded-lg shadow-2xl">
-                        <h2 class="text-xl sm:text-2xl font-display font-bold text-center mb-6">Request a Call Back
-                        </h2>
-                        <form class="space-y-4 sm:space-y-5">
-                            <div>
-                                <label class="sr-only" for="full-name">Full Name</label>
-                                <input
-                                    class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
-                                    id="full-name" placeholder="Full Name*" type="text" />
-                            </div>
-                            <div>
-                                <label class="sr-only" for="phone">Phone</label>
-                                <input
-                                    class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
-                                    id="phone" placeholder="Phone*" type="tel" />
-                            </div>
-                            <div>
-                                <label class="sr-only" for="email">Email</label>
-                                <input
-                                    class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
-                                    id="email" placeholder="Email*" type="email" />
-                            </div>
-                            <div>
-                                <label class="sr-only" for="service">Service</label>
-                                <select
-                                    class="w-full bg-gray-100 border border-gray-300 rounded text-text-dark focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
-                                    id="service">
-                                    <option class="text-text-muted-light">Service*</option>
-                                    <option>Sign Services</option>
-                                    <option>Awning Services</option>
-                                    <option>Installation</option>
-                                </select>
-                            </div>
-                            <p class="text-[11px] sm:text-xs text-text-muted-light text-center pt-1 sm:pt-2">
-                                This site is protected by reCAPTCHA.
-                            </p>
-                            <button
-                                class="w-full bg-primary text-text-light font-bold py-2.5 sm:py-3 rounded-md hover:bg-primary-light transform hover:-translate-y-0.5 transition-all duration-300 shadow-md text-sm sm:text-base"
-                                type="submit">
-                                Request Call Back
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- RESTO DE SECCIONES (ajuste mínimo, ya son responsivas) -->
-        <section class="bg-primary text-text-light py-16 sm:py-20 lg:py-24">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-12">
-                    <div class="flex-shrink-0">
-                        <div
-                            class="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 border-4 border-secondary rounded-lg flex items-center justify-center bg-primary-light shadow-lg mx-auto md:mx-0">
-                            <span class="material-symbols-outlined" style="font-size: 48px;">video_chat</span>
-                        </div>
-                    </div>
-                    <div class="text-left md:max-w-2xl">
-                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-3 sm:mb-4">
-                            Now Offering Virtual Consultations
-                        </h2>
-                        <p class="text-text-muted-dark mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg">
-                            Submit your request today to set up a live video consultation
-                            from your smartphone, tablet, or computer! Get 5% off a service when you request a virtual
-                            call!
-                        </p>
-                        <a class="inline-block bg-accent text-primary-dark font-bold px-6 sm:px-10 py-3 rounded-md hover:bg-gray-400 transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg text-sm sm:text-base"
-                            href="{{ url('/request-call-back') }}">Request Consultation</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 sm:py-20 lg:py-24 bg-background-light dark:bg-background-dark">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2
-                    class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark dark:text-text-light mb-4 sm:mb-6">
-                    Your Trusted Partner in Signage Solutions
-                </h2>
-                <div
-                    class="space-y-4 sm:space-y-6 text-text-muted-light dark:text-text-muted-dark text-sm sm:text-base lg:text-lg leading-relaxed">
-                    <p>
-                        Tri State Signs &amp; Awnings has been a cornerstone in the tri-state area for over three
-                        decades,
-                        delivering exceptional signage solutions tailored to your business needs. We are committed to
-                        providing 100%
-                        customer satisfaction through our concierge-level service, ensuring every project exceeds
-                        expectations.
-                    </p>
-                    <p>
-                        Our team of experts handles all permitting on behalf of our clients, making the process seamless
-                        and
-                        hassle-free. As a UL-listed company, we guarantee the quality and durability of our materials
-                        and
-                        craftsmanship. Whether you need exterior signs, interior signs, awe-inspiring awnings, or
-                        cutting-edge LED
-                        displays, we've got you covered.
-                    </p>
-                    <p>
-                        Trust us to bring your brand to life with signs that not only capture attention but also stand
-                        the test of
-                        time.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 sm:py-20 lg:py-24 bg-gray-100 dark:bg-primary-dark">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2
-                    class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark dark:text-text-light mb-4 sm:mb-6">
-                    Learn More Today
-                </h2>
-                <p
-                    class="text-text-muted-light dark:text-text-muted-dark text-sm sm:text-base lg:text-lg leading-relaxed">
-                    To get started with custom signs in West Babylon, NY, reach out to our team today. We look forward
-                    to hearing
-                    from you and discussing your vision. If you have any questions, we're here to help. Want to learn
-                    more about
-                    our services? Explore our website! Whether you're looking for interior or exterior custom signs, our
-                    experts
-                    have you covered. Let us help you take your branding to the next level.
-                </p>
-            </div>
-        </section>
-
-        <section class="bg-primary py-16 sm:py-20 lg:py-24 text-text-light">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-center mb-10 sm:mb-12">
-                    Why Choose Tri State Signs &amp; Awnings?
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 items-center">
-                    <div class="md:col-span-1">
-                        <ul class="space-y-3 sm:space-y-4 text-sm sm:text-base lg:text-lg">
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
-                                <span>Five-Year Sign Warranty</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
-                                <span>40+ Years of Experience</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
-                                <span>One-Year Electrical Warranty</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
-                                <span>Service Provided Within 48 Hours</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
-                                <span>Handle All Permitting on Your Behalf</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined text-secondary mr-3 mt-0.5">check_circle</span>
-                                <span>100% Customer Satisfaction Guaranteed</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div
-                        class="md:col-span-2 text-text-muted-dark text-sm sm:text-base lg:text-lg space-y-4 sm:space-y-6">
-                        <p>
-                            With over 40 years of experience, Tri State Signs &amp; Awnings stands out for its
-                            unwavering commitment
-                            to quality and customer satisfaction. We offer a comprehensive range of services from design
-                            to
-                            installation, ensuring your signage journey is smooth and efficient.
-                        </p>
-                        <p>
-                            Our team goes above and beyond, managing all permitting processes and providing prompt
-                            service when you
-                            need it most. Our dedication to meeting expectations, and the peace of mind that comes with
-                            knowing your
-                            signage is crafted to the highest standards.
-                        </p>
-                        <div class="pt-2 sm:pt-4">
-                            <a class="inline-block bg-accent text-primary-dark font-bold px-6 sm:px-8 py-2.5 sm:py-3 rounded-md hover:bg-gray-400 transform hover:-translate-y-0.5 transition-all duration-300 shadow-md text-sm sm:text-base"
-                                href="{{ url('/contact-us') }}">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 sm:py-20 lg:py-24 bg-background-light dark:bg-background-dark">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-                    <h2
-                        class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark dark:text-text-light">
-                        Our Services
-                    </h2>
-                    <p
-                        class="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-text-muted-light dark:text-text-muted-dark">
-                        From eye-catching exterior signs to functional and elegant awnings, we offer a comprehensive
-                        suite of
-                        services to meet all your signage needs.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                    <!-- Card 1 -->
-                    <div
-                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
-                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
-                            <span class="material-symbols-outlined" style="font-size: 40px;">store</span>
-                        </div>
-                        <div class="flex-grow">
-                            <h3
-                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
-                                Exterior Signs
-                            </h3>
-                            <p
-                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
-                                Exterior signs are the first impression customers have of your business. We create
-                                eye-catching,
-                                durable signs to enhance visibility and attract your target audience.
-                            </p>
-                        </div>
-                        <div class="mt-auto">
-                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
-                                href="{{ url('/exterior-signs') }}">Learn More</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div
-                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
-                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
-                            <span class="material-symbols-outlined" style="font-size: 40px;">meeting_room</span>
-                        </div>
-                        <div class="flex-grow">
-                            <h3
-                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
-                                Interior Signs
-                            </h3>
-                            <p
-                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
-                                Enhance your customer experience with our functional and aesthetically pleasing interior
-                                signs, from
-                                wayfinding to reception logos, all aligned with your brand image.
-                            </p>
-                        </div>
-                        <div class="mt-auto">
-                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
-                                href="{{ url('/interior-signs') }}">Learn More</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div
-                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
-                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
-                            <span class="material-symbols-outlined" style="font-size: 40px;">storefront</span>
-                        </div>
-                        <div class="flex-grow">
-                            <h3
-                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
-                                Commercial Awnings
-                            </h3>
-                            <p
-                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
-                                Our high-quality, custom-designed awnings provide shade and shelter while serving as a
-                                visually
-                                appealing extension of your brand and storefront aesthetic.
-                            </p>
-                        </div>
-                        <div class="mt-auto">
-                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
-                                href="{{ url('/commercial-awnings') }}">Learn More</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div
-                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
-                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
-                            <span class="material-symbols-outlined" style="font-size: 40px;">villa</span>
-                        </div>
-                        <div class="flex-grow">
-                            <h3
-                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
-                                Residential Awnings
-                            </h3>
-                            <p
-                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
-                                We offer a diverse range of residential awnings, from durable metal options to elegant
-                                fabric designs
-                                in various colors, adding style to patios and entrances.
-                            </p>
-                        </div>
-                        <div class="mt-auto">
-                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
-                                href="{{ url('/residential-awnings') }}">Learn More</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div
-                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
-                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
-                            <span class="material-symbols-outlined" style="font-size: 40px;">description</span>
-                        </div>
-                        <div class="flex-grow">
-                            <h3
-                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
-                                Sign Permit Expediting
-                            </h3>
-                            <p
-                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
-                                Navigating the permit process is easy with us. Our team handles all aspects of permit
-                                expediting,
-                                ensuring your project is compliant and approved without delays.
-                            </p>
-                        </div>
-                        <div class="mt-auto">
-                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
-                                href="{{ url('/sign-permit-expediting') }}">Learn More</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 6 -->
-                    <div
-                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
-                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
-                            <span class="material-symbols-outlined" style="font-size: 40px;">construction</span>
-                        </div>
-                        <div class="flex-grow">
-                            <h3
-                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
-                                Sign Installation Services
-                            </h3>
-                            <p
-                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
-                                Our skilled technicians ensure your signs are installed correctly and safely, using
-                                state-of-the-art
-                                equipment for secure mounting and maximum visibility.
-                            </p>
-                        </div>
-                        <div class="mt-auto">
-                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
-                                href="{{ url('/installation') }}">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  gap-6 lg:gap-8">
-                    <!-- Card 1 -->
-                    <div
-                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
-                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
-                            {{-- <span class="material-symbols-outlined" style="font-size: 40px;">store</span> --}}
-                            <span class="material-symbols-outlined" style="font-size: 40px;"> desktop_windows</span>
-                        </div>
-                        <div class="flex-grow">
-                            <h3
-                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
-                                LED Display
-                            </h3>
-                            <p
-                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
-                                LED displays offer dynamic and engaging ways to communicate with your audience. At Tri
-                                State Signs & Awnings, we provide cutting-edge LED displays that captivate attention and
-                                convey your message effectively. Our LED solutions are energy-efficient, customizable,
-                                and designed to suit various business needs. Whether for advertising, announcements, or
-                                informational purposes, we've got you covered.
-                            </p>
-                        </div>
-                        <div class="mt-auto">
-                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
-                                href="{{ url('/led-displays') }}">Learn More</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div
-                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col p-6 sm:p-8">
-                        <div class="flex-shrink-0 text-primary dark:text-secondary mb-4">
-                            <span class="material-symbols-outlined" style="font-size: 40px;"> wallpaper_slideshow
-                            </span>
-                        </div>
-                        <div class="flex-grow">
-                            <h3
-                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
-                                Gallery of Our Work
-                            </h3>
-                            <p
-                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 text-sm sm:text-base">
-                                Check out our gallery that showcases our exceptional craftsmanship and innovative
-                                designs in signage, LED lights, awnings, and canopies. Each product comes in various
-                                styles and materials, so give us your idea, and we'll bring it to life. Our team will
-                                enhance your brand presence while providing practical solutions that stand the test of
-                                time. Give us a call today to get started. Our services to you are second to none.
-                            </p>
-                        </div>
-                        <div class="mt-auto">
-                            <a class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm"
-                                href="{{ url('/gallery') }}">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 sm:py-20 lg:py-24 bg-gray-100 dark:bg-primary-dark/40">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-                    <h2
-                        class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark dark:text-text-light">
-                        Our Commitment to You
-                    </h2>
-                    <p
-                        class="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-text-muted-light dark:text-text-muted-dark">
-                        At Tri State Signs &amp; Awnings, customer satisfaction is at the heart of everything we do. We
-                        strive to
-                        deliver solutions that exceed their expectations. Backed by a high level of skill and know-how,
-                        we provide
-                        high-quality products that effectively communicate your brand's message while maintaining a high
-                        standard.
-                        Our extensive range of materials and our professional and skilled staff offer a range of stylish
-                        and durable
-                        options to meet all your needs.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-                    <div class="bg-white dark:bg-primary-dark/80 rounded-lg shadow-lg overflow-hidden flex flex-col">
-                        <img alt="A storefront with a sign" class="w-full h-48 sm:h-56 object-cover"
-                            src="{{ asset('img/img1.png') }}" />
-                        <div class="p-5 sm:p-6 flex flex-col flex-grow text-center">
-                            <h3
-                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
-                                Same-Day Appointments
-                            </h3>
-                            <p
-                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 flex-grow text-sm sm:text-base">
-                                Tri State Signs &amp; Awnings understands the urgency of planning your signage and
-                                awning needs. We
-                                address this promptly, which is why we offer same-day appointments for consultations and
-                                assessments.
-                            </p>
-                            <a class="mt-auto inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm w-full sm:w-auto"
-                                href="{{ url('contact-us')}}">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="bg-white dark:bg-primary-dark/80 rounded-lg shadow-lg overflow-hidden flex flex-col">
-                        <img alt="A modern building with a distinct sign" class="w-full h-48 sm:h-56 object-cover"
-                            src="{{ asset('img/img2.png') }}" />
-                        <div class="p-5 sm:p-6 flex flex-col flex-grow text-center">
-                            <h3
-                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
-                                Concierge-Level Service
-                            </h3>
-                            <p
-                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 flex-grow text-sm sm:text-base">
-                                Concierge means much more than that you receive personal attention and expert guidance
-                                throughout your
-                                project. From the initial consultation to the final installation, we've got it handled.
-                            </p>
-                            <a class="mt-auto inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm w-full sm:w-auto"
-                                href="{{ url('contact-us')}}">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="bg-white dark:bg-primary-dark/80 rounded-lg shadow-lg overflow-hidden flex flex-col">
-                        <img alt="A large retail store sign at night" class="w-full h-48 sm:h-56 object-cover"
-                            src="{{ asset('img/img3.png') }}" />
-                        <div class="p-5 sm:p-6 flex flex-col flex-grow text-center">
-                            <h3
-                                class="text-xl sm:text-2xl font-display font-bold mb-2 sm:mb-3 text-text-dark dark:text-text-light">
-                                UL Listed
-                            </h3>
-                            <p
-                                class="text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6 flex-grow text-sm sm:text-base">
-                                As a UL listed business, Tri State Signs &amp; Awnings prioritizes safety and quality in
-                                every product
-                                we create, adhering to industry standards for performance and reliability. We deliver
-                                exceptional
-                                results.
-                            </p>
-                            <a class="mt-auto inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm w-full sm:w-auto"
-                                href="{{ url('contact-us')}}">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="write-bg py-16 sm:py-20 lg:py-24 bg-background-light dark:bg-background-dark">
-            <div class="write-content max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-center mb-10 sm:mb-12 text-text-light dark:text-text-dark">
-                        Here's what our satisfied customers are saying...
-                    </h2>
-                    <br>
-                    <p class="sm:mb-6 text-sm sm:text-base text-center text-text-light dark:text-text-dark">
-                        At Tri State Signs & Awnings, we take pride in providing exceptional sign and awning services to
-                        our customers. We would be grateful if you could share your thoughts about our business with
-                        others. Your feedback helps us improve and helps others make informed decisions. Please take a
-                        moment to leave a review of Tri State Signs & Awnings and let others know what you think.</p>
-                        <button id="openReviewModal" class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm">Write a Review</button>
-                    </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                    <div
-                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md p-6 sm:p-8 flex flex-col">
-                        <div class="flex items-center justify-between mb-3 sm:mb-4">
-                            <div>
-                                <h3 class="font-bold text-base sm:text-lg text-text-dark dark:text-text-light">Brittany
-                                    D</h3>
-                                <p class="text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">5/1/2025
-                                </p>
-                            </div>
-                            <div class="flex text-primary dark:text-yellow-400">
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                            </div>
-                        </div>
-                        <p
-                            class="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-sm sm:text-base">
-                            Super easy to work with and they really know their stuff. When it comes to permits, custom
-                            vinyl turned out
-                            awesome, and the awning looking good too -- totally transforms the front of storefront.
-                            Definitely recommend!
-                        </p>
-                    </div>
-                    <div
-                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md p-6 sm:p-8 flex flex-col">
-                        <div class="flex items-center justify-between mb-3 sm:mb-4">
-                            <div>
-                                <h3 class="font-bold text-base sm:text-lg text-text-dark dark:text-text-light">Brit
-                                </h3>
-                                <p class="text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">5/1/2025
-                                </p>
-                            </div>
-                            <div class="flex text-primary dark:text-yellow-400">
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                            </div>
-                        </div>
-                        <p
-                            class="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-sm sm:text-base">
-                            Melvin, Dennis and the whole crew at TriState are professional, creative, and reliable--they
-                            delivered a
-                            custom sign and awning that was high-quality and eye-catching. Excellent customer service
-                            and timely
-                            installation. Highly recommended these guys for a storefront side that will set apart your
-                            business apart.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 sm:py-20 lg:py-24 bg-gray-100 dark:bg-primary-dark/40">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                    <div class="lg:w-1/2 text-center lg:text-left">
-                        <h2
-                            class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark dark:text-text-light mb-4">
-                            Learn More About Tri State Signs &amp; Awnings
-                        </h2>
-                        <p
-                            class="text-text-muted-light dark:text-text-muted-dark mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg">
-                            Located in West Babylon, NY, Tri State Signs &amp; Awnings specializes in signs, awnings,
-                            and LED
-                            displays. 40+ years of trusted experience. Five-year sign warranty. With same-day
-                            appointments, call for
-                            your free estimate!
-                        </p>
-                        <a class="inline-flex items-center bg-primary text-text-light font-bold px-6 sm:px-8 py-2.5 sm:py-3 rounded-md hover:bg-primary-light transition-colors duration-300 shadow-md text-sm sm:text-base"
-                            href="#">
-                            <span class="material-symbols-outlined mr-2 text-base sm:text-lg">play_circle</span>
-                            Watch Video
+            <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
+                <div class="text-center max-w-4xl mx-auto space-y-8">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight">
+                        Custom Signs & Awnings That Have Drawn A Crowd For Over 40 Years
+                    </h1>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+                        <a href="{{ url('/request-call-back') }}"
+                           class="inline-flex items-center justify-center bg-white text-primary font-bold px-8 sm:px-12 py-4 sm:py-5 rounded-md hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg text-base sm:text-lg">
+                            Get In Touch
+                        </a>
+                        <a href="{{ url('/contact-us') }}"
+                           class="inline-flex items-center justify-center bg-primary-light text-white font-bold px-8 sm:px-12 py-4 sm:py-5 rounded-md hover:bg-primary transform hover:scale-105 transition-all duration-300 shadow-lg text-base sm:text-lg border-2 border-white">
+                            LET'S GET STARTED
                         </a>
                     </div>
-                    <div class="lg:w-1/2 w-full mt-6 lg:mt-0">
-                        <div class="relative aspect-video w-full">
-                            <iframe class="absolute inset-0 w-full h-full rounded-lg shadow-lg"
-                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player"
+                </div>
+            </div>
+        </section>
+
+        <!-- PERMIT EXPEDITOR SECTION - Similar to Valle Signs -->
+        <section class="bg-white py-12 sm:py-16 lg:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8 sm:mb-12">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark mb-4">
+                        Ask About Our In-House Permit Expeditor
+                    </h2>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8 items-center justify-items-center opacity-60">
+                    <!-- Client logos placeholder - you can add actual logos here -->
+                    <div class="bg-gray-200 h-20 w-full rounded flex items-center justify-center text-text-muted-light text-sm font-semibold">Client 1</div>
+                    <div class="bg-gray-200 h-20 w-full rounded flex items-center justify-center text-text-muted-light text-sm font-semibold">Client 2</div>
+                    <div class="bg-gray-200 h-20 w-full rounded flex items-center justify-center text-text-muted-light text-sm font-semibold">Client 3</div>
+                    <div class="bg-gray-200 h-20 w-full rounded flex items-center justify-center text-text-muted-light text-sm font-semibold">Client 4</div>
+                    <div class="bg-gray-200 h-20 w-full rounded flex items-center justify-center text-text-muted-light text-sm font-semibold">Client 5</div>
+                    <div class="bg-gray-200 h-20 w-full rounded flex items-center justify-center text-text-muted-light text-sm font-semibold">Client 6</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NATIONWIDE SERVICE - Design, Fabrication, Installation -->
+        <section class="bg-gray-50 py-16 sm:py-20 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark mb-4">
+                        Nationwide Service
+                    </h2>
+                    <p class="text-lg text-text-muted-light max-w-3xl mx-auto">
+                        Tri State Signs & Awnings is trusted by top national brands, for their superior design, fabrication and installation services.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                    <!-- 01 Design -->
+                    <div class="text-center">
+                        <div class="inline-flex items-center justify-center w-20 h-20 bg-primary text-white rounded-full mb-6 text-3xl font-bold">
+                            01
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-text-dark mb-4">Design</h3>
+                        <p class="text-text-muted-light leading-relaxed">
+                            Let us help you enhance your business with a custom designed sign with the support of our expert staff.
+                        </p>
+                    </div>
+                    <!-- 02 Fabrication -->
+                    <div class="text-center">
+                        <div class="inline-flex items-center justify-center w-20 h-20 bg-primary text-white rounded-full mb-6 text-3xl font-bold">
+                            02
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-text-dark mb-4">Fabrication</h3>
+                        <p class="text-text-muted-light leading-relaxed">
+                            We build signs to last, using only the finest quality materials in the manufacturing process.
+                        </p>
+                    </div>
+                    <!-- 03 Installation -->
+                    <div class="text-center">
+                        <div class="inline-flex items-center justify-center w-20 h-20 bg-primary text-white rounded-full mb-6 text-3xl font-bold">
+                            03
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-text-dark mb-4">Installation</h3>
+                        <p class="text-text-muted-light leading-relaxed">
+                            Our technicians arrive on-site with a fully equipped vehicle to get the install job done with quality workmanship.
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="tel:7187050333"
+                       class="inline-flex items-center bg-primary text-white font-bold px-8 py-4 rounded-md hover:bg-primary-light transform hover:scale-105 transition-all duration-300 shadow-lg text-lg">
+                        Call Today For An Estimate!
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR QUALITY SECTION - Similar to Valle Signs -->
+        <section class="bg-white py-16 sm:py-20 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark mb-4">
+                        It's all about
+                    </h2>
+                    <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-primary mb-6">
+                        Our Quality
+                    </h3>
+                    <p class="text-lg text-text-muted-light max-w-4xl mx-auto leading-relaxed">
+                        Noted for custom signs with durability and value, Tri State Signs & Awnings uses only the highest quality materials and processes in the manufacture of our custom signs. As a registered manufacturer with Underwriters Laboratories, Tri State Signs and Awnings is qualified to produce only the safest fixtures that adhere to the strictest codes and standards.
+                    </p>
+                    <div class="mt-8">
+                        <span class="inline-block bg-primary text-white font-bold px-8 py-3 rounded-md text-lg">
+                            UL Listed
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR WORK / GALLERY SECTION - Similar to Valle Signs -->
+        <section class="bg-gray-50 py-16 sm:py-20 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark mb-4">
+                        Our Work
+                    </h2>
+                    <p class="text-lg text-text-muted-light max-w-3xl mx-auto">
+                        Our mission is to help people create innovative solutions to improve and advertise their business. Our goal is moderate growth, annual profitability and to offer the best service possible!!
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                    <a href="{{ url('/commercial-awnings') }}" class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-primary to-primary-light flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-6xl">storefront</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-display font-bold text-text-dark mb-2 group-hover:text-primary transition-colors">
+                                Awnings & Canopies
+                            </h3>
+                            <h4 class="text-lg font-semibold text-primary">Awnings & Canopies</h4>
+                        </div>
+                    </a>
+                    <a href="{{ url('/exterior-signs') }}" class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-primary to-primary-light flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-6xl">text_fields</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-display font-bold text-text-dark mb-2 group-hover:text-primary transition-colors">
+                                Channel Letters
+                            </h3>
+                            <h4 class="text-lg font-semibold text-primary">Channel Letters</h4>
+                        </div>
+                    </a>
+                    <a href="{{ url('/installations') }}" class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-primary to-primary-light flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-6xl">construction</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-display font-bold text-text-dark mb-2 group-hover:text-primary transition-colors">
+                                Sign Installations
+                            </h3>
+                            <h4 class="text-lg font-semibold text-primary">Sign Installations</h4>
+                        </div>
+                    </a>
+                    <a href="{{ url('/led-displays') }}" class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-primary to-primary-light flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-6xl">desktop_windows</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-display font-bold text-text-dark mb-2 group-hover:text-primary transition-colors">
+                                LED Displays
+                            </h3>
+                            <h4 class="text-lg font-semibold text-primary">LED Displays</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS SECTION - Similar to Valle Signs -->
+        <section class="bg-primary text-white py-16 sm:py-20 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-12">Stats</h2>
+                    <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-16">Successful Projects</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 text-center">
+                    <div>
+                        <div class="text-5xl sm:text-6xl lg:text-7xl font-display font-bold mb-4">1000+</div>
+                        <h4 class="text-xl sm:text-2xl font-display font-semibold mb-2">Signs</h4>
+                    </div>
+                    <div>
+                        <div class="text-5xl sm:text-6xl lg:text-7xl font-display font-bold mb-4">500+</div>
+                        <h4 class="text-xl sm:text-2xl font-display font-semibold mb-2">Installations</h4>
+                    </div>
+                    <div>
+                        <div class="text-5xl sm:text-6xl lg:text-7xl font-display font-bold mb-4">100%</div>
+                        <h4 class="text-xl sm:text-2xl font-display font-semibold mb-2">Customer Satisfaction</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WATCH THE PROS VIDEO SECTION - Similar to Valle Signs -->
+        <section class="bg-white py-16 sm:py-20 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-dark mb-4">
+                        Watch The Pros at Tri State Signs & Awnings
+                    </h2>
+                    <p class="text-lg text-text-muted-light max-w-3xl mx-auto mb-8">
+                        From design and fabrication to installation and service, we at Tri State Signs and Awnings are here for you. We pride ourselves in giving you the best possible experience.
+                    </p>
+                    <a href="{{ url('/gallery') }}"
+                       class="inline-flex items-center bg-primary text-white font-bold px-8 py-4 rounded-md hover:bg-primary-light transform hover:scale-105 transition-all duration-300 shadow-lg text-lg">
+                        View Our Project Gallery
+                    </a>
+                </div>
+                <div class="max-w-4xl mx-auto">
+                    <div class="relative aspect-video w-full rounded-lg shadow-2xl overflow-hidden">
+                        <iframe class="absolute inset-0 w-full h-full"
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                title="YouTube video player"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
-                            </iframe>
-                        </div>
+                        </iframe>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- GET A FAST QUOTE FORM - Similar to Valle Signs -->
+        <section class="bg-gray-50 py-16 sm:py-20 lg:py-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-lg shadow-xl p-8 sm:p-10 lg:p-12">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl sm:text-4xl font-display font-bold text-text-dark mb-4">
+                            GET A FAST QUOTE
+                        </h2>
+                        <p class="text-text-muted-light mb-6">
+                            Get in Touch and Upload Your Ideas (optional)
+                        </p>
+                        <div class="space-y-2 text-sm text-text-muted-light">
+                            <p><strong>Email:</strong> info@tristatesigns.com</p>
+                            <p><strong>Phone:</strong> <a href="tel:7187050333" class="text-primary hover:underline">(718) 705-0333</a></p>
+                            <p><strong>Corporate Office:</strong> 333 Wyandanch Ave, West Babylon, NY 11704</p>
+                            <p>Open Monday – Friday from 8am-5pm | Closed Saturday – Sunday</p>
+                        </div>
+                    </div>
+                    <form class="space-y-6" id="quoteForm">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="quote-name" class="block text-sm font-semibold text-text-dark mb-2">
+                                    Name <span class="text-red-500">*</span>
+                                </label>
+                                <input type="text" id="quote-name" name="name" required
+                                    class="w-full bg-gray-50 border-2 border-gray-200 rounded-md text-text-dark placeholder-text-muted-light focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 px-4 py-3"
+                                    placeholder="First Last" />
+                            </div>
+                            <div>
+                                <label for="quote-email" class="block text-sm font-semibold text-text-dark mb-2">
+                                    Email <span class="text-red-500">*</span>
+                                </label>
+                                <input type="email" id="quote-email" name="email" required
+                                    class="w-full bg-gray-50 border-2 border-gray-200 rounded-md text-text-dark placeholder-text-muted-light focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 px-4 py-3"
+                                    placeholder="your.email@example.com" />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="quote-phone" class="block text-sm font-semibold text-text-dark mb-2">
+                                Phone <span class="text-red-500">*</span>
+                            </label>
+                            <input type="tel" id="quote-phone" name="phone" required
+                                class="w-full bg-gray-50 border-2 border-gray-200 rounded-md text-text-dark placeholder-text-muted-light focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 px-4 py-3"
+                                placeholder="(555) 123-4567" />
+                        </div>
+                        <div>
+                            <label for="quote-address" class="block text-sm font-semibold text-text-dark mb-2">
+                                Address <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="quote-address" name="address" required
+                                class="w-full bg-gray-50 border-2 border-gray-200 rounded-md text-text-dark placeholder-text-muted-light focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 px-4 py-3"
+                                placeholder="Street Address" />
+                        </div>
+                        <div>
+                            <label for="quote-city" class="block text-sm font-semibold text-text-dark mb-2">
+                                City, State ZIP / Postal Code <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="quote-city" name="city" required
+                                class="w-full bg-gray-50 border-2 border-gray-200 rounded-md text-text-dark placeholder-text-muted-light focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 px-4 py-3"
+                                placeholder="City, State ZIP" />
+                        </div>
+                        <div>
+                            <label for="quote-info" class="block text-sm font-semibold text-text-dark mb-2">
+                                Additional Info
+                            </label>
+                            <textarea id="quote-info" name="info" rows="4"
+                                class="w-full bg-gray-50 border-2 border-gray-200 rounded-md text-text-dark placeholder-text-muted-light focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 px-4 py-3 resize-none"
+                                placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <div>
+                            <label for="quote-file" class="block text-sm font-semibold text-text-dark mb-2">
+                                Upload Your Ideas
+                            </label>
+                            <input type="file" id="quote-file" name="file" accept=".jpg,.jpeg,.png,.pdf,.heic"
+                                class="w-full bg-gray-50 border-2 border-gray-200 rounded-md text-text-dark focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 px-4 py-3"
+                            />
+                            <p class="text-xs text-text-muted-light mt-2">
+                                Accepted file types: jpg, jpeg, png, pdf, heic, Max. file size: 10 MB.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-text-muted-light">
+                            <span class="material-symbols-outlined text-primary">security</span>
+                            <span>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</span>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-primary text-white font-bold py-4 rounded-md hover:bg-primary-light transform hover:scale-[1.02] transition-all duration-300 shadow-lg text-lg">
+                            Submit Quote Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
     <!-- Review Modal -->
     <div id="reviewModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="reviewModalLabel" aria-hidden="true">

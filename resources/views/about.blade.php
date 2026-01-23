@@ -125,9 +125,9 @@
 
 <body class="font-sans bg-background-light dark:bg-background-dark text-text-dark dark:text-text-light antialiased">
     <!-- HEADER -->
-    <header class="bg-background-light dark:bg-background-dark shadow-sm sticky top-0 z-40">
+    <header class="bg-white dark:bg-background-dark shadow-md sticky top-0 z-40 backdrop-blur-sm bg-white/95">
         <!-- Top bar -->
-        <div class="border-b border-gray-200 dark:border-gray-700 bg-white">
+        <div class="border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-gray-50 to-white">
             <div
                 class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row md:justify-between md:items-center gap-3 md:gap-0 text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">
                 <div class="flex flex-wrap items-center gap-4">
@@ -153,11 +153,15 @@
                     </div>
                 </div>
                 <div class="flex items-center justify-between md:justify-end gap-4">
-                    <a class="inline-block px-4 sm:px-6 py-2 bg-primary text-text-light font-bold rounded-md hover:bg-primary-light transition-all duration-300 text-xs sm:text-sm shadow-sm text-center"
-                        href="{{ url('/request-call-back') }}">Request Call Back</a>
-                    <p class="text-base sm:text-lg font-bold text-text-dark dark:text-text-light whitespace-nowrap">
+                    <a class="inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 bg-gradient-to-r from-primary to-primary-light text-text-light font-bold rounded-lg hover:from-primary-light hover:to-primary transform hover:scale-105 transition-all duration-300 text-xs sm:text-sm shadow-md hover:shadow-lg text-center"
+                        href="{{ url('/request-call-back') }}">
+                        <span class="material-symbols-outlined text-sm">phone_in_talk</span>
+                        Request Call Back
+                    </a>
+                    <a href="tel:7187050333" class="flex items-center gap-2 text-base sm:text-lg font-bold text-text-dark dark:text-text-light whitespace-nowrap hover:text-primary transition-colors duration-300">
+                        <span class="material-symbols-outlined text-primary">call</span>
                         (718) 705-0333
-                    </p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -382,230 +386,189 @@
     </header>
 
     <!-- MAIN -->
-
     <main>
-        <section class="bg-primary py-2 sm:py-6 lg:py-6 text-text-light">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-center mb-8 sm:mb-6">
-                    About
-                </h2>
-                <h4 class="text-lg sm:text-lg lg:text-lg font-display font-bold text-center mb-8 sm:mb-6">
-                    Tri State Signs & Awnings
-                </h4>
-
-
+        <!-- HERO SECTION -->
+        <section class="hero-bg text-text-light">
+            <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
+                <div class="text-center max-w-4xl mx-auto space-y-6">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight">
+                        About Tri State Signs & Awnings
+                    </h1>
+                    <p class="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto">
+                        Your Trusted Partner in Custom Signs & Awnings for Over 40 Years
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- RESTO DE SECCIONES (ajuste mínimo, ya son responsivas) -->
-        <section class="bg-white py-16 sm:py-10 lg:py-14 text-text-primary">
-            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12 ">
-                    <div class="md:col-span-1">
-                        <h2
-                            class="text-xl sm:text-xl lg:text-xl font-display font-bold text-text-primary mb-8 sm:mb-6">
-                            About
-                        </h2>
-                        <p>Tri State Signs & Awnings provides residential and commercial signs, LED displays, corporate
-                            event set up and tear down, and awnings to NY, NJ, and CT.</p>
-                        <br>
-                        <h2
-                            class="text-xl sm:text-xl lg:text-xl font-display font-bold text-text-primary mb-8 sm:mb-6">
-                            Languages
-                        </h2>
-                        <ul>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>English</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Spanish</li>
-                        </ul>
-                    </div>
-                    <div class="md:col-span-1">
-                        <h2
-                            class="text-xl sm:text-xl lg:text-xl font-display font-bold text-text-primary mb-8 sm:mb-6">
-                            Business Hours
-                        </h2>
-                        <ul>
-                            <li><b>Mon - Fri:</b> 8:00 am - 5:00 pm</li>
-                            <li><b>Sat - Sun:</b> Closed</li>
-                        </ul>
-                        <p><b>Same-Day Appointments</b></p>
-                        <br>
-                        <h2
-                            class="text-xl sm:text-xl lg:text-xl font-display font-bold text-text-primary mb-8 sm:mb-6">
-                            Pickup and Delivery
-                        </h2>
-                        <ul>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">fiber_manual_record</span>Delivery</li>
-                        </ul>
+        <!-- ABOUT CONTENT SECTION -->
+        <section class="bg-white py-16 sm:py-20 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+                    <!-- Main About Content -->
+                    <div class="lg:col-span-2 space-y-8">
+                        <div>
+                            <h2 class="text-3xl sm:text-4xl font-display font-bold text-text-dark mb-6">
+                                About Us
+                            </h2>
+                            <p class="text-lg text-text-muted-light leading-relaxed mb-6">
+                                Tri State Signs & Awnings provides residential and commercial signs, LED displays, corporate event set up and tear down, and awnings to NY, NJ, and CT.
+                            </p>
+                            <p class="text-lg text-text-muted-light leading-relaxed">
+                                With over 40 years of experience, we've built a reputation for excellence, quality craftsmanship, and exceptional customer service. Our team of skilled professionals is dedicated to bringing your vision to life with custom signage solutions that stand the test of time.
+                            </p>
+                        </div>
+
+                        <!-- Specialties -->
+                        <div>
+                            <h3 class="text-2xl font-display font-bold text-text-dark mb-6">Our Specialties</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                                    <span class="material-symbols-outlined text-primary text-2xl">store</span>
+                                    <span class="text-text-dark font-medium">Illuminated Signs</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                                    <span class="material-symbols-outlined text-primary text-2xl">meeting_room</span>
+                                    <span class="text-text-dark font-medium">Interior & Exterior Signs</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                                    <span class="material-symbols-outlined text-primary text-2xl">edit</span>
+                                    <span class="text-text-dark font-medium">Custom Signs</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                                    <span class="material-symbols-outlined text-primary text-2xl">storefront</span>
+                                    <span class="text-text-dark font-medium">Awnings</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                                    <span class="material-symbols-outlined text-primary text-2xl">desktop_windows</span>
+                                    <span class="text-text-dark font-medium">LED Displays</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                                    <span class="material-symbols-outlined text-primary text-2xl">construction</span>
+                                    <span class="text-text-dark font-medium">Fabrication</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                                    <span class="material-symbols-outlined text-primary text-2xl">palette</span>
+                                    <span class="text-text-dark font-medium">Graphic Design</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                                    <span class="material-symbols-outlined text-primary text-2xl">description</span>
+                                    <span class="text-text-dark font-medium">Permitting</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+                                    <span class="material-symbols-outlined text-primary text-2xl">build</span>
+                                    <span class="text-text-dark font-medium">Maintenance</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="md:col-span-1">
-                        <h2
-                            class="text-xl sm:text-xl lg:text-xl font-display font-bold text-text-primary mb-8 sm:mb-6">
-                            Products
-                        </h2>
-                        <ul>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Signs</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Awnings</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>LED Displays</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Window Graphics</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>ADA Signs</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Illuminated signs</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Canopies</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Wayfinding Signs</li>
-                        </ul>
-                    </div>
-                    <div class="md:col-span-1">
-                        <h2
-                            class="text-xl sm:text-xl lg:text-xl font-display font-bold text-text-primary mb-8 sm:mb-6">
-                            Good to Know
-                        </h2>
-                        <h4><b>Payments</b></h4>
-                        <ul>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">fiber_manual_record</span>Checks</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">fiber_manual_record</span>Debit Cards</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">fiber_manual_record</span>Credit Cards</li>
-                        </ul>
-                        <h4><b>Service options</b></h4>
-                        <ul>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">fiber_manual_record</span>Delivery</li>
-                        </ul>
-                        <h4><b>Parking</b></h4>
-                        <ul>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">fiber_manual_record</span>Free parking garage</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">fiber_manual_record</span>Free street parking</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">fiber_manual_record</span>Free parking lot</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">fiber_manual_record</span>On-site parking</li>
-                        </ul>
-                        <h4><b>From the business</b></h4>
-                        <ul>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">fiber_manual_record</span>Small business</li>
-                        </ul>
-                    </div>
-                    <div class="md:col-span-1">
-                        <h2
-                            class="text-xl sm:text-xl lg:text-xl font-display font-bold text-text-primary mb-8 sm:mb-6">
-                            Year Established
-                        </h2>
-                        <p>2017</p>
-                        <ul>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>ACH</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span> Cash</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Check</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Discover</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Mastercard </li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span> Invoice</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Visa</li>
-                        </ul>
-                    </div>
+                    <!-- Sidebar Info -->
+                    <div class="lg:col-span-1 space-y-8">
+                        <!-- Business Hours -->
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="text-xl font-display font-bold text-text-dark mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">schedule</span>
+                                Business Hours
+                            </h3>
+                            <ul class="space-y-3 text-text-muted-light">
+                                <li class="flex justify-between">
+                                    <span class="font-medium text-text-dark">Mon - Fri:</span>
+                                    <span>8:00 am - 5:00 pm</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span class="font-medium text-text-dark">Sat - Sun:</span>
+                                    <span>Closed</span>
+                                </li>
+                            </ul>
+                            <p class="mt-4 text-sm font-semibold text-primary">Same-Day Appointments Available</p>
+                        </div>
 
-                    <div class="md:col-span-1">
-                        <h2
-                            class="text-xl sm:text-xl lg:text-xl font-display font-bold text-text-primary mb-8 sm:mb-6">
-                            Specialties
-                        </h2>
-                        <ul>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Illuminated Signs</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Interior and Exterior Signs</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Custom Signs</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Awnings</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>LED Display</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Fabrication</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Graphic Design</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Permitting</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Maintenance</li>
-                        </ul>
+                        <!-- Languages -->
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="text-xl font-display font-bold text-text-dark mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">language</span>
+                                Languages
+                            </h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    <span class="text-text-dark">English</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    <span class="text-text-dark">Spanish</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Services -->
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="text-xl font-display font-bold text-text-dark mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">local_shipping</span>
+                                Service Options
+                            </h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    <span class="text-text-dark">Delivery</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    <span class="text-text-dark">Pickup Available</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Payment Methods -->
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="text-xl font-display font-bold text-text-dark mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">payment</span>
+                                Payment Methods
+                            </h3>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <span class="text-text-dark">✓ Checks</span>
+                                <span class="text-text-dark">✓ Cash</span>
+                                <span class="text-text-dark">✓ Credit Cards</span>
+                                <span class="text-text-dark">✓ Debit Cards</span>
+                                <span class="text-text-dark">✓ ACH</span>
+                                <span class="text-text-dark">✓ Invoice</span>
+                            </div>
+                        </div>
+
+                        <!-- Parking -->
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="text-xl font-display font-bold text-text-dark mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">local_parking</span>
+                                Parking
+                            </h3>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    <span class="text-text-dark">Free Parking Garage</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    <span class="text-text-dark">Free Street Parking</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    <span class="text-text-dark">Free Parking Lot</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    <span class="text-text-dark">On-Site Parking</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Year Established -->
+                        <div class="bg-primary text-white rounded-lg p-6 text-center">
+                            <h3 class="text-xl font-display font-bold mb-2">Year Established</h3>
+                            <p class="text-4xl font-bold">1980+</p>
+                            <p class="text-sm mt-2 opacity-90">Over 40 Years of Excellence</p>
+                        </div>
                     </div>
-                    <div class="md:col-span-1">
-                        <h2
-                            class="text-xl sm:text-xl lg:text-xl font-display font-bold text-text-primary mb-8 sm:mb-6">
-                            Services
-                        </h2>
-                        <ul>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Illuminated Signs</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Interior and Exterior Signs</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Custom Signs</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Awnings</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>LED Display</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Fabrication</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Graphic Design</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Permitting</li>
-                            <li><span class="material-symbols-outlined text-sm mr-2 mt-0.5">
-                                    fiber_manual_record
-                                </span>Maintenance</li>
-                        </ul>
-                    </div>
-
-
-
-
                 </div>
             </div>
         </section>
@@ -763,22 +726,32 @@
 
     <!-- Barra lateral fija -->
     <div
-        class="hidden sm:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col items-center bg-primary-dark shadow-lg rounded-l-md z-30">
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center rounded-tl-md group"
-            href="#" title="Call Us"><span
-                class="material-symbols-outlined text-base sm:text-lg">phone</span></a>
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group"
-            href="{{ url('/reviews') }}" title="Reviews"><span
-                class="material-symbols-outlined text-base sm:text-lg">star</span></a>
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group"
-            href="{{ url('request-call-back') }}" title="Email Us"><span
-                class="material-symbols-outlined text-base sm:text-lg">email</span></a>
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group"
-            href="#" title="Our Location"><span
-                class="material-symbols-outlined text-base sm:text-lg">location_on</span></a>
-        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center rounded-bl-md group"
-            href="#" title="Share"><span
-                class="material-symbols-outlined text-base sm:text-lg">share</span></a>
+        class="hidden sm:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col items-center bg-gradient-to-b from-primary-dark to-primary-light shadow-lg rounded-l-md z-30">
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center rounded-tl-md group relative flex items-center justify-center"
+            href="tel:7187050333" title="Call Us">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">phone</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Call Us</span>
+        </a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group relative flex items-center justify-center"
+            href="{{ url('/reviews') }}" title="Reviews">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">star</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Reviews</span>
+        </a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group relative flex items-center justify-center"
+            href="{{ url('request-call-back') }}" title="Email Us">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">email</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Email Us</span>
+        </a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center group relative flex items-center justify-center"
+            href="https://www.google.com/maps/search/333+Wyandanch+Ave,+West+Babylon,+NY" target="_blank" title="Our Location">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">location_on</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Our Location</span>
+        </a>
+        <a class="p-3 text-secondary hover:bg-accent hover:text-primary-dark transition-all duration-300 w-full text-center rounded-bl-md group relative flex items-center justify-center"
+            href="#" title="Share">
+            <span class="material-symbols-outlined text-base sm:text-lg group-hover:scale-110 transition-transform duration-300">share</span>
+            <span class="absolute left-full ml-3 px-3 py-1 bg-primary text-text-light text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Share</span>
+        </a>
     </div>
 
     <!-- FOOTER -->
