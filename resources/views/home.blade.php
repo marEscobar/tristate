@@ -501,7 +501,13 @@
                     <div class="bg-gray-200 h-20 w-full rounded flex items-center justify-center text-text-muted-light text-sm font-semibold">Client 4</div>
                     <div class="bg-gray-200 h-20 w-full rounded flex items-center justify-center text-text-muted-light text-sm font-semibold">Client 5</div>
                     <div class="bg-gray-200 h-20 w-full rounded flex items-center justify-center text-text-muted-light text-sm font-semibold">Client 6</div>
-            <div class="hero-content max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+                </div>
+            </div>
+        </section>
+
+        <!-- WEST BABYLON + REQUEST A CALL BACK SECTION -->
+        <section class="bg-gray-50 py-16 sm:py-20 lg:py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-10 lg:gap-16 items-center">
                     <div class="md:col-span-3 space-y-6 sm:space-y-8">
                         <h1 class="text-5xl font-display font-bold leading-tight">Custom Signs in West Babylon, NY and
@@ -766,7 +772,8 @@
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
                         </iframe>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mt-12">
                     <div class="bg-white dark:bg-primary-dark/80 rounded-lg shadow-lg overflow-hidden flex flex-col">
                         <img alt="A storefront with a sign" class="w-full h-48 sm:h-56 object-cover"
                             src="{{ asset('img/img1.png') }}" />
@@ -856,57 +863,6 @@
                                     class="w-full bg-gray-50 border-2 border-gray-200 rounded-md text-text-dark placeholder-text-muted-light focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 px-4 py-3"
                                     placeholder="First Last" />
                             </div>
-        <section class="write-bg py-16 sm:py-20 lg:py-24 bg-background-light dark:bg-background-dark">
-            <div class="write-content max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-                    <h2
-                        class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-center mb-10 sm:mb-12 text-text-light dark:text-text-dark">
-                        Here's what our satisfied customers are saying...
-                    </h2>
-                    <br>
-                    <p class="sm:mb-6 text-sm sm:text-base text-center text-text-light dark:text-text-dark">
-                        At Tri State Signs & Awnings, we take pride in providing exceptional sign and awning services to
-                        our customers. We would be grateful if you could share your thoughts about our business with
-                        others. Your feedback helps us improve and helps others make informed decisions. Please take a
-                        moment to leave a review of Tri State Signs & Awnings and let others know what you think.</p>
-                    <button id="openReviewModal"
-                        class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm">Write
-                        a Review</button>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                    <div
-                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md p-6 sm:p-8 flex flex-col">
-                        <div class="flex items-center justify-between mb-3 sm:mb-4">
-                            <div>
-                                <h3 class="font-bold text-base sm:text-lg text-text-dark dark:text-text-light">Brittany
-                                    D</h3>
-                                <p class="text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">5/1/2025
-                                </p>
-                            </div>
-                            <div class="flex text-primary dark:text-yellow-400">
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                            </div>
-                        </div>
-                        <p
-                            class="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-sm sm:text-base">
-                            Super easy to work with and they really know their stuff. When it comes to permits, custom
-                            vinyl turned out
-                            awesome, and the awning looking good too -- totally transforms the front of storefront.
-                            Definitely recommend!
-                        </p>
-                    </div>
-                    <div
-                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md p-6 sm:p-8 flex flex-col">
-                        <div class="flex items-center justify-between mb-3 sm:mb-4">
                             <div>
                                 <label for="quote-email" class="block text-sm font-semibold text-text-dark mb-2">
                                     Email <span class="text-red-500">*</span>
@@ -968,6 +924,81 @@
                             Submit Quote Request
                         </button>
                     </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS - Here's what our satisfied customers are saying... -->
+        <section class="write-bg py-16 sm:py-20 lg:py-24 bg-background-light dark:bg-background-dark">
+            <div class="write-content max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+                    <h2
+                        class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-center mb-10 sm:mb-12 text-text-light dark:text-text-dark">
+                        Here's what our satisfied customers are saying...
+                    </h2>
+                    <p class="sm:mb-6 text-sm sm:text-base text-center text-text-light dark:text-text-dark">
+                        At Tri State Signs & Awnings, we take pride in providing exceptional sign and awning services to
+                        our customers. We would be grateful if you could share your thoughts about our business with
+                        others. Your feedback helps us improve and helps others make informed decisions. Please take a
+                        moment to leave a review of Tri State Signs & Awnings and let others know what you think.
+                    </p>
+                    <button id="openReviewModal"
+                        class="inline-block bg-primary text-text-light font-bold px-5 sm:px-6 py-2.5 rounded-md hover:bg-primary-light transition-colors duration-300 text-xs sm:text-sm">Write
+                        a Review</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                    <div
+                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md p-6 sm:p-8 flex flex-col">
+                        <div class="flex items-center justify-between mb-3 sm:mb-4">
+                            <div>
+                                <h3 class="font-bold text-base sm:text-lg text-text-dark dark:text-text-light">Brittany D</h3>
+                                <p class="text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">5/1/2025</p>
+                            </div>
+                            <div class="flex text-primary dark:text-yellow-400">
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                            </div>
+                        </div>
+                        <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-sm sm:text-base">
+                            Super easy to work with and they really know their stuff. When it comes to permits, custom
+                            vinyl turned out awesome, and the awning looking good too -- totally transforms the front of
+                            storefront. Definitely recommend!
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-primary-dark/20 border border-gray-200 dark:border-primary-light/20 rounded-lg shadow-md p-6 sm:p-8 flex flex-col">
+                        <div class="flex items-center justify-between mb-3 sm:mb-4">
+                            <div>
+                                <h3 class="font-bold text-base sm:text-lg text-text-dark dark:text-text-light">John M</h3>
+                                <p class="text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">4/15/2025</p>
+                            </div>
+                            <div class="flex text-primary dark:text-yellow-400">
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                                <span class="material-symbols-outlined text-sm sm:text-base"
+                                    style="font-variation-settings: 'FILL' 1">star</span>
+                            </div>
+                        </div>
+                        <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-sm sm:text-base">
+                            Excellent experience from start to finish. The team at Tri State Signs & Awnings was
+                            professional, responsive, and delivered exactly what we needed. Our new signage looks
+                            fantastic and we've received many compliments. Highly recommended!
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>

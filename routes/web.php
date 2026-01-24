@@ -6,6 +6,14 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/welcome2', function () {
+    return view('welcome2');
+});
+
+Route::get('/welcome3', function () {
+    return view('welcome3');
+});
+
 Route::get('/exterior-signs', function () {
     return view('exterior-signs');
 });
