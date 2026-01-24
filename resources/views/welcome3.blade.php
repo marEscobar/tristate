@@ -15,11 +15,10 @@
                 extend: {
                     colors: {
                         primary: { DEFAULT: '#003d64', light: '#005285', dark: '#002a45' },
-                        teal: '#0d9488',
                         coral: '#ea580c',
                         amber: '#f59e0b',
-                        mint: '#5eead4',
                         violet: '#8b5cf6',
+                        slate: { 100: '#f1f5f9', 200: '#e2e8f0', 400: '#94a3b8', 600: '#475569', 700: '#334155', 800: '#1e293b' },
                     },
                     fontFamily: {
                         display: ['Archivo Black', 'sans-serif'],
@@ -31,8 +30,8 @@
     </script>
     <style>
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .clip-diag { clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%); }
-        .clip-diag-inv { clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%); }
+        .clip-diag { clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%); }
+        .clip-diag-inv { clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%); }
         .marquee { animation: marquee 25s linear infinite; }
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .card-lift { transition: transform 0.25s ease, box-shadow 0.25s ease; }
@@ -41,8 +40,8 @@
     </style>
 </head>
 <body class="font-sans text-gray-900 bg-white antialiased">
-    <!-- Top bar: gradient primary → teal -->
-    <div class="bg-gradient-to-r from-primary via-primary-light to-teal text-white py-2">
+    <!-- Top bar: solid -->
+    <div class="bg-primary-dark text-white py-2.5 border-b border-white/10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-sm">
             <div class="flex flex-wrap items-center gap-4 sm:gap-6">
                 <div class="flex items-center gap-1.5">
@@ -54,110 +53,110 @@
                         <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
                     </span>
                     <span class="font-bold">5.0</span>
-                    <a href="{{ url('/reviews') }}" class="text-white/80 hover:text-mint underline">(4 Ratings)</a>
+                    <a href="{{ url('/reviews') }}" class="text-white/80 hover:text-white underline">(4 Ratings)</a>
                 </div>
                 <div class="flex items-center gap-2 text-white/90">
-                    <span class="material-symbols-outlined text-mint text-base">location_on</span>
+                    <span class="material-symbols-outlined text-white/70 text-base">location_on</span>
                     <span>333 Wyandanch Ave, West Babylon, NY</span>
                 </div>
             </div>
             <div class="flex items-center gap-4">
-                <a href="{{ url('/request-call-back') }}" class="text-mint font-bold hover:underline">Request Call Back</a>
+                <a href="{{ url('/request-call-back') }}" class="text-white font-bold hover:underline">Request Call Back</a>
                 <a href="tel:7187050333" class="font-bold">(718) 705-0333</a>
             </div>
         </div>
     </div>
 
     <!-- Nav: primary-dark, compact -->
-    <header class="sticky top-0 z-50 bg-primary-dark border-b border-teal/30">
+    <header class="sticky top-0 z-50 bg-primary-dark border-b border-white/10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-14">
                 <a href="{{ url('/') }}"><img src="{{ asset('img/logo.png') }}" alt="Tri State Signs & Awnings" class="h-8 w-auto brightness-0 invert" /></a>
                 <nav class="hidden lg:flex items-center gap-0.5">
-                    <a href="{{ url('/') }}" class="px-3 py-2.5 text-white/80 hover:text-mint font-medium text-sm rounded-lg hover:bg-white/5">Home</a>
+                    <a href="{{ url('/') }}" class="px-3 py-2.5 text-white/80 hover:text-white font-medium text-sm rounded-lg hover:bg-white/5">Home</a>
                     <div class="relative group">
-                        <button class="px-3 py-2.5 text-white/80 hover:text-mint font-medium text-sm rounded-lg hover:bg-white/5 flex items-center gap-0.5">Sign Services <span class="material-symbols-outlined text-sm">expand_more</span></button>
+                        <button class="px-3 py-2.5 text-white/80 hover:text-white font-medium text-sm rounded-lg hover:bg-white/5 flex items-center gap-0.5">Sign Services <span class="material-symbols-outlined text-sm">expand_more</span></button>
                         <div class="absolute left-0 top-full pt-0.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                            <div class="bg-primary-dark border border-teal/30 rounded-lg py-2 min-w-[180px] shadow-xl">
-                                <a href="{{ url('/exterior-signs') }}" class="block px-4 py-2 text-white/80 hover:text-mint hover:bg-white/5 text-sm">Exterior Signs</a>
-                                <a href="{{ url('/interior-signs') }}" class="block px-4 py-2 text-white/80 hover:text-mint hover:bg-white/5 text-sm">Interior Signs</a>
+                            <div class="bg-slate-800 border border-white/10 rounded-xl py-2 min-w-[180px] shadow-xl">
+                                <a href="{{ url('/exterior-signs') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 text-sm rounded-lg mx-1">Exterior Signs</a>
+                                <a href="{{ url('/interior-signs') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 text-sm rounded-lg mx-1">Interior Signs</a>
                             </div>
                         </div>
                     </div>
                     <div class="relative group">
-                        <button class="px-3 py-2.5 text-white/80 hover:text-mint font-medium text-sm rounded-lg hover:bg-white/5 flex items-center gap-0.5">Awning Services <span class="material-symbols-outlined text-sm">expand_more</span></button>
+                        <button class="px-3 py-2.5 text-white/80 hover:text-white font-medium text-sm rounded-lg hover:bg-white/5 flex items-center gap-0.5">Awning Services <span class="material-symbols-outlined text-sm">expand_more</span></button>
                         <div class="absolute left-0 top-full pt-0.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                            <div class="bg-primary-dark border border-teal/30 rounded-lg py-2 min-w-[180px] shadow-xl">
-                                <a href="{{ url('/commercial-awnings') }}" class="block px-4 py-2 text-white/80 hover:text-mint hover:bg-white/5 text-sm">Commercial Awnings</a>
-                                <a href="{{ url('/residential-awnings') }}" class="block px-4 py-2 text-white/80 hover:text-mint hover:bg-white/5 text-sm">Residential Awnings</a>
+                            <div class="bg-slate-800 border border-white/10 rounded-xl py-2 min-w-[180px] shadow-xl">
+                                <a href="{{ url('/commercial-awnings') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 text-sm rounded-lg mx-1">Commercial Awnings</a>
+                                <a href="{{ url('/residential-awnings') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 text-sm rounded-lg mx-1">Residential Awnings</a>
                             </div>
                         </div>
                     </div>
-                    <a href="{{ url('/installations') }}" class="px-3 py-2.5 text-white/80 hover:text-mint font-medium text-sm rounded-lg hover:bg-white/5">Installations</a>
-                    <a href="{{ url('/led-displays') }}" class="px-3 py-2.5 text-white/80 hover:text-mint font-medium text-sm rounded-lg hover:bg-white/5">LED Displays</a>
-                    <a href="{{ url('/permits') }}" class="px-3 py-2.5 text-white/80 hover:text-mint font-medium text-sm rounded-lg hover:bg-white/5">Permits</a>
+                    <a href="{{ url('/installations') }}" class="px-3 py-2.5 text-white/80 hover:text-white font-medium text-sm rounded-lg hover:bg-white/5">Installations</a>
+                    <a href="{{ url('/led-displays') }}" class="px-3 py-2.5 text-white/80 hover:text-white font-medium text-sm rounded-lg hover:bg-white/5">LED Displays</a>
+                    <a href="{{ url('/permits') }}" class="px-3 py-2.5 text-white/80 hover:text-white font-medium text-sm rounded-lg hover:bg-white/5">Permits</a>
                     <div class="relative group">
-                        <button class="px-3 py-2.5 text-white/80 hover:text-mint font-medium text-sm rounded-lg hover:bg-white/5 flex items-center gap-0.5">About <span class="material-symbols-outlined text-sm">expand_more</span></button>
+                        <button class="px-3 py-2.5 text-white/80 hover:text-white font-medium text-sm rounded-lg hover:bg-white/5 flex items-center gap-0.5">About <span class="material-symbols-outlined text-sm">expand_more</span></button>
                         <div class="absolute left-0 top-full pt-0.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                            <div class="bg-primary-dark border border-teal/30 rounded-lg py-2 min-w-[180px] shadow-xl">
-                                <a href="{{ url('/gallery') }}" class="block px-4 py-2 text-white/80 hover:text-mint hover:bg-white/5 text-sm">Gallery</a>
-                                <a href="{{ url('/reviews') }}" class="block px-4 py-2 text-white/80 hover:text-mint hover:bg-white/5 text-sm">Reviews</a>
-                                <a href="{{ url('/blog') }}" class="block px-4 py-2 text-white/80 hover:text-mint hover:bg-white/5 text-sm">Blog</a>
-                                <a href="{{ url('/faqs') }}" class="block px-4 py-2 text-white/80 hover:text-mint hover:bg-white/5 text-sm">FAQs</a>
+                            <div class="bg-slate-800 border border-white/10 rounded-xl py-2 min-w-[180px] shadow-xl">
+                                <a href="{{ url('/gallery') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 text-sm rounded-lg mx-1">Gallery</a>
+                                <a href="{{ url('/reviews') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 text-sm rounded-lg mx-1">Reviews</a>
+                                <a href="{{ url('/blog') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 text-sm rounded-lg mx-1">Blog</a>
+                                <a href="{{ url('/faqs') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 text-sm rounded-lg mx-1">FAQs</a>
                             </div>
                         </div>
                     </div>
                     <div class="relative group">
-                        <button class="px-3 py-2.5 text-white/80 hover:text-mint font-medium text-sm rounded-lg hover:bg-white/5 flex items-center gap-0.5">Contact <span class="material-symbols-outlined text-sm">expand_more</span></button>
+                        <button class="px-3 py-2.5 text-white/80 hover:text-white font-medium text-sm rounded-lg hover:bg-white/5 flex items-center gap-0.5">Contact <span class="material-symbols-outlined text-sm">expand_more</span></button>
                         <div class="absolute left-0 top-full pt-0.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                            <div class="bg-primary-dark border border-teal/30 rounded-lg py-2 min-w-[180px] shadow-xl">
-                                <a href="{{ url('/request-call-back') }}" class="block px-4 py-2 text-white/80 hover:text-mint hover:bg-white/5 text-sm">Request Call Back</a>
+                            <div class="bg-slate-800 border border-white/10 rounded-xl py-2 min-w-[180px] shadow-xl">
+                                <a href="{{ url('/request-call-back') }}" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/5 text-sm rounded-lg mx-1">Request Call Back</a>
                             </div>
                         </div>
                     </div>
                 </nav>
                 <div class="flex items-center gap-3">
-                    <a href="{{ url('/request-call-back') }}" class="bg-teal text-white font-bold px-4 py-2 rounded-lg text-sm hover:bg-teal/90 transition-colors">Request Call Back</a>
+                    <a href="{{ url('/request-call-back') }}" class="bg-coral text-white font-bold px-4 py-2 rounded-lg text-sm hover:bg-coral/90 transition-colors">Request Call Back</a>
                     <button id="nav-toggle" class="lg:hidden p-2 rounded-lg text-white hover:bg-white/10" aria-label="Menu"><span class="material-symbols-outlined text-2xl">menu</span></button>
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="lg:hidden hidden border-t border-teal/30 bg-primary-dark">
+        <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-primary-dark">
             <nav class="max-w-6xl mx-auto px-4 py-4 space-y-0.5">
-                <a href="{{ url('/') }}" class="block py-2.5 px-3 text-white/80 hover:text-mint rounded-lg">Home</a>
-                <a href="{{ url('/exterior-signs') }}" class="block py-2.5 px-3 text-white/80 hover:text-mint rounded-lg">Exterior Signs</a>
-                <a href="{{ url('/interior-signs') }}" class="block py-2.5 px-3 text-white/80 hover:text-mint rounded-lg">Interior Signs</a>
-                <a href="{{ url('/commercial-awnings') }}" class="block py-2.5 px-3 text-white/80 hover:text-mint rounded-lg">Commercial Awnings</a>
-                <a href="{{ url('/residential-awnings') }}" class="block py-2.5 px-3 text-white/80 hover:text-mint rounded-lg">Residential Awnings</a>
-                <a href="{{ url('/installations') }}" class="block py-2.5 px-3 text-white/80 hover:text-mint rounded-lg">Installations</a>
-                <a href="{{ url('/led-displays') }}" class="block py-2.5 px-3 text-white/80 hover:text-mint rounded-lg">LED Displays</a>
-                <a href="{{ url('/permits') }}" class="block py-2.5 px-3 text-white/80 hover:text-mint rounded-lg">Permits</a>
-                <a href="{{ url('/gallery') }}" class="block py-2.5 px-3 text-white/80 hover:text-mint rounded-lg">Gallery</a>
-                <a href="{{ url('/reviews') }}" class="block py-2.5 px-3 text-white/80 hover:text-mint rounded-lg">Reviews</a>
-                <a href="{{ url('/blog') }}" class="block py-2.5 px-3 text-white/80 hover:text-mint rounded-lg">Blog</a>
-                <a href="{{ url('/faqs') }}" class="block py-2.5 px-3 text-white/80 hover:text-mint rounded-lg">FAQs</a>
-                <a href="{{ url('/request-call-back') }}" class="block py-2.5 px-3 text-white/80 hover:text-mint rounded-lg">Request Call Back</a>
+                <a href="{{ url('/') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">Home</a>
+                <a href="{{ url('/exterior-signs') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">Exterior Signs</a>
+                <a href="{{ url('/interior-signs') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">Interior Signs</a>
+                <a href="{{ url('/commercial-awnings') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">Commercial Awnings</a>
+                <a href="{{ url('/residential-awnings') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">Residential Awnings</a>
+                <a href="{{ url('/installations') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">Installations</a>
+                <a href="{{ url('/led-displays') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">LED Displays</a>
+                <a href="{{ url('/permits') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">Permits</a>
+                <a href="{{ url('/gallery') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">Gallery</a>
+                <a href="{{ url('/reviews') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">Reviews</a>
+                <a href="{{ url('/blog') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">Blog</a>
+                <a href="{{ url('/faqs') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">FAQs</a>
+                <a href="{{ url('/request-call-back') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">Request Call Back</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- HERO: diagonal split – gradient left, image right -->
+        <!-- HERO: diagonal split – solid primary left, image right -->
         <section class="relative min-h-[85vh] flex flex-col lg:flex-row clip-diag overflow-hidden">
-            <div class="flex-1 flex items-center bg-gradient-to-br from-primary via-primary-light to-teal p-8 sm:p-12 lg:p-16 order-2 lg:order-1">
+            <div class="flex-1 flex items-center bg-primary p-8 sm:p-12 lg:p-16 order-2 lg:order-1">
                 <div class="max-w-xl">
-                    <p class="text-mint font-bold text-sm uppercase tracking-widest mb-3">West Babylon, NY • 40+ Years</p>
+                    <p class="text-amber-300 font-bold text-sm uppercase tracking-widest mb-3">West Babylon, NY • 40+ Years</p>
                     <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.05] mb-5">
                         Custom Signs &amp; Awnings That Have Drawn A Crowd
                     </h1>
-                    <p class="text-white/80 text-lg mb-8">
+                    <p class="text-white/85 text-lg mb-8">
                         Your local one-stop shop. Five-year warranty, impossible deadlines? No problem—we deliver.
                     </p>
                     <div class="flex flex-wrap gap-3 mb-4">
-                        <a href="{{ url('/request-call-back') }}" class="inline-flex items-center gap-2 bg-white text-primary font-bold px-6 py-3.5 rounded-lg hover:bg-mint hover:text-primary-dark transition-colors">
+                        <a href="{{ url('/request-call-back') }}" class="inline-flex items-center gap-2 bg-white text-primary font-bold px-6 py-3.5 rounded-xl hover:bg-slate-100 transition-colors">
                             Get In Touch <span class="material-symbols-outlined text-lg">arrow_forward</span>
                         </a>
-                        <a href="{{ url('/contact-us') }}" class="inline-flex items-center gap-2 border-2 border-white/60 text-white font-bold px-6 py-3.5 rounded-lg hover:bg-white/10 transition-colors">
+                        <a href="{{ url('/contact-us') }}" class="inline-flex items-center gap-2 border-2 border-white/60 text-white font-bold px-6 py-3.5 rounded-xl hover:bg-white/10 transition-colors">
                             Let's Get Started
                         </a>
                     </div>
@@ -167,29 +166,29 @@
             <div class="flex-1 min-h-[40vh] lg:min-h-[85vh] order-1 lg:order-2 bg-cover bg-center" style="background-image: url('{{ asset('img/1.webp') }}');"></div>
         </section>
 
-        <!-- PERMIT: marquee strip – clients in colored pills -->
-        <section class="py-8 bg-gray-100 border-y border-gray-200 overflow-hidden">
+        <!-- PERMIT: marquee strip – clients in colored pills (no aqua) -->
+        <section class="py-8 bg-slate-100 border-y border-slate-200 overflow-hidden">
             <div class="text-center mb-6">
                 <h2 class="font-display text-2xl sm:text-3xl text-gray-900">Ask About Our In-House Permit Expeditor</h2>
-                <p class="text-gray-600 mt-1">Trusted by top national brands for design, fabrication &amp; installation.</p>
+                <p class="text-slate-600 mt-1">Trusted by top national brands for design, fabrication &amp; installation.</p>
             </div>
             <div class="flex overflow-hidden">
                 <div class="flex marquee gap-4 px-4" style="width: max-content;">
                     <div class="flex gap-4 shrink-0">
-                        <div class="w-28 h-16 rounded-xl bg-primary/15 text-primary font-bold text-sm flex items-center justify-center shrink-0">Client 1</div>
-                        <div class="w-28 h-16 rounded-xl bg-teal/15 text-teal font-bold text-sm flex items-center justify-center shrink-0">Client 2</div>
-                        <div class="w-28 h-16 rounded-xl bg-coral/15 text-coral font-bold text-sm flex items-center justify-center shrink-0">Client 3</div>
-                        <div class="w-28 h-16 rounded-xl bg-amber/15 text-amber font-bold text-sm flex items-center justify-center shrink-0">Client 4</div>
-                        <div class="w-28 h-16 rounded-xl bg-violet/15 text-violet font-bold text-sm flex items-center justify-center shrink-0">Client 5</div>
-                        <div class="w-28 h-16 rounded-xl bg-mint/20 text-teal font-bold text-sm flex items-center justify-center shrink-0">Client 6</div>
+                        <div class="w-28 h-16 rounded-xl bg-primary/10 text-primary font-bold text-sm flex items-center justify-center shrink-0 border border-primary/20">Client 1</div>
+                        <div class="w-28 h-16 rounded-xl bg-coral/10 text-coral font-bold text-sm flex items-center justify-center shrink-0 border border-coral/20">Client 2</div>
+                        <div class="w-28 h-16 rounded-xl bg-amber/10 text-amber font-bold text-sm flex items-center justify-center shrink-0 border border-amber/20">Client 3</div>
+                        <div class="w-28 h-16 rounded-xl bg-violet/10 text-violet font-bold text-sm flex items-center justify-center shrink-0 border border-violet/20">Client 4</div>
+                        <div class="w-28 h-16 rounded-xl bg-primary/10 text-primary font-bold text-sm flex items-center justify-center shrink-0 border border-primary/20">Client 5</div>
+                        <div class="w-28 h-16 rounded-xl bg-coral/10 text-coral font-bold text-sm flex items-center justify-center shrink-0 border border-coral/20">Client 6</div>
                     </div>
                     <div class="flex gap-4 shrink-0">
-                        <div class="w-28 h-16 rounded-xl bg-primary/15 text-primary font-bold text-sm flex items-center justify-center shrink-0">Client 1</div>
-                        <div class="w-28 h-16 rounded-xl bg-teal/15 text-teal font-bold text-sm flex items-center justify-center shrink-0">Client 2</div>
-                        <div class="w-28 h-16 rounded-xl bg-coral/15 text-coral font-bold text-sm flex items-center justify-center shrink-0">Client 3</div>
-                        <div class="w-28 h-16 rounded-xl bg-amber/15 text-amber font-bold text-sm flex items-center justify-center shrink-0">Client 4</div>
-                        <div class="w-28 h-16 rounded-xl bg-violet/15 text-violet font-bold text-sm flex items-center justify-center shrink-0">Client 5</div>
-                        <div class="w-28 h-16 rounded-xl bg-mint/20 text-teal font-bold text-sm flex items-center justify-center shrink-0">Client 6</div>
+                        <div class="w-28 h-16 rounded-xl bg-primary/10 text-primary font-bold text-sm flex items-center justify-center shrink-0 border border-primary/20">Client 1</div>
+                        <div class="w-28 h-16 rounded-xl bg-coral/10 text-coral font-bold text-sm flex items-center justify-center shrink-0 border border-coral/20">Client 2</div>
+                        <div class="w-28 h-16 rounded-xl bg-amber/10 text-amber font-bold text-sm flex items-center justify-center shrink-0 border border-amber/20">Client 3</div>
+                        <div class="w-28 h-16 rounded-xl bg-violet/10 text-violet font-bold text-sm flex items-center justify-center shrink-0 border border-violet/20">Client 4</div>
+                        <div class="w-28 h-16 rounded-xl bg-primary/10 text-primary font-bold text-sm flex items-center justify-center shrink-0 border border-primary/20">Client 5</div>
+                        <div class="w-28 h-16 rounded-xl bg-coral/10 text-coral font-bold text-sm flex items-center justify-center shrink-0 border border-coral/20">Client 6</div>
                     </div>
                 </div>
             </div>
@@ -205,12 +204,12 @@
                             Custom Signs in West Babylon, NY and Surrounding Areas
                         </h2>
                         <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-                            <a href="tel:7187050333" class="text-2xl sm:text-3xl font-bold text-primary hover:text-teal transition-colors">(718) 705-0333</a>
-                            <span class="text-gray-500 text-sm">Hours: <span id="businessStatus" class="font-semibold text-gray-700">Loading...</span> • Opens 8am</span>
+                            <a href="tel:7187050333" class="text-2xl sm:text-3xl font-bold text-primary hover:text-primary-light transition-colors">(718) 705-0333</a>
+                            <span class="text-slate-500 text-sm">Hours: <span id="businessStatus" class="font-semibold text-slate-700">Loading...</span> • Opens 8am</span>
                         </div>
                     </div>
-                    <div class="hidden lg:block h-64 rounded-2xl bg-gradient-to-br from-primary/20 to-teal/20 overflow-hidden">
-                        <img src="{{ asset('img/2.webp') }}" alt="" class="w-full h-full object-cover opacity-80" />
+                    <div class="hidden lg:block h-64 rounded-2xl bg-slate-200 overflow-hidden ring-1 ring-slate-200">
+                        <img src="{{ asset('img/2.webp') }}" alt="" class="w-full h-full object-cover" />
                     </div>
                 </div>
                 <!-- Row 2: form LEFT, benefits RIGHT (reversed from usual) -->
@@ -218,38 +217,38 @@
                     <div class="lg:col-span-2 lg:order-2">
                         <ul class="space-y-4">
                             <li class="flex items-start gap-3">
-                                <span class="w-10 h-10 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">check</span></span>
+                                <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">check</span></span>
                                 <span class="text-gray-700 font-medium">Five-Year Sign Warranty</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="w-10 h-10 rounded-xl bg-teal/15 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-teal">check</span></span>
+                                <span class="w-10 h-10 rounded-xl bg-coral/10 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-coral">check</span></span>
                                 <span class="text-gray-700 font-medium">Impossible Deadlines? No Problem—We Deliver</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="w-10 h-10 rounded-xl bg-coral/15 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-coral">check</span></span>
+                                <span class="w-10 h-10 rounded-xl bg-amber/10 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-amber">check</span></span>
                                 <span class="text-gray-700 font-medium">Over 40 Years Of Trusted Experience</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="w-10 h-10 rounded-xl bg-amber/15 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-amber">check</span></span>
+                                <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-primary">check</span></span>
                                 <span class="text-gray-700 font-medium">Your Local One-stop Shop For All Signage Needs</span>
                             </li>
                         </ul>
                     </div>
                     <div class="lg:col-span-3 lg:order-1">
-                        <div class="bg-gray-50 rounded-2xl p-6 sm:p-8 border-2 border-primary/10">
+                        <div class="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200">
                             <h3 class="font-display text-2xl text-gray-900 text-center mb-6">Request a Call Back</h3>
                             <form class="space-y-4">
-                                <input type="text" placeholder="Full Name*" class="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-teal focus:border-teal outline-none" />
-                                <input type="tel" placeholder="Phone*" class="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-teal focus:border-teal outline-none" />
-                                <input type="email" placeholder="Email*" class="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-teal focus:border-teal outline-none" />
-                                <select class="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-teal focus:border-teal outline-none">
+                                <input type="text" placeholder="Full Name*" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none" />
+                                <input type="tel" placeholder="Phone*" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none" />
+                                <input type="email" placeholder="Email*" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none" />
+                                <select class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none">
                                     <option value="">Service*</option>
                                     <option>Sign Services</option>
                                     <option>Awning Services</option>
                                     <option>Installation</option>
                                 </select>
-                                <p class="text-gray-400 text-xs text-center">reCAPTCHA protected.</p>
-                                <button type="submit" class="w-full bg-teal text-white font-bold py-3.5 rounded-xl hover:bg-teal/90 transition-colors">Request Call Back</button>
+                                <p class="text-slate-400 text-xs text-center">reCAPTCHA protected.</p>
+                                <button type="submit" class="w-full bg-primary text-white font-bold py-3.5 rounded-xl hover:bg-primary-light transition-colors">Request Call Back</button>
                             </form>
                         </div>
                     </div>
@@ -257,30 +256,30 @@
             </div>
         </section>
 
-        <!-- NATIONWIDE: horizontal timeline – line + 3 colored nodes -->
-        <section class="py-16 sm:py-24 bg-gradient-to-r from-primary/5 via-teal/5 to-coral/5">
+        <!-- NATIONWIDE: horizontal timeline – solid line + 3 colored nodes (no aqua) -->
+        <section class="py-16 sm:py-24 bg-slate-50 border-y border-slate-200">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-14">
                     <h2 class="font-display text-3xl sm:text-4xl text-gray-900 mb-2">Nationwide Service</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Tri State Signs &amp; Awnings is trusted by top national brands for design, fabrication and installation.</p>
+                    <p class="text-slate-600 max-w-2xl mx-auto">Tri State Signs &amp; Awnings is trusted by top national brands for design, fabrication and installation.</p>
                 </div>
                 <div class="relative">
-                    <div class="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-teal to-coral"></div>
+                    <div class="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-slate-300"></div>
                     <div class="grid md:grid-cols-3 gap-8 md:gap-4">
                         <div class="relative text-center">
                             <div class="timeline-dot bg-primary mx-auto mb-4 md:mb-6 ring-4 ring-primary/20"></div>
                             <h3 class="font-display text-xl text-gray-900 mb-2">01 — Design</h3>
-                            <p class="text-gray-600 text-sm">Custom designed signs with the support of our expert staff.</p>
-                        </div>
-                        <div class="relative text-center">
-                            <div class="timeline-dot bg-teal mx-auto mb-4 md:mb-6 ring-4 ring-teal/20"></div>
-                            <h3 class="font-display text-xl text-gray-900 mb-2">02 — Fabrication</h3>
-                            <p class="text-gray-600 text-sm">We build signs to last with the finest quality materials.</p>
+                            <p class="text-slate-600 text-sm">Custom designed signs with the support of our expert staff.</p>
                         </div>
                         <div class="relative text-center">
                             <div class="timeline-dot bg-coral mx-auto mb-4 md:mb-6 ring-4 ring-coral/20"></div>
+                            <h3 class="font-display text-xl text-gray-900 mb-2">02 — Fabrication</h3>
+                            <p class="text-slate-600 text-sm">We build signs to last with the finest quality materials.</p>
+                        </div>
+                        <div class="relative text-center">
+                            <div class="timeline-dot bg-amber mx-auto mb-4 md:mb-6 ring-4 ring-amber/20"></div>
                             <h3 class="font-display text-xl text-gray-900 mb-2">03 — Installation</h3>
-                            <p class="text-gray-600 text-sm">Fully equipped technicians for quality on-site installs.</p>
+                            <p class="text-slate-600 text-sm">Fully equipped technicians for quality on-site installs.</p>
                         </div>
                     </div>
                 </div>
@@ -292,23 +291,23 @@
             </div>
         </section>
 
-        <!-- OUR QUALITY: split – quote left, UL badge + short list right -->
+        <!-- OUR QUALITY: split – quote left, UL badge + short list right (no aqua) -->
         <section class="py-16 sm:py-24 bg-primary-dark text-white clip-diag-inv">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <div>
                         <h2 class="font-display text-3xl sm:text-4xl mb-2">It's all about</h2>
-                        <h3 class="font-display text-4xl sm:text-5xl text-mint mb-6">Our Quality</h3>
+                        <h3 class="font-display text-4xl sm:text-5xl text-amber-300 mb-6">Our Quality</h3>
                         <p class="text-white/80 text-lg leading-relaxed">
                             Noted for custom signs with durability and value. Tri State uses only the highest quality materials and processes. As a registered manufacturer with Underwriters Laboratories, we produce the safest fixtures that adhere to the strictest codes and standards.
                         </p>
                     </div>
                     <div class="flex flex-col items-center lg:items-end">
-                        <span class="inline-block bg-teal text-primary-dark font-bold px-8 py-4 rounded-2xl text-xl mb-8">UL Listed</span>
+                        <span class="inline-block bg-white text-primary-dark font-bold px-8 py-4 rounded-2xl text-xl mb-8">UL Listed</span>
                         <ul class="space-y-2 text-white/70 text-sm">
-                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-mint"></span> Highest quality materials</li>
-                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-mint"></span> Strictest codes &amp; standards</li>
-                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-mint"></span> UL registered manufacturer</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-300"></span> Highest quality materials</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-300"></span> Strictest codes &amp; standards</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-300"></span> UL registered manufacturer</li>
                         </ul>
                     </div>
                 </div>
@@ -323,7 +322,7 @@
                     <p class="text-gray-600 max-w-2xl mx-auto">We help businesses create innovative solutions. Growth, profitability, and the best service possible.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-                    <a href="{{ url('/commercial-awnings') }}" class="md:row-span-2 card-lift rounded-2xl overflow-hidden bg-gradient-to-br from-primary to-teal text-white group">
+                    <a href="{{ url('/commercial-awnings') }}" class="md:row-span-2 card-lift rounded-2xl overflow-hidden bg-primary text-white group">
                         <div class="h-48 sm:h-64 flex items-center justify-center">
                             <span class="material-symbols-outlined text-7xl opacity-80 group-hover:scale-110 transition-transform">storefront</span>
                         </div>
@@ -332,22 +331,22 @@
                             <p class="text-white/80 text-sm">Commercial &amp; residential</p>
                         </div>
                     </a>
-                    <a href="{{ url('/exterior-signs') }}" class="card-lift rounded-2xl overflow-hidden bg-teal/10 border-2 border-teal/20 p-6 group">
-                        <div class="w-14 h-14 rounded-xl bg-teal/20 flex items-center justify-center mb-4"><span class="material-symbols-outlined text-teal text-2xl">text_fields</span></div>
-                        <h3 class="font-bold text-gray-900 mb-1 group-hover:text-teal transition-colors">Channel Letters</h3>
-                        <p class="text-gray-500 text-sm">Exterior signage</p>
+                    <a href="{{ url('/exterior-signs') }}" class="card-lift rounded-2xl overflow-hidden bg-coral/10 border border-coral/20 p-6 group">
+                        <div class="w-14 h-14 rounded-xl bg-coral/20 flex items-center justify-center mb-4"><span class="material-symbols-outlined text-coral text-2xl">text_fields</span></div>
+                        <h3 class="font-bold text-gray-900 mb-1 group-hover:text-coral transition-colors">Channel Letters</h3>
+                        <p class="text-slate-500 text-sm">Exterior signage</p>
                     </a>
-                    <a href="{{ url('/installations') }}" class="card-lift rounded-2xl overflow-hidden bg-coral/10 border-2 border-coral/20 p-6 group">
-                        <div class="w-14 h-14 rounded-xl bg-coral/20 flex items-center justify-center mb-4"><span class="material-symbols-outlined text-coral text-2xl">construction</span></div>
-                        <h3 class="font-bold text-gray-900 mb-1 group-hover:text-coral transition-colors">Sign Installations</h3>
-                        <p class="text-gray-500 text-sm">Professional installs</p>
+                    <a href="{{ url('/installations') }}" class="card-lift rounded-2xl overflow-hidden bg-amber/10 border border-amber/20 p-6 group">
+                        <div class="w-14 h-14 rounded-xl bg-amber/20 flex items-center justify-center mb-4"><span class="material-symbols-outlined text-amber text-2xl">construction</span></div>
+                        <h3 class="font-bold text-gray-900 mb-1 group-hover:text-amber transition-colors">Sign Installations</h3>
+                        <p class="text-slate-500 text-sm">Professional installs</p>
                     </a>
-                    <a href="{{ url('/led-displays') }}" class="card-lift rounded-2xl overflow-hidden bg-amber/10 border-2 border-amber/20 p-6 group md:col-span-2">
+                    <a href="{{ url('/led-displays') }}" class="card-lift rounded-2xl overflow-hidden bg-violet/10 border border-violet/20 p-6 group md:col-span-2">
                         <div class="flex items-center gap-4">
-                            <div class="w-14 h-14 rounded-xl bg-amber/20 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-amber text-2xl">desktop_windows</span></div>
+                            <div class="w-14 h-14 rounded-xl bg-violet/20 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-violet text-2xl">desktop_windows</span></div>
                             <div>
-                                <h3 class="font-bold text-gray-900 mb-1 group-hover:text-amber transition-colors">LED Displays</h3>
-                                <p class="text-gray-500 text-sm">Digital signage</p>
+                                <h3 class="font-bold text-gray-900 mb-1 group-hover:text-violet transition-colors">LED Displays</h3>
+                                <p class="text-slate-500 text-sm">Digital signage</p>
                             </div>
                         </div>
                     </a>
@@ -355,14 +354,14 @@
             </div>
         </section>
 
-        <!-- STATS: 3 colored stripes (primary, teal, coral) -->
+        <!-- STATS: 3 solid stripes (primary, primary-light, coral) – no aqua -->
         <section class="py-0">
             <div class="grid md:grid-cols-3">
                 <div class="bg-primary text-white py-12 sm:py-16 text-center">
                     <div class="font-display text-4xl sm:text-5xl lg:text-6xl mb-2">1000+</div>
                     <p class="font-semibold text-white/90">Signs</p>
                 </div>
-                <div class="bg-teal text-white py-12 sm:py-16 text-center">
+                <div class="bg-primary-light text-white py-12 sm:py-16 text-center">
                     <div class="font-display text-4xl sm:text-5xl lg:text-6xl mb-2">500+</div>
                     <p class="font-semibold text-white/90">Installations</p>
                 </div>
@@ -373,17 +372,17 @@
             </div>
         </section>
 
-        <!-- WATCH THE PROS: full-bleed video, then 3 cards with colored LEFT border -->
-        <section class="py-16 sm:py-24 bg-gray-50">
+        <!-- WATCH THE PROS: video + 3 cards with colored LEFT border (no aqua) -->
+        <section class="py-16 sm:py-24 bg-slate-50">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="font-display text-3xl sm:text-4xl text-gray-900 mb-2">Watch The Pros at Tri State Signs &amp; Awnings</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto mb-6">From design and fabrication to installation and service. We pride ourselves on the best possible experience.</p>
+                    <p class="text-slate-600 max-w-2xl mx-auto mb-6">From design and fabrication to installation and service. We pride ourselves on the best possible experience.</p>
                     <a href="{{ url('/gallery') }}" class="inline-flex items-center gap-2 bg-primary text-white font-bold px-6 py-3 rounded-xl hover:bg-primary-light transition-colors">
                         View Our Project Gallery <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
                 </div>
-                <div class="max-w-4xl mx-auto mb-14 rounded-2xl overflow-hidden shadow-2xl aspect-video bg-gray-200">
+                <div class="max-w-4xl mx-auto mb-14 rounded-2xl overflow-hidden shadow-xl aspect-video bg-slate-200 ring-1 ring-slate-200">
                     <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="grid md:grid-cols-3 gap-6">
@@ -391,66 +390,66 @@
                         <img src="{{ asset('img/img1.png') }}" alt="Same-Day Appointments" class="w-24 sm:w-32 h-24 sm:h-32 object-cover flex-shrink-0" />
                         <div class="p-4 flex flex-col justify-center">
                             <h3 class="font-bold text-gray-900 mb-1">Same-Day Appointments</h3>
-                            <p class="text-gray-600 text-sm mb-2">Same-day appointments for consultations and assessments.</p>
+                            <p class="text-slate-600 text-sm mb-2">Same-day appointments for consultations and assessments.</p>
                             <a href="{{ url('contact-us') }}" class="text-primary font-semibold text-sm hover:underline">Learn More →</a>
                         </div>
                     </div>
-                    <div class="card-lift bg-white rounded-2xl overflow-hidden shadow-md flex border-l-4 border-teal">
+                    <div class="card-lift bg-white rounded-2xl overflow-hidden shadow-md flex border-l-4 border-coral">
                         <img src="{{ asset('img/img2.png') }}" alt="Concierge-Level Service" class="w-24 sm:w-32 h-24 sm:h-32 object-cover flex-shrink-0" />
                         <div class="p-4 flex flex-col justify-center">
                             <h3 class="font-bold text-gray-900 mb-1">Concierge-Level Service</h3>
-                            <p class="text-gray-600 text-sm mb-2">Personal attention and expert guidance from start to finish.</p>
-                            <a href="{{ url('contact-us') }}" class="text-teal font-semibold text-sm hover:underline">Learn More →</a>
+                            <p class="text-slate-600 text-sm mb-2">Personal attention and expert guidance from start to finish.</p>
+                            <a href="{{ url('contact-us') }}" class="text-coral font-semibold text-sm hover:underline">Learn More →</a>
                         </div>
                     </div>
-                    <div class="card-lift bg-white rounded-2xl overflow-hidden shadow-md flex border-l-4 border-coral">
+                    <div class="card-lift bg-white rounded-2xl overflow-hidden shadow-md flex border-l-4 border-amber">
                         <img src="{{ asset('img/img3.png') }}" alt="UL Listed" class="w-24 sm:w-32 h-24 sm:h-32 object-cover flex-shrink-0" />
                         <div class="p-4 flex flex-col justify-center">
                             <h3 class="font-bold text-gray-900 mb-1">UL Listed</h3>
-                            <p class="text-gray-600 text-sm mb-2">Safety and quality in every product we create.</p>
-                            <a href="{{ url('contact-us') }}" class="text-coral font-semibold text-sm hover:underline">Learn More →</a>
+                            <p class="text-slate-600 text-sm mb-2">Safety and quality in every product we create.</p>
+                            <a href="{{ url('contact-us') }}" class="text-amber font-semibold text-sm hover:underline">Learn More →</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- GET A FAST QUOTE: split – trust/contact left, form right, gradient bg -->
-        <section class="py-16 sm:py-24 bg-gradient-to-br from-primary/10 via-teal/10 to-coral/10">
+        <!-- GET A FAST QUOTE: split – trust/contact left, form right (solid bg, no aqua) -->
+        <section class="py-16 sm:py-24 bg-slate-100 border-y border-slate-200">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
                     <div class="lg:col-span-2">
                         <h2 class="font-display text-3xl sm:text-4xl text-gray-900 mb-2">GET A FAST QUOTE</h2>
-                        <p class="text-gray-600 mb-6">Get in Touch and Upload Your Ideas (optional)</p>
-                        <div class="space-y-3 text-gray-700">
+                        <p class="text-slate-600 mb-6">Get in Touch and Upload Your Ideas (optional)</p>
+                        <div class="space-y-3 text-slate-700">
                             <p><strong class="text-primary">Email:</strong> info@tristatesigns.com</p>
-                            <p><strong class="text-primary">Phone:</strong> <a href="tel:7187050333" class="text-teal hover:underline">(718) 705-0333</a></p>
+                            <p><strong class="text-primary">Phone:</strong> <a href="tel:7187050333" class="text-primary hover:underline">(718) 705-0333</a></p>
                             <p><strong class="text-primary">Office:</strong> 333 Wyandanch Ave, West Babylon, NY 11704</p>
-                            <p class="text-gray-500 text-sm">Mon–Fri 8am–5pm | Sat–Sun Closed</p>
+                            <p class="text-slate-500 text-sm">Mon–Fri 8am–5pm | Sat–Sun Closed</p>
                         </div>
                         <div class="mt-8 flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-lg bg-primary/15 text-primary text-xs font-semibold">Design</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-teal/15 text-teal text-xs font-semibold">Fabrication</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-coral/15 text-coral text-xs font-semibold">Installation</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-semibold border border-primary/20">Design</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-coral/10 text-coral text-xs font-semibold border border-coral/20">Fabrication</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-amber/10 text-amber text-xs font-semibold border border-amber/20">Installation</span>
                         </div>
                     </div>
                     <div class="lg:col-span-3">
-                        <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-xl border border-gray-200">
+                        <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-200">
                             <form id="quoteForm" class="space-y-4">
                                 <div class="grid sm:grid-cols-2 gap-4">
-                                    <input type="text" id="quote-name" name="name" required placeholder="Name *" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-teal focus:border-teal outline-none" />
-                                    <input type="email" id="quote-email" name="email" required placeholder="Email *" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-teal focus:border-teal outline-none" />
+                                    <input type="text" id="quote-name" name="name" required placeholder="Name *" class="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none" />
+                                    <input type="email" id="quote-email" name="email" required placeholder="Email *" class="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none" />
                                 </div>
-                                <input type="tel" id="quote-phone" name="phone" required placeholder="Phone *" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-teal focus:border-teal outline-none" />
-                                <input type="text" id="quote-address" name="address" required placeholder="Address *" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-teal focus:border-teal outline-none" />
-                                <input type="text" id="quote-city" name="city" required placeholder="City, State ZIP *" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-teal focus:border-teal outline-none" />
-                                <textarea id="quote-info" name="info" rows="3" placeholder="Tell us about your project..." class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-teal focus:border-teal outline-none resize-none"></textarea>
+                                <input type="tel" id="quote-phone" name="phone" required placeholder="Phone *" class="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none" />
+                                <input type="text" id="quote-address" name="address" required placeholder="Address *" class="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none" />
+                                <input type="text" id="quote-city" name="city" required placeholder="City, State ZIP *" class="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none" />
+                                <textarea id="quote-info" name="info" rows="3" placeholder="Tell us about your project..." class="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none resize-none"></textarea>
                                 <div>
-                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Upload Your Ideas (optional)</label>
-                                    <input type="file" id="quote-file" name="file" accept=".jpg,.jpeg,.png,.pdf,.heic" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-teal file:text-white file:font-semibold file:text-sm" />
-                                    <p class="text-gray-400 text-xs mt-1">jpg, jpeg, png, pdf, heic — max 10 MB</p>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-2">Upload Your Ideas (optional)</label>
+                                    <input type="file" id="quote-file" name="file" accept=".jpg,.jpeg,.png,.pdf,.heic" class="w-full border border-slate-200 rounded-xl px-4 py-3 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white file:font-semibold file:text-sm" />
+                                    <p class="text-slate-400 text-xs mt-1">jpg, jpeg, png, pdf, heic — max 10 MB</p>
                                 </div>
-                                <p class="flex items-center gap-2 text-gray-500 text-sm"><span class="material-symbols-outlined text-teal">security</span> reCAPTCHA &amp; Google Privacy Policy apply.</p>
+                                <p class="flex items-center gap-2 text-slate-500 text-sm"><span class="material-symbols-outlined text-slate-400">security</span> reCAPTCHA &amp; Google Privacy Policy apply.</p>
                                 <button type="submit" class="w-full bg-coral text-white font-bold py-4 rounded-xl hover:bg-coral/90 transition-colors">Submit Quote Request</button>
                             </form>
                         </div>
@@ -459,19 +458,18 @@
             </div>
         </section>
 
-        <!-- TESTIMONIALS: overlapping cards + quote style, tinted bg -->
-        <section class="py-16 sm:py-24 bg-amber/5 relative overflow-hidden">
-            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(13,148,136,0.08)_0%,transparent_50%)]"></div>
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <!-- TESTIMONIALS: overlapping cards (solid bg, no gradients/aqua) -->
+        <section class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="font-display text-3xl sm:text-4xl text-gray-900 mb-2">Here's what our satisfied customers are saying...</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto mb-6">We take pride in exceptional sign and awning services. Your feedback helps us improve and helps others decide.</p>
+                    <p class="text-slate-600 max-w-2xl mx-auto mb-6">We take pride in exceptional sign and awning services. Your feedback helps us improve and helps others decide.</p>
                     <button id="openReviewModal" class="inline-flex items-center gap-2 bg-violet text-white font-bold px-6 py-3 rounded-xl hover:bg-violet/90 transition-colors">
                         <span class="material-symbols-outlined">rate_review</span> Write a Review
                     </button>
                 </div>
                 <div class="grid md:grid-cols-2 gap-6 md:gap-8 relative">
-                    <div class="card-lift bg-white rounded-2xl p-6 sm:p-8 shadow-lg border-2 border-amber/20 relative z-10 md:-mr-4 md:mt-4">
+                    <div class="card-lift bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-200 relative z-10 md:-mr-4 md:mt-4">
                         <div class="flex items-center justify-between mb-4">
                             <div>
                                 <h3 class="font-bold text-gray-900">Brittany D</h3>
@@ -487,7 +485,7 @@
                         </div>
                         <p class="text-gray-600 leading-relaxed italic">"Super easy to work with and they really know their stuff. Permits, custom vinyl, awning — totally transforms the storefront. Definitely recommend!"</p>
                     </div>
-                    <div class="card-lift bg-white rounded-2xl p-6 sm:p-8 shadow-lg border-2 border-teal/20 relative z-0 md:ml-4">
+                    <div class="card-lift bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-200 relative z-0 md:ml-4">
                         <div class="flex items-center justify-between mb-4">
                             <div>
                                 <h3 class="font-bold text-gray-900">John M</h3>
@@ -516,7 +514,7 @@
                     <h3 class="font-display text-lg mb-4">Visit Us</h3>
                     <p class="text-white/80">333 Wyandanch Avenue</p>
                     <p class="text-white/80">West Babylon, NY 11704</p>
-                    <a href="#" class="inline-block mt-4 border-2 border-mint text-mint font-bold px-4 py-2 rounded-lg hover:bg-mint hover:text-primary-dark transition-colors text-sm">Get Directions</a>
+                    <a href="#" class="inline-block mt-4 border-2 border-white/50 text-white font-bold px-4 py-2 rounded-xl hover:bg-white hover:text-primary-dark transition-colors text-sm">Get Directions</a>
                 </div>
                 <div>
                     <h3 class="font-display text-lg mb-4">Serving Area</h3>
@@ -527,10 +525,10 @@
                 <div>
                     <h3 class="font-display text-lg mb-4">Contact Us</h3>
                     <p class="font-bold text-lg mb-4">(718) 705-0333</p>
-                    <a href="{{ url('contact-us') }}" class="inline-block bg-teal text-white font-bold px-4 py-2 rounded-lg hover:bg-teal/90 transition-colors text-sm mb-4">Send a Message</a>
+                    <a href="{{ url('contact-us') }}" class="inline-block bg-coral text-white font-bold px-4 py-2 rounded-xl hover:bg-coral/90 transition-colors text-sm mb-4">Send a Message</a>
                     <div class="flex gap-4">
-                        <a href="https://www.facebook.com/tristatesigns" class="text-white/80 hover:text-mint transition-colors" aria-label="Facebook"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
-                        <a href="https://www.facebook.com/TriSignsNY" class="text-white/80 hover:text-mint transition-colors" aria-label="TriSigns"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg></a>
+                        <a href="https://www.facebook.com/tristatesigns" class="text-white/80 hover:text-white transition-colors" aria-label="Facebook"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+                        <a href="https://www.facebook.com/TriSignsNY" class="text-white/80 hover:text-white transition-colors" aria-label="TriSigns"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg></a>
                     </div>
                 </div>
                 <div>
@@ -540,12 +538,12 @@
                     <p class="text-white/60 text-sm mt-4">Same-Day Appointments</p>
                 </div>
             </div>
-            <div class="border-t border-teal/30 mt-10 pt-6 text-center text-white/60 text-sm">© {{ date('Y') }} Tri State Signs &amp; Awnings. All Rights Reserved.</div>
+            <div class="border-t border-white/10 mt-10 pt-6 text-center text-white/60 text-sm">© {{ date('Y') }} Tri State Signs &amp; Awnings. All Rights Reserved.</div>
         </div>
     </footer>
 
-    <!-- Floating sidebar: gradient -->
-    <div class="hidden sm:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col bg-gradient-to-b from-primary to-teal rounded-l-2xl shadow-xl border-l border-y border-teal/30 z-40 overflow-hidden">
+    <!-- Floating sidebar: solid primary (no gradient/aqua) -->
+    <div class="hidden sm:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col bg-primary-dark rounded-l-2xl shadow-xl border-l border-y border-white/10 z-40 overflow-hidden">
         <a href="tel:7187050333" class="p-3 text-white/90 hover:bg-white/10 transition-colors" title="Call"><span class="material-symbols-outlined">call</span></a>
         <a href="{{ url('/reviews') }}" class="p-3 text-white/90 hover:bg-white/10 transition-colors" title="Reviews"><span class="material-symbols-outlined">star</span></a>
         <a href="{{ url('request-call-back') }}" class="p-3 text-white/90 hover:bg-white/10 transition-colors" title="Request Call Back"><span class="material-symbols-outlined">mail</span></a>
@@ -556,19 +554,19 @@
     <div id="reviewModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-hidden="true">
         <div id="modalBackdrop" class="fixed inset-0 bg-gray-900/60 backdrop-blur-sm"></div>
         <div class="flex min-h-full items-center justify-center p-4">
-            <div class="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full border-2 border-gray-200">
-                <div class="flex items-center justify-between p-6 border-b border-gray-200">
-                    <h2 id="reviewModalLabel" class="font-display text-xl text-gray-900">Write a Review</h2>
-                    <button id="closeReviewModal" type="button" class="p-2 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-700"><span class="material-symbols-outlined">close</span></button>
+            <div class="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full border border-slate-200">
+                <div class="flex items-center justify-between p-6 border-b border-slate-200">
+                    <h2 id="reviewModalLabel" class="font-display text-xl text-slate-900">Write a Review</h2>
+                    <button id="closeReviewModal" type="button" class="p-2 rounded-lg text-slate-400 hover:bg-slate-100 hover:text-slate-700"><span class="material-symbols-outlined">close</span></button>
                 </div>
                 <div class="p-6">
                     <form id="reviewForm">
                         <div class="mb-4">
-                            <label for="reviewerName" class="block text-sm font-bold text-gray-800 mb-2">Your Name</label>
-                            <input type="text" id="reviewerName" name="name" required placeholder="Enter your name" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-teal focus:border-teal outline-none" />
+                            <label for="reviewerName" class="block text-sm font-bold text-slate-800 mb-2">Your Name</label>
+                            <input type="text" id="reviewerName" name="name" required placeholder="Enter your name" class="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none" />
                         </div>
                         <div class="mb-4">
-                            <label class="block text-sm font-bold text-gray-800 mb-2">Rating</label>
+                            <label class="block text-sm font-bold text-slate-800 mb-2">Rating</label>
                             <div class="flex gap-1" id="ratingStars">
                                 <button type="button" class="rating-star text-gray-300 hover:text-amber-400 p-1" data-rating="1"><span class="material-symbols-outlined text-2xl">star</span></button>
                                 <button type="button" class="rating-star text-gray-300 hover:text-amber-400 p-1" data-rating="2"><span class="material-symbols-outlined text-2xl">star</span></button>
@@ -579,14 +577,14 @@
                             <input type="hidden" id="reviewRating" name="rating" value="0" required />
                         </div>
                         <div class="mb-4">
-                            <label for="review" class="block text-sm font-bold text-gray-800 mb-2">Your Review</label>
-                            <textarea id="review" name="review" rows="4" required placeholder="Share your experience..." class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-teal focus:border-teal outline-none resize-none"></textarea>
+                            <label for="review" class="block text-sm font-bold text-slate-800 mb-2">Your Review</label>
+                            <textarea id="review" name="review" rows="4" required placeholder="Share your experience..." class="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none resize-none"></textarea>
                         </div>
                     </form>
                 </div>
-                <div class="flex justify-end gap-3 p-6 border-t border-gray-200">
-                    <button id="cancelReviewModal" type="button" class="px-4 py-2.5 rounded-xl font-bold text-gray-700 bg-gray-100 hover:bg-gray-200">Cancel</button>
-                    <button id="submitReview" type="button" class="px-4 py-2.5 rounded-xl font-bold text-white bg-teal hover:bg-teal/90">Submit Review</button>
+                <div class="flex justify-end gap-3 p-6 border-t border-slate-200">
+                    <button id="cancelReviewModal" type="button" class="px-4 py-2.5 rounded-xl font-bold text-slate-700 bg-slate-100 hover:bg-slate-200">Cancel</button>
+                    <button id="submitReview" type="button" class="px-4 py-2.5 rounded-xl font-bold text-white bg-primary hover:bg-primary-light">Submit Review</button>
                 </div>
             </div>
         </div>

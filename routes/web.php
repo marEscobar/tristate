@@ -14,6 +14,10 @@ Route::get('/welcome3', function () {
     return view('welcome3');
 });
 
+Route::get('/welcome4', function () {
+    return view('welcome4');
+});
+
 Route::get('/exterior-signs', function () {
     return view('exterior-signs');
 });
