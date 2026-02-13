@@ -16,8 +16,8 @@
                     colors: {
                         ink: '#0f172a',
                         inklight: '#1e293b',
-                        accent: '#f97316',
-                        accentlight: '#fb923c',
+                        accent: '#6ebb1c',
+                        accentlight: '#8dd43a',
                         cream: '#fefce8',
                         sand: '#fef3c7',
                     },
@@ -32,13 +32,13 @@
     <style>
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .font-display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; }
-        .hero-pattern { background-image: radial-gradient(circle at 20% 50%, rgba(249,115,22,0.08) 0%, transparent 50%); }
+        .hero-pattern { background-image: radial-gradient(circle at 20% 50%, rgba(110,187,28,0.08) 0%, transparent 50%); }
         .clip-wedge { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
         .clip-wedge-inv { clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
         .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .card-hover:hover { transform: translateY(-6px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); }
-        .btn-accent { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); }
-        .btn-accent:hover { background: linear-gradient(135deg, #fb923c 0%, #f97316 100%); }
+        .btn-accent { background: linear-gradient(135deg, #6ebb1c 0%, #5a9516 100%); }
+        .btn-accent:hover { background: linear-gradient(135deg, #8dd43a 0%, #6ebb1c 100%); }
         .nav-blur { backdrop-filter: blur(12px); background: rgba(15,23,42,0.85); }
     </style>
 </head>
