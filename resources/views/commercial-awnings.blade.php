@@ -378,67 +378,67 @@
                     {{-- column right --}}
                     <div class="text-text-light py-16 sm:py-20 lg:py-24 rounded-lg ">
                         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                            <div class="text-white py-4 sm:py-4 lg:py-4 rounded-lg bg-accent p-4">
-                                <h3 class="text-3xl font-bold text-white ">Reviews</h3>
+                            <div class="text-white py-4 sm:py-4 lg:py-4 rounded-lg bg-green-700 p-4 text-white">
+                                <h3 class="text-3xl font-bold text-white">Reviews</h3>
                                 <br>
                                 <div class="flex items-center justify-between mb-3 sm:mb-4">
                                     <div>
                                         <h3
-                                            class="font-bold text-base sm:text-lg text-text-light dark:text-text-light">
+                                            class="font-bold text-base sm:text-lg text-text-light dark:text-text-light text-white">
                                             Brittany
                                             D</h3>
 
                                     </div>
                                     <div class="flex text-text-light dark:text-yellow-400">
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
                                     </div>
                                 </div>
                                 <p
-                                    class="text-text-light dark:text-text-light leading-relaxed text-sm sm:text-base text-left">
+                                    class="text-text-light dark:text-text-light leading-relaxed text-sm sm:text-base text-left text-white">
                                     Super easy to work with and they really know their
                                     stuff when it comes to permits. Custom ...
-                                    <a href="{{ url('/reviews') }}"><u>read more</u></a>
+                                    <a href="{{ url('/reviews') }}" class="text-white"><u>read more</u></a>
                                 </p>
-                                <p class="text-xs sm:text-sm text-text-light dark:text-text-light text-right">5/1/2025
+                                <p class="text-xs sm:text-sm text-text-light dark:text-text-light text-right text-white">5/1/2025
                                 </p>
                                 <br>
 
                                 <div class="flex items-center justify-between mb-3 sm:mb-4">
                                     <div>
                                         <h3
-                                            class="font-bold text-base sm:text-lg text-text-light dark:text-text-light">
+                                            class="font-bold text-base sm:text-lg text-text-light dark:text-text-light text-white">
                                             Brit</h3>
 
                                     </div>
                                     <div class="flex text-text-light dark:text-yellow-400">
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
                                     </div>
                                 </div>
                                 <p
-                                    class="text-text-light dark:text-text-light leading-relaxed text-sm sm:text-base text-left">
+                                    class="text-text-light dark:text-text-light leading-relaxed text-sm sm:text-base text-left text-white">
                                     Kelvin, Pedro and the whole crew at TriState are
                                     professional, creative, and reliable—the ...
-                                    <a href="{{ url('/reviews') }}"><u>read more</u></a>
+                                    <a href="{{ url('/reviews') }}" class="text-white"><u>read more</u></a>
                                 </p>
-                                <p class="text-xs sm:text-sm text-text-light dark:text-text-light text-right">5/1/2025
+                                <p class="text-xs sm:text-sm text-text-light dark:text-text-light text-right text-white">5/1/2025
                                 </p>
                                 <br>
                                 <button id="openReviewModal"

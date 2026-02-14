@@ -403,7 +403,7 @@
                     {{-- column right --}}
                     <div class="text-white py-16 sm:py-20 lg:py-24 rounded-lg ">
                         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                            <div class="text-white py-4 sm:py-4 lg:py-4 rounded-xl bg-accent p-4">
+                            <div class="text-white py-4 sm:py-4 lg:py-4 rounded-xl bg-green-700 p-4">
                                 <h3 class="text-3xl font-bold text-white ">Reviews</h3>
                                 <br>
                                 <div class="flex items-center justify-between mb-3 sm:mb-4">
@@ -415,15 +415,15 @@
 
                                     </div>
                                     <div class="flex text-white">
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
                                     </div>
                                 </div>
@@ -431,7 +431,7 @@
                                     class="text-white leading-relaxed text-sm sm:text-base text-left">
                                     Super easy to work with and they really know their
                                     stuff when it comes to permits. Custom ...
-                                    <a href="{{ url('/reviews') }}"><u>read more</u></a>
+                                    <a href="{{ url('/reviews') }}" class="text-white"><u>read more</u></a>
                                 </p>
                                 <p class="text-xs sm:text-sm text-white text-right">5/1/2025
                                 </p>
@@ -445,15 +445,15 @@
 
                                     </div>
                                     <div class="flex text-white">
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base"
+                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
                                             style="font-variation-settings: 'FILL' 1">star</span>
                                     </div>
                                 </div>
@@ -461,7 +461,7 @@
                                     class="text-white leading-relaxed text-sm sm:text-base text-left">
                                     Kelvin, Pedro and the whole crew at TriState are
                                     professional, creative, and reliable—the ...
-                                    <a href="{{ url('/reviews') }}"><u>read more</u></a>
+                                    <a href="{{ url('/reviews') }}" class="text-white"><u>read more</u></a>
                                 </p>
                                 <p class="text-xs sm:text-sm text-white text-right">5/1/2025
                                 </p>
@@ -472,7 +472,7 @@
 
                             </div>
                             <br>
-                            <div class="text-white py-4 sm:py-4 lg:py-4 rounded-xl bg-accent p-4">
+                            <div class="text-white py-4 sm:py-4 lg:py-4 rounded-xl bg-ink text-white p-4">
                                 <span class="material-symbols-outlined text-3xl text-white p-2"
                                     style="font-size: 4rem;">
                                     order_approve

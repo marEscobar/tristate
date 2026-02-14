@@ -466,7 +466,7 @@
                     {{-- column right --}}
                     <div class="text-white py-16 sm:py-20 lg:py-24 rounded-lg ">
                         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                            <div class="text-white py-4 sm:py-4 lg:py-4 rounded-xl bg-accent p-4">
+                            <div class="text-white py-4 sm:py-4 lg:py-4 rounded-xl bg-green-700 p-4">
                                 <h3 class="text-3xl font-bold text-white ">Reviews</h3>
                                 <br>
                                 <div class="flex items-center justify-between mb-3 sm:mb-4">
@@ -535,7 +535,7 @@
 
                             </div>
                             <br>
-                            <div class="text-white py-4 sm:py-4 lg:py-4 rounded-xl bg-accent p-4">
+                            <div class="text-white py-4 sm:py-4 lg:py-4 rounded-xl bg-ink text-white p-4">
                                 <span class="material-symbols-outlined text-3xl text-white p-2"
                                     style="font-size: 4rem;">
                                     filter_frames
