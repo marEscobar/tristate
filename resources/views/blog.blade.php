@@ -200,13 +200,13 @@
 
         {{-- Reviews Section --}}
         @if(isset($latestReviews) && $latestReviews->count() > 0)
-        <section class="bg-sand py-16 sm:py-20 lg:py-24">
+        <section class="bg-gradient-to-b from-ink to-inklight py-16 sm:py-20 lg:py-24 text-white">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
-                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-ink mb-4">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white mb-4">
                         Latest Reviews
                     </h2>
-                    <p class="text-ink/70 text-sm sm:text-base lg:text-lg">
+                    <p class="text-white/70 text-sm sm:text-base lg:text-lg">
                         See what our customers are saying about us
                     </p>
                 </div>

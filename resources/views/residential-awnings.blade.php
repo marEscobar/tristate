@@ -391,7 +391,7 @@
                             <div class="text-text-light py-4 sm:py-4 lg:py-4 rounded-lg bg-green-700 p-4 text-white">
                                 <h3 class="text-3xl font-bold text-white">Reviews</h3>
                                 <br>
-                                <div class="flex items-center justify-between mb-3 sm:mb-4">
+                                <div class="items-center justify-between mb-3 sm:mb-4">
                                     @if(isset($reviews) && $reviews->count() > 0)
                                         @foreach($reviews as $review)
                                             <div class="flex items-center justify-between mb-3 sm:mb-4">
@@ -436,7 +436,7 @@
                                 <h3 class="text-xl font-bold text-text-light ">(718) 705-0333</h3>
                             </div>
                             <br>
-                            <div class="text-text-light py-4 sm:py-4 lg:py-4 rounded-lg bg-gray-100 p-4 text-left">
+                            <div class="text-ink py-4 sm:py-4 lg:py-4 rounded-lg bg-gray-100 p-4 text-left">
                                 <h3 class="text-2xl font-bold text-text-dark ">Related Services</h3>
                                 <br>
                                 <h3 class="text-md font-bold text-text-dark "> <a

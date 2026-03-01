@@ -200,7 +200,7 @@ Route::middleware('auth')->group(function () {
     // Blog CRUD Routes
     Route::resource('blogs', BlogController::class);
     // Review CRUD Routes (Admin)
-    Route::resource('reviews', ReviewController::class);
+    Route::resource('admin/reviews', ReviewController::class);
     Route::post('/reviews/{review}/toggle-approval', [ReviewController::class, 'toggleApproval'])->name('reviews.toggleApproval');
 
     // Permission, Role, and User Management Routes

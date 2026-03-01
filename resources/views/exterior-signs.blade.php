@@ -489,7 +489,7 @@
             </div>
         </section>
 
-        <section class="bg-green-900 py-4 sm:py-10 lg:py-10 text-text-light">
+        <section class="bg-green-900 py-4 sm:py-10 lg:py-10 text-text-light text-white">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-center mb-8 sm:mb-6">
                     Contact Tri State Signs  &amp; Awnings

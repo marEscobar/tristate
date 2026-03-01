@@ -381,7 +381,7 @@
                             <div class="text-white py-4 sm:py-4 lg:py-4 rounded-lg bg-green-700 p-4 text-white">
                                 <h3 class="text-3xl font-bold text-white">Reviews</h3>
                                 <br>
-                                <div class="flex items-center justify-between mb-3 sm:mb-4">
+                                <div class=" items-center justify-between mb-3 sm:mb-4">
                                     @if(isset($reviews) && $reviews->count() > 0)
                                         @foreach($reviews as $review)
                                             <div class="flex items-center justify-between mb-3 sm:mb-4">
