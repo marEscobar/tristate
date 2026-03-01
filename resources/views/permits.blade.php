@@ -406,65 +406,31 @@
                             <div class="text-white py-4 sm:py-4 lg:py-4 rounded-xl bg-green-700 p-4">
                                 <h3 class="text-3xl font-bold text-white ">Reviews</h3>
                                 <br>
-                                <div class="flex items-center justify-between mb-3 sm:mb-4">
-                                    <div>
-                                        <h3
-                                            class="font-bold text-base sm:text-lg text-white">
-                                            Brittany
-                                            D</h3>
-
-                                    </div>
-                                    <div class="flex text-white">
-                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
-                                            style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
-                                            style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
-                                            style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
-                                            style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
-                                            style="font-variation-settings: 'FILL' 1">star</span>
-                                    </div>
-                                </div>
-                                <p
-                                    class="text-white leading-relaxed text-sm sm:text-base text-left">
-                                    Super easy to work with and they really know their
-                                    stuff when it comes to permits. Custom ...
-                                    <a href="{{ url('/reviews') }}" class="text-white"><u>read more</u></a>
-                                </p>
-                                <p class="text-xs sm:text-sm text-white text-right">5/1/2025
-                                </p>
-                                <br>
-
-                                <div class="flex items-center justify-between mb-3 sm:mb-4">
-                                    <div>
-                                        <h3
-                                            class="font-bold text-base sm:text-lg text-white">
-                                            Brit</h3>
-
-                                    </div>
-                                    <div class="flex text-white">
-                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
-                                            style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
-                                            style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
-                                            style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
-                                            style="font-variation-settings: 'FILL' 1">star</span>
-                                        <span class="material-symbols-outlined text-sm sm:text-base text-white"
-                                            style="font-variation-settings: 'FILL' 1">star</span>
-                                    </div>
-                                </div>
-                                <p
-                                    class="text-white leading-relaxed text-sm sm:text-base text-left">
-                                    Kelvin, Pedro and the whole crew at TriState are
-                                    professional, creative, and reliable—the ...
-                                    <a href="{{ url('/reviews') }}" class="text-white"><u>read more</u></a>
-                                </p>
-                                <p class="text-xs sm:text-sm text-white text-right">5/1/2025
-                                </p>
+                                @if(isset($reviews) && $reviews->count() > 0)
+                                    @foreach($reviews as $review)
+                                        <div class="flex items-center justify-between mb-3 sm:mb-4">
+                                            <div>
+                                                <h3 class="font-bold text-base sm:text-lg text-white">{{ $review->name }}</h3>
+                                            </div>
+                                            <div class="flex text-white">
+                                                @for($i = 1; $i <= 5; $i++)
+                                                    <span class="material-symbols-outlined text-sm sm:text-base text-white"
+                                                        style="font-variation-settings: 'FILL' {{ $i <= $review->rating ? 1 : 0 }}">star</span>
+                                                @endfor
+                                            </div>
+                                        </div>
+                                        <p class="text-white leading-relaxed text-sm sm:text-base text-left">
+                                            {{ Str::limit($review->comment, 100) }}...
+                                            <a href="{{ url('/reviews') }}" class="text-white"><u>read more</u></a>
+                                        </p>
+                                        <p class="text-xs sm:text-sm text-white text-right">{{ $review->created_at->format('n/j/Y') }}</p>
+                                        @if(!$loop->last)
+                                            <br>
+                                        @endif
+                                    @endforeach
+                                @else
+                                    <p class="text-white">No reviews available at this time.</p>
+                                @endif
                                 <br>
                                 <button id="openReviewModal"
                                     class="inline-block bg-white text-accent hover:text-white font-bold px-5 sm:px-6 py-2.5 rounded-xl hover:bg-accent transition-colors duration-300 text-xs sm:text-sm">Write
@@ -603,7 +569,8 @@
 
                 <!-- Modal Body -->
                 <div class="p-6">
-                    <form id="reviewForm">
+                    <form id="reviewForm" action="{{ route('reviews.storePublic') }}" method="POST">
+                        @csrf
                         <div class="mb-4">
                             <label for="reviewerName"
                                 class="block text-sm font-medium text-ink mb-2">Your

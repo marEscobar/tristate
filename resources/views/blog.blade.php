@@ -148,111 +148,47 @@
         <!-- RESTO DE SECCIONES (ajuste mínimo, ya son responsivas) -->
         <section class="bg-white py-16 sm:py-10 lg:py-14 text-ink">
             <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8">
-                    <!-- Blog Post 1 -->
+                @if(isset($blogs) && $blogs->count() > 0)
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8">
+                        @foreach($blogs as $blog)
+                        <!-- Blog Post -->
                     <div class="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col card-hover">
                         <div class="relative h-48 sm:h-56 overflow-hidden">
-                            <img src="{{ asset('img/exterior/ext1.JPG') }}" alt="Exterior Signage Guide" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                            @if($blog->image)
+                                <img src="{{ asset($blog->image) }}" alt="{{ $blog->title }}" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                            @else
+                                <img src="{{ asset('img/exterior/ext1.JPG') }}" alt="{{ $blog->title }}" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                            @endif
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <div class="mb-3">
-                                <span class="text-xs text-ink/60">January 15, 2025</span>
+                                <span class="text-xs text-ink/60">
+                                    @if($blog->published_at)
+                                        {{ $blog->published_at->format('F d, Y') }}
+                                    @else
+                                        {{ $blog->created_at->format('F d, Y') }}
+                                    @endif
+                                </span>
                             </div>
                             <h3 class="text-xl sm:text-2xl font-display font-bold mb-3 text-ink">
-                                The Ultimate Guide to Choosing the Right Exterior Signage for Your Business
+                                {{ $blog->title }}
                             </h3>
                             <p class="text-ink/70 mb-4 flex-grow text-sm sm:text-base leading-relaxed">
-                                Discover how to select the perfect exterior signage that not only represents your brand but also attracts customers and complies with local regulations. Learn about different sign types, materials, and design considerations.
+                                {{ $blog->excerpt }}
                             </p>
-                            <a href="{{ url('/blog/choosing-exterior-signage') }}" class="inline-block btn-accent text-white font-bold px-5 sm:px-6 py-2.5 rounded-xl hover:shadow-lg transition-all text-xs sm:text-sm w-full sm:w-auto text-center">
+                                <a href="{{ url('/blog/' . $blog->slug) }}" class="inline-block btn-accent text-white font-bold px-5 sm:px-6 py-2.5 rounded-xl hover:shadow-lg transition-all text-xs sm:text-sm w-full sm:w-auto text-center">
                                 Read More
                             </a>
                         </div>
                     </div>
 
-                    <!-- Blog Post 2 -->
-                    <div class="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col card-hover">
-                        <div class="relative h-48 sm:h-56 overflow-hidden">
-                            <img src="{{ asset('img/exterior/ext2.JPG') }}" alt="LED Display Technology" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <div class="mb-3">
-                                <span class="text-xs text-ink/60">January 10, 2025</span>
-                            </div>
-                            <h3 class="text-xl sm:text-2xl font-display font-bold mb-3 text-ink">
-                                LED Display Technology: Transforming Modern Business Communication
-                            </h3>
-                            <p class="text-ink/70 mb-4 flex-grow text-sm sm:text-base leading-relaxed">
-                                Explore the latest advancements in LED display technology and how businesses are using dynamic signage to engage customers, increase visibility, and drive sales. Learn about installation, maintenance, and ROI.
-                            </p>
-                            <a href="{{ url('/blog/led-display-technology') }}" class="inline-block btn-accent text-white font-bold px-5 sm:px-6 py-2.5 rounded-xl hover:shadow-lg transition-all text-xs sm:text-sm w-full sm:w-auto text-center">
-                                Read More
-                            </a>
-                        </div>
+                        @endforeach
                     </div>
-
-                    <!-- Blog Post 3 -->
-                    <div class="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col card-hover">
-                        <div class="relative h-48 sm:h-56 overflow-hidden">
-                            <img src="{{ asset('img/exterior/ext3.JPG') }}" alt="Commercial Awnings" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <div class="mb-3">
-                                <span class="text-xs text-ink/60">January 5, 2025</span>
-                            </div>
-                            <h3 class="text-xl sm:text-2xl font-display font-bold mb-3 text-ink">
-                                Commercial Awnings: Combining Functionality with Aesthetic Appeal
-                            </h3>
-                            <p class="text-ink/70 mb-4 flex-grow text-sm sm:text-base leading-relaxed">
-                                Learn how commercial awnings can enhance your storefront's appearance while providing practical benefits like weather protection, energy savings, and increased curb appeal. Discover design options and materials.
-                            </p>
-                            <a href="{{ url('/blog/commercial-awnings-guide') }}" class="inline-block btn-accent text-white font-bold px-5 sm:px-6 py-2.5 rounded-xl hover:shadow-lg transition-all text-xs sm:text-sm w-full sm:w-auto text-center">
-                                Read More
-                            </a>
-                        </div>
+                @else
+                    <div class="text-center py-12">
+                        <p class="text-ink/70 text-lg">No hay blogs disponibles en este momento.</p>
                     </div>
-
-                    <!-- Blog Post 4 -->
-                    <div class="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col card-hover">
-                        <div class="relative h-48 sm:h-56 overflow-hidden">
-                            <img src="{{ asset('img/exterior/ext4.JPG') }}" alt="Sign Permits" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <div class="mb-3">
-                                <span class="text-xs text-ink/60">December 28, 2024</span>
-                            </div>
-                            <h3 class="text-xl sm:text-2xl font-display font-bold mb-3 text-ink">
-                                Sign Permits 101: Everything You Need to Know
-                            </h3>
-                            <p class="text-ink/70 mb-4 flex-grow text-sm sm:text-base leading-relaxed">
-                                Navigating the permit process can be complex. This comprehensive guide covers sign permit requirements, application processes, timelines, and how professional permit expediting services can save you time and money.
-                            </p>
-                            <a href="{{ url('/blog/sign-permits-guide') }}" class="inline-block btn-accent text-white font-bold px-5 sm:px-6 py-2.5 rounded-xl hover:shadow-lg transition-all text-xs sm:text-sm w-full sm:w-auto text-center">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Blog Post 5 -->
-                    <div class="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col card-hover">
-                        <div class="relative h-48 sm:h-56 overflow-hidden">
-                            <img src="{{ asset('img/exterior/ext6.JPG') }}" alt="Sign Maintenance" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <div class="mb-3">
-                                <span class="text-xs text-ink/60">December 20, 2024</span>
-                            </div>
-                            <h3 class="text-xl sm:text-2xl font-display font-bold mb-3 text-ink">
-                                Maintenance Tips to Extend the Life of Your Business Signs
-                            </h3>
-                            <p class="text-ink/70 mb-4 flex-grow text-sm sm:text-base leading-relaxed">
-                                Proper maintenance is key to keeping your business signs looking professional and functioning correctly. Get expert tips on cleaning, inspection schedules, and when to call professionals for repairs or replacements.
-                            </p>
-                            <a href="{{ url('/blog/sign-maintenance-tips') }}" class="inline-block btn-accent text-white font-bold px-5 sm:px-6 py-2.5 rounded-xl hover:shadow-lg transition-all text-xs sm:text-sm w-full sm:w-auto text-center">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
+                @endif
 
 
 
@@ -261,6 +197,54 @@
                 </div>
             </div>
         </section>
+
+        {{-- Reviews Section --}}
+        @if(isset($latestReviews) && $latestReviews->count() > 0)
+        <section class="bg-sand py-16 sm:py-20 lg:py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-ink mb-4">
+                        Latest Reviews
+                    </h2>
+                    <p class="text-ink/70 text-sm sm:text-base lg:text-lg">
+                        See what our customers are saying about us
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                    @foreach($latestReviews as $review)
+                        <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <div>
+                                    <h3 class="font-display font-bold text-lg sm:text-xl text-ink mb-1">
+                                        {{ $review->name }}
+                                    </h3>
+                                    <p class="text-xs sm:text-sm text-ink/60">
+                                        {{ $review->created_at->format('F d, Y') }}
+                                    </p>
+                                </div>
+                                <div class="flex text-accent">
+                                    @for($i = 1; $i <= 5; $i++)
+                                        <span class="material-symbols-outlined text-lg sm:text-xl"
+                                            style="font-variation-settings: 'FILL' {{ $i <= $review->rating ? 1 : 0 }};">
+                                            star
+                                        </span>
+                                    @endfor
+                                </div>
+                            </div>
+                            <p class="text-ink/70 leading-relaxed text-sm sm:text-base">
+                                {{ $review->comment }}
+                            </p>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="text-center mt-8">
+                    <a href="{{ url('/reviews') }}" class="inline-block btn-accent text-white font-bold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl hover:shadow-lg transition-all text-sm sm:text-base">
+                        View All Reviews
+                    </a>
+                </div>
+            </div>
+        </section>
+        @endif
 
         {{-- section video --}}
         <section class="py-16 sm:py-20 lg:py-24 bg-sand">
@@ -346,14 +330,29 @@
 
                 <!-- Modal Body -->
                 <div class="p-6">
-                    <form id="reviewForm">
+                    @if(session('review_success'))
+                        <div class="mb-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+                            {{ session('review_success') }}
+                        </div>
+                    @endif
+                    @if($errors->any())
+                        <div class="mb-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <form id="reviewForm" action="{{ route('reviews.storePublic') }}" method="POST">
+                        @csrf
                         <div class="mb-4">
                             <label for="reviewerName"
                                 class="block text-sm font-medium text-text-dark dark:text-text-light mb-2">Your
                                 Name</label>
                             <input type="text" id="reviewerName" name="name"
                                 class="w-full bg-gray-100 dark:bg-primary-light/20 border border-gray-300 dark:border-gray-600 rounded-md text-text-dark dark:text-text-light placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
-                                placeholder="Enter your name" required>
+                                placeholder="Enter your name" value="{{ old('name') }}" required>
                         </div>
                         <div class="mb-4">
                             <label for="reviewRating"
@@ -385,15 +384,15 @@
                                     <span class="material-symbols-outlined text-2xl">star</span>
                                 </button>
                             </div>
-                            <input type="hidden" id="reviewRating" name="rating" value="0" required>
+                            <input type="hidden" id="reviewRating" name="rating" value="{{ old('rating', '0') }}" required>
                         </div>
                         <div class="mb-4">
                             <label for="review"
                                 class="block text-sm font-medium text-text-dark dark:text-text-light mb-2">Your
                                 Review</label>
-                            <textarea id="review" name="review" rows="4"
+                            <textarea id="review" name="comment" rows="4"
                                 class="w-full bg-gray-100 dark:bg-primary-light/20 border border-gray-300 dark:border-gray-600 rounded-md text-text-dark dark:text-text-light placeholder-text-muted-light focus:ring-primary focus:border-primary transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
-                                placeholder="Share your experience with us..." required></textarea>
+                                placeholder="Share your experience with us..." required>{{ old('comment') }}</textarea>
                         </div>
                     </form>
                 </div>
@@ -404,7 +403,7 @@
                         class="px-4 py-2 text-sm font-medium text-text-dark dark:text-text-light bg-gray-100 dark:bg-primary-light/20 rounded-md hover:bg-gray-200 dark:hover:bg-primary-light/30 transition-colors duration-300">
                         Cancel
                     </button>
-                    <button id="submitReview" type="button"
+                    <button id="submitReview" type="submit" form="reviewForm"
                         class="px-4 py-2 text-sm font-medium text-text-light bg-primary rounded-md hover:bg-primary-light transition-colors duration-300">
                         Submit Review
                     </button>
@@ -620,31 +619,23 @@
             });
         });
 
-        // Submit review
+        // Submit review - validate and submit form
         const submitReviewBtn = document.getElementById('submitReview');
         if (submitReviewBtn) {
-            submitReviewBtn.addEventListener('click', () => {
+            submitReviewBtn.addEventListener('click', (e) => {
+                e.preventDefault();
                 const form = document.getElementById('reviewForm');
-                const formData = new FormData(form);
-                const name = formData.get('name');
+                const name = document.getElementById('reviewerName').value;
                 const rating = ratingInput.value;
-                const review = formData.get('review');
+                const comment = document.getElementById('review').value;
 
-                if (!name || rating === '0' || !review) {
+                if (!name || rating === '0' || !comment) {
                     alert('Please fill in all fields and select a rating.');
-                    return;
+                    return false;
                 }
 
-                // Here you would typically send the data to your server
-                console.log('Review submitted:', {
-                    name,
-                    rating,
-                    review
-                });
-
-                // Show success message
-                alert('Thank you for your review!');
-                closeModal();
+                // Submit the form
+                form.submit();
             });
         }
 

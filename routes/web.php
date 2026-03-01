@@ -1,80 +1,120 @@
 <?php
 
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Review;
+use App\Models\Blog;
 
 Route::get('/', function () {
-    return view('home');
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(3)
+        ->get();
+    return view('home', compact('reviews'));
 });
 
 Route::get('/welcome2', function () {
-    return view('welcome2');
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('welcome2', ['reviews' => $reviews]);
 });
 
 Route::get('/welcome3', function () {
-    return view('welcome3');
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('welcome3', ['reviews' => $reviews]);
 });
 
 Route::get('/welcome4', function () {
-    return view('welcome4');
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('welcome4', ['reviews' => $reviews]);
 });
 
 Route::get('/exterior-signs', function () {
-    return view('exterior-signs');
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('exterior-signs', ['reviews' => $reviews]);
 });
 
 Route::get('/interior-signs', function () {
-    return view('interior-signs');
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('interior-signs', ['reviews' => $reviews]);
 });
 
 Route::get('/commercial-awnings', function () {
-    return view('commercial-awnings');
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('commercial-awnings', ['reviews' => $reviews]);
 });
 
 Route::get('/residential-awnings', function () {
-    return view('residential-awnings');
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('residential-awnings', ['reviews' => $reviews]);
 });
 
 Route::get('/installations', function () {
-    return view('installations');
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('installations', ['reviews' => $reviews]);
 });
 
 Route::get('/led-displays', function () {
-    return view('led-displays');
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('led-displays', ['reviews' => $reviews]);
 });
 
 Route::get('/permits', function () {
-    return view('permits');
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('permits', ['reviews' => $reviews]);
 });
 
 Route::get('/gallery', function () {
-    return view('gallery');
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('gallery', ['reviews' => $reviews]);
 });
 
 Route::get('/reviews', function () {
-    return view('reviews');
+    $latestReviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('reviews', ['latestReviews' => $latestReviews]);
 });
 
-Route::get('/blog', function () {
-    return view('blog');
-});
-
-Route::get('/faqs', function () {
-    return view('faqs');
-});
-
-Route::get('/request-call-back', function () {
-    return view('request-call-back');
-});
-
-Route::get('/contact-us', function () {
-    return view('contact-us');
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-// Blog post routes
+// Blog post routes (specific routes must come before the general /blog route)
 Route::get('/blog/choosing-exterior-signage', function () {
     return view('blog.choosing-exterior-signage');
 });
@@ -94,3 +134,79 @@ Route::get('/blog/sign-permits-guide', function () {
 Route::get('/blog/sign-maintenance-tips', function () {
     return view('blog.sign-maintenance-tips');
 });
+
+// General blog listing route (must come after specific blog routes)
+Route::get('/blog', function () {
+    $blogs = Blog::where('is_published', true)
+        ->orderBy('published_at', 'desc')
+        ->orderBy('created_at', 'desc')
+        ->get();
+    $latestReviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('blog', ['blogs' => $blogs, 'latestReviews' => $latestReviews]);
+});
+
+Route::get('/faqs', function () {
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('faqs', ['reviews' => $reviews]);
+});
+
+Route::get('/request-call-back', function () {
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('request-call-back', ['reviews' => $reviews]);
+});
+
+Route::get('/contact-us', function () {
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('contact-us', ['reviews' => $reviews]);
+});
+
+Route::get('/about', function () {
+    $reviews = Review::where('is_approved', true)
+        ->orderBy('created_at', 'desc')
+        ->take(2)
+        ->get();
+    return view('about', ['reviews' => $reviews]);
+});
+
+// Dashboard route
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+
+
+// Review Public Route (for submitting reviews from frontend)
+Route::post('/reviews/public', [ReviewController::class, 'storePublic'])->name('reviews.storePublic');
+
+
+// Profile routes
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Blog CRUD Routes
+    Route::resource('blogs', BlogController::class);
+    // Review CRUD Routes (Admin)
+    Route::resource('reviews', ReviewController::class);
+    Route::post('/reviews/{review}/toggle-approval', [ReviewController::class, 'toggleApproval'])->name('reviews.toggleApproval');
+
+    // Permission, Role, and User Management Routes
+    Route::resource('permissions', PermissionController::class);
+    Route::resource('roles', RoleController::class);
+    Route::resource('users', UserController::class);
+});
+
+require __DIR__ . '/auth.php';

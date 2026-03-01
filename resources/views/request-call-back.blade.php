@@ -331,7 +331,8 @@
 
                 <!-- Modal Body -->
                 <div class="p-6">
-                    <form id="reviewForm">
+                    <form id="reviewForm" action="{{ route('reviews.storePublic') }}" method="POST">
+                        @csrf
                         <div class="mb-4">
                             <label for="reviewerName"
                                 class="block text-sm font-medium text-ink mb-2">Your

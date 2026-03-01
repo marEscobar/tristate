@@ -441,38 +441,28 @@
                     </button>
                 </div>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur">
-                        <div class="flex items-center justify-between mb-4">
-                            <div>
-                                <h3 class="font-bold text-lg">Brittany D</h3>
-                                <p class="text-white/50 text-sm">5/1/2025</p>
+                    @if(isset($reviews) && $reviews->count() > 0)
+                        @foreach($reviews as $review)
+                            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div>
+                                        <h3 class="font-bold text-lg">{{ $review->name }}</h3>
+                                        <p class="text-white/50 text-sm">{{ $review->created_at->format('n/j/Y') }}</p>
+                                    </div>
+                                    <div class="flex text-accent">
+                                        @for($i = 1; $i <= 5; $i++)
+                                            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' {{ $i <= $review->rating ? 1 : 0 }}">star</span>
+                                        @endfor
+                                    </div>
+                                </div>
+                                <p class="text-white/80 leading-relaxed">{{ $review->comment }}</p>
                             </div>
-                            <div class="flex text-accent">
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                            </div>
+                        @endforeach
+                    @else
+                        <div class="col-span-2 text-center py-8">
+                            <p class="text-white/50">No reviews available at this time.</p>
                         </div>
-                        <p class="text-white/80 leading-relaxed">Super easy to work with and they really know their stuff. Permits, custom vinyl, awning — totally transforms the storefront. Definitely recommend!</p>
-                    </div>
-                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur">
-                        <div class="flex items-center justify-between mb-4">
-                            <div>
-                                <h3 class="font-bold text-lg">John M</h3>
-                                <p class="text-white/50 text-sm">4/15/2025</p>
-                            </div>
-                            <div class="flex text-accent">
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                            </div>
-                        </div>
-                        <p class="text-white/80 leading-relaxed">Excellent experience from start to finish. Professional, responsive, delivered exactly what we needed. New signage looks fantastic. Highly recommended!</p>
-                    </div>
+                    @endif
                 </div>
             </div>
         </section>
@@ -546,10 +536,25 @@
                     <button id="closeReviewModal" type="button" class="p-2 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-ink"><span class="material-symbols-outlined">close</span></button>
                 </div>
                 <div class="p-6">
-                    <form id="reviewForm">
+                    @if(session('review_success'))
+                        <div class="mb-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+                            {{ session('review_success') }}
+                        </div>
+                    @endif
+                    @if($errors->any())
+                        <div class="mb-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <form id="reviewForm" action="{{ route('reviews.storePublic') }}" method="POST">
+                        @csrf
                         <div class="mb-4">
                             <label for="reviewerName" class="block text-sm font-semibold text-ink mb-2">Your Name</label>
-                            <input type="text" id="reviewerName" name="name" required placeholder="Enter your name" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
+                            <input type="text" id="reviewerName" name="name" required placeholder="Enter your name" value="{{ old('name') }}" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
                         </div>
                         <div class="mb-4">
                             <label class="block text-sm font-semibold text-ink mb-2">Rating</label>
@@ -560,11 +565,11 @@
                                 <button type="button" class="rating-star text-gray-300 hover:text-accent p-1" data-rating="4"><span class="material-symbols-outlined text-2xl">star</span></button>
                                 <button type="button" class="rating-star text-gray-300 hover:text-accent p-1" data-rating="5"><span class="material-symbols-outlined text-2xl">star</span></button>
                             </div>
-                            <input type="hidden" id="reviewRating" name="rating" value="0" required />
+                            <input type="hidden" id="reviewRating" name="rating" value="{{ old('rating', '0') }}" required />
                         </div>
                         <div class="mb-4">
                             <label for="review" class="block text-sm font-semibold text-ink mb-2">Your Review</label>
-                            <textarea id="review" name="review" rows="4" required placeholder="Share your experience..." class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none resize-none"></textarea>
+                            <textarea id="review" name="comment" rows="4" required placeholder="Share your experience..." class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none resize-none">{{ old('comment') }}</textarea>
                         </div>
                     </form>
                 </div>
@@ -608,10 +613,19 @@
             star.addEventListener('mouseleave', () => { stars.forEach((s, i) => { if (selectedRating === 0) s.classList.remove('text-accent'), s.classList.add('text-gray-300'); else if (i >= selectedRating) s.classList.remove('text-accent'), s.classList.add('text-gray-300'); }); });
         });
 
-        document.getElementById('submitReview')?.addEventListener('click', () => {
-            const f = document.getElementById('reviewForm'); const d = new FormData(f);
-            if (!d.get('name') || ratingInput.value === '0' || !d.get('review')) { alert('Please fill all fields and select a rating.'); return; }
-            alert('Thank you for your review!'); closeModal();
+        document.getElementById('submitReview')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            const f = document.getElementById('reviewForm');
+            const name = document.getElementById('reviewerName').value;
+            const rating = ratingInput.value;
+            const comment = document.getElementById('review').value;
+
+            if (!name || rating === '0' || !comment) {
+                alert('Please fill all fields and select a rating.');
+                return false;
+            }
+
+            f.submit();
         });
 
         function updateBusinessStatus() {

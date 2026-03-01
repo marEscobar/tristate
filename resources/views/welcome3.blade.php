@@ -314,7 +314,7 @@
             </div>
         </section>
 
-        <!-- OUR WORK: bento – 1 large + 3 small -->
+        <!-- OUR WORK: bento – 1 large + 3 small
         <section class="py-16 sm:py-24 bg-white">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
@@ -352,7 +352,7 @@
                     </a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- STATS: 3 solid stripes (primary, primary-light, coral) – no aqua -->
         <section class="py-0">
@@ -469,38 +469,28 @@
                     </button>
                 </div>
                 <div class="grid md:grid-cols-2 gap-6 md:gap-8 relative">
-                    <div class="card-lift bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-200 relative z-10 md:-mr-4 md:mt-4">
-                        <div class="flex items-center justify-between mb-4">
-                            <div>
-                                <h3 class="font-bold text-gray-900">Brittany D</h3>
-                                <p class="text-gray-500 text-sm">5/1/2025</p>
+                    @if(isset($reviews) && $reviews->count() > 0)
+                        @foreach($reviews as $index => $review)
+                            <div class="card-lift bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-200 {{ $index == 0 ? 'relative z-10 md:-mr-4 md:mt-4' : 'relative z-0 md:ml-4' }}">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div>
+                                        <h3 class="font-bold text-gray-900">{{ $review->name }}</h3>
+                                        <p class="text-gray-500 text-sm">{{ $review->created_at->format('n/j/Y') }}</p>
+                                    </div>
+                                    <div class="flex text-amber-400">
+                                        @for($i = 1; $i <= 5; $i++)
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' {{ $i <= $review->rating ? 1 : 0 }}">star</span>
+                                        @endfor
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed italic">"{{ $review->comment }}"</p>
                             </div>
-                            <div class="flex text-amber-400">
-                                <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
-                            </div>
+                        @endforeach
+                    @else
+                        <div class="col-span-2 text-center py-8">
+                            <p class="text-gray-500">No reviews available at this time.</p>
                         </div>
-                        <p class="text-gray-600 leading-relaxed italic">"Super easy to work with and they really know their stuff. Permits, custom vinyl, awning — totally transforms the storefront. Definitely recommend!"</p>
-                    </div>
-                    <div class="card-lift bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-200 relative z-0 md:ml-4">
-                        <div class="flex items-center justify-between mb-4">
-                            <div>
-                                <h3 class="font-bold text-gray-900">John M</h3>
-                                <p class="text-gray-500 text-sm">4/15/2025</p>
-                            </div>
-                            <div class="flex text-amber-400">
-                                <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 leading-relaxed italic">"Excellent experience from start to finish. Professional, responsive, delivered exactly what we needed. New signage looks fantastic. Highly recommended!"</p>
-                    </div>
+                    @endif
                 </div>
             </div>
         </section>

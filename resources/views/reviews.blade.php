@@ -192,67 +192,33 @@
                 <br>
                 <div class="grid grid-cols-1 md:grid-cols-1 gap-8 lg:gap-8 ">
 
-                    <div class="col-span-1">
-                        <div class="flex items-center justify-between mb-3 sm:mb-4">
-                            <div>
-                                <h3 class="font-bold text-base sm:text-lg text-ink">Brittany
-                                    D</h3>
-                                <p class="text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">5/1/2025
+                    @if(isset($latestReviews) && $latestReviews->count() > 0)
+                        @foreach($latestReviews as $review)
+                            <div class="col-span-1">
+                                <div class="flex items-center justify-between mb-3 sm:mb-4">
+                                    <div>
+                                        <h3 class="font-bold text-base sm:text-lg text-ink">{{ $review->name }}</h3>
+                                        <p class="text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">
+                                            {{ $review->created_at->format('n/j/Y') }}
+                                        </p>
+                                    </div>
+                                    <div class="flex text-accent">
+                                        @for($i = 1; $i <= 5; $i++)
+                                            <span class="material-symbols-outlined text-sm sm:text-base"
+                                                style="font-variation-settings: 'FILL' {{ $i <= $review->rating ? 1 : 0 }}">star</span>
+                                        @endfor
+                                    </div>
+                                </div>
+                                <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-sm sm:text-base">
+                                    {{ $review->comment }}
                                 </p>
                             </div>
-                            <div class="flex text-accent">
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                            </div>
+                        @endforeach
+                    @else
+                        <div class="col-span-1 text-center py-8">
+                            <p class="text-text-muted-light dark:text-text-muted-dark">No reviews available at this time.</p>
                         </div>
-                        <p
-                            class="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-sm sm:text-base">
-                            Super easy to work with and they really know their stuff. When it comes to permits, custom
-                            vinyl turned out
-                            awesome, and the awning looking good too -- totally transforms the front of storefront.
-                            Definitely recommend!
-                        </p>
-                    </div>
-                    <div class="col-span-1">
-                        <div class="flex items-center justify-between mb-3 sm:mb-4">
-                            <div>
-                                <h3 class="font-bold text-base sm:text-lg text-ink">Brit
-                                </h3>
-                                <p class="text-xs sm:text-sm text-text-muted-light dark:text-text-muted-dark">5/1/2025
-                                </p>
-                            </div>
-                            <div class="flex text-accent">
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                                <span class="material-symbols-outlined text-sm sm:text-base"
-                                    style="font-variation-settings: 'FILL' 1">star</span>
-                            </div>
-                        </div>
-                        <p
-                            class="text-text-muted-light dark:text-text-muted-dark leading-relaxed text-sm sm:text-base">
-                            Melvin, Dennis and the whole crew at TriState are professional, creative, and reliable--they
-                            delivered a
-                            custom sign and awning that was high-quality and eye-catching. Excellent customer service
-                            and timely
-                            installation. Highly recommended these guys for a storefront side that will set apart your
-                            business apart.
-                        </p>
-
-                    </div>
+                    @endif
 
 
 
@@ -346,7 +312,22 @@
 
                 <!-- Modal Body -->
                 <div class="p-6">
-                    <form id="reviewForm">
+                    @if(session('review_success'))
+                        <div class="mb-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+                            {{ session('review_success') }}
+                        </div>
+                    @endif
+                    @if($errors->any())
+                        <div class="mb-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <form id="reviewForm" action="{{ route('reviews.storePublic') }}" method="POST">
+                        @csrf
                         <div class="mb-4">
                             <label for="reviewerName"
                                 class="block text-sm font-medium text-ink mb-2">Your
@@ -391,7 +372,7 @@
                             <label for="review"
                                 class="block text-sm font-medium text-ink mb-2">Your
                                 Review</label>
-                            <textarea id="review" name="review" rows="4"
+                            <textarea id="review" name="comment" rows="4"
                                 class="w-full bg-gray-100 border border-gray-300 rounded-xl text-ink placeholder-gray-400 focus:ring-accent focus:border-accent transition-colors duration-300 text-sm sm:text-base px-3 py-2.5"
                                 placeholder="Share your experience with us..." required></textarea>
                         </div>
@@ -607,31 +588,23 @@
             });
         });
 
-        // Submit review
+        // Submit review - validate and submit form
         const submitReviewBtn = document.getElementById('submitReview');
         if (submitReviewBtn) {
-            submitReviewBtn.addEventListener('click', () => {
+            submitReviewBtn.addEventListener('click', (e) => {
+                e.preventDefault();
                 const form = document.getElementById('reviewForm');
-                const formData = new FormData(form);
-                const name = formData.get('name');
+                const name = document.getElementById('reviewerName').value;
                 const rating = ratingInput.value;
-                const review = formData.get('review');
+                const comment = document.getElementById('review').value; // El textarea tiene id="review" pero name="comment"
 
-                if (!name || rating === '0' || !review) {
+                if (!name || rating === '0' || !comment) {
                     alert('Please fill in all fields and select a rating.');
-                    return;
+                    return false;
                 }
 
-                // Here you would typically send the data to your server
-                console.log('Review submitted:', {
-                    name,
-                    rating,
-                    review
-                });
-
-                // Show success message
-                alert('Thank you for your review!');
-                closeModal();
+                // Submit the form
+                form.submit();
             });
         }
 

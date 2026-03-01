@@ -386,14 +386,18 @@
                     <button id="openReviewModal" class="inline-flex items-center gap-2 font-display font-semibold border-2 border-primary text-primary px-6 py-3 rounded-xl hover:bg-primary hover:text-white transition-colors">Write a Review</button>
                 </div>
                 <div class="grid sm:grid-cols-2 gap-6">
-                    <blockquote class="rounded-2xl border border-slate-200 bg-white p-8 pl-10 border-l-4 border-l-primary shadow-sm hover:shadow-soft hover:bg-primary/[0.02] transition-all">
-                        <p class="text-slate-700 italic mb-4 leading-relaxed">“Super easy to work with and they really know their stuff. Permits, custom vinyl, awning — totally transforms the storefront. Definitely recommend.”</p>
-                        <footer class="text-slate-500 text-sm">— Brittany D, 5/1/2025</footer>
-                    </blockquote>
-                    <blockquote class="rounded-2xl border border-slate-200 bg-white p-8 pl-10 border-l-4 border-l-teal-600 shadow-sm hover:shadow-soft hover:bg-teal-50/50 transition-all">
-                        <p class="text-slate-700 italic mb-4 leading-relaxed">“Excellent experience from start to finish. Professional, responsive, delivered exactly what we needed. New signage looks fantastic. Highly recommended.”</p>
-                        <footer class="text-slate-500 text-sm">— John M, 4/15/2025</footer>
-                    </blockquote>
+                    @if(isset($reviews) && $reviews->count() > 0)
+                        @foreach($reviews as $index => $review)
+                            <blockquote class="rounded-2xl border border-slate-200 bg-white p-8 pl-10 border-l-4 {{ $index % 2 == 0 ? 'border-l-primary' : 'border-l-teal-600' }} shadow-sm hover:shadow-soft {{ $index % 2 == 0 ? 'hover:bg-primary/[0.02]' : 'hover:bg-teal-50/50' }} transition-all">
+                                <p class="text-slate-700 italic mb-4 leading-relaxed">"{{ $review->comment }}"</p>
+                                <footer class="text-slate-500 text-sm">— {{ $review->name }}, {{ $review->created_at->format('n/j/Y') }}</footer>
+                            </blockquote>
+                        @endforeach
+                    @else
+                        <div class="col-span-2 text-center py-8">
+                            <p class="text-slate-500">No reviews available at this time.</p>
+                        </div>
+                    @endif
                 </div>
             </div>
         </section>

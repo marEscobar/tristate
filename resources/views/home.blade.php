@@ -181,22 +181,55 @@
             </div>
         </div>
 
-        <!-- Permit expeditor strip -->
-        <section class="bg-sand py-12 sm:py-16">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="font-display text-3xl sm:text-4xl text-ink mb-2">Ask About Our In-House Permit Expeditor</h2>
-                <p class="text-ink/70 mb-8 max-w-2xl mx-auto">Trusted by top national brands for design, fabrication &amp; installation.</p>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-                    <div class="bg-white/80 rounded-2xl h-20 flex items-center justify-center text-ink/50 font-semibold text-sm shadow-sm">Client 1</div>
-                    <div class="bg-white/80 rounded-2xl h-20 flex items-center justify-center text-ink/50 font-semibold text-sm shadow-sm">Client 2</div>
-                    <div class="bg-white/80 rounded-2xl h-20 flex items-center justify-center text-ink/50 font-semibold text-sm shadow-sm">Client 3</div>
-                    <div class="bg-white/80 rounded-2xl h-20 flex items-center justify-center text-ink/50 font-semibold text-sm shadow-sm">Client 4</div>
-                    <div class="bg-white/80 rounded-2xl h-20 flex items-center justify-center text-ink/50 font-semibold text-sm shadow-sm">Client 5</div>
-                    <div class="bg-white/80 rounded-2xl h-20 flex items-center justify-center text-ink/50 font-semibold text-sm shadow-sm">Client 6</div>
-                </div>
+
+        <!-- Our Quality -->
+        <section class="py-16 sm:py-24 bg-cream">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="font-display text-4xl sm:text-5xl text-ink mb-2">It's all about</h2>
+                <h3 class="font-display text-4xl sm:text-5xl lg:text-6xl text-accent mb-6">Our Quality</h3>
+                <p class="text-ink/70 text-lg leading-relaxed mb-8">
+                    Noted for custom signs with durability and value. Tri State Signs &amp; Awnings uses only the highest quality materials and processes. As a registered manufacturer with Underwriters Laboratories, we produce the safest fixtures that adhere to the strictest codes and standards.
+                </p>
+                <span class="inline-block bg-ink text-white font-bold px-8 py-3 rounded-xl text-lg">UL Listed</span>
             </div>
         </section>
 
+       <!-- Testimonials -->
+       <section class="py-16 sm:py-24 bg-gradient-to-b from-ink to-inklight text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-4xl sm:text-5xl mb-4">Ask About Our In-House Permit Expeditor</h2>
+                <p class="text-white/70 max-w-2xl mx-auto mb-6">Trusted by top national brands for design, fabrication & installation.</p>
+                <button id="openReviewModal" class="btn-accent text-white font-bold px-6 py-3 rounded-xl inline-flex items-center gap-2">
+                    <span class="material-symbols-outlined">rate_review</span> Write a Review
+                </button>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                @if(isset($reviews) && $reviews->count() > 0)
+                    @foreach($reviews->take(2) as $review)
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur">
+                            <div class="flex items-center justify-between mb-4">
+                                <div>
+                                    <h3 class="font-bold text-lg">{{ $review->name }}</h3>
+                                    <p class="text-white/50 text-sm">{{ $review->created_at->format('n/j/Y') }}</p>
+                                </div>
+                                <div class="flex text-accent">
+                                    @for($i = 1; $i <= 5; $i++)
+                                        <span class="material-symbols-outlined" style="font-variation-settings:'FILL' {{ $i <= $review->rating ? 1 : 0 }}">star</span>
+                                    @endfor
+                                </div>
+                            </div>
+                            <p class="text-white/80 leading-relaxed">{{ $review->comment }}</p>
+                        </div>
+                    @endforeach
+                @else
+                    <div class="col-span-2 text-center py-8">
+                        <p class="text-white/50">No reviews available at this time.</p>
+                    </div>
+                @endif
+            </div>
+        </div>
+    </section>
         <!-- West Babylon + Request Call Back: asymmetric -->
         <section class="py-16 sm:py-24 lg:py-32 bg-white overflow-hidden">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -248,17 +281,23 @@
                 </div>
                 <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
                     <div class="text-center group">
-                        <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-accent/20 text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">01</div>
+                        <div class="inline-flex items-center justify-center  w-60 h-20 rounded-2xl bg-accent/20 text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">
+                            <img src="{{ asset('img/interior/int1.JPG') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
+                        </div>
                         <h3 class="font-display text-2xl mb-3">Design</h3>
                         <p class="text-white/70">Custom designed signs with the support of our expert staff.</p>
                     </div>
                     <div class="text-center group">
-                        <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-accent/20 text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">02</div>
+                        <div class="inline-flex items-center justify-center w-60 h-20 rounded-2xl bg-accent/20 text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">
+                            <img src="{{ asset('img/exterior/ext9.JPG') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
+                        </div>
                         <h3 class="font-display text-2xl mb-3">Fabrication</h3>
                         <p class="text-white/70">We build signs to last with the finest quality materials.</p>
                     </div>
                     <div class="text-center group">
-                        <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-accent/20 text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">03</div>
+                        <div class="inline-flex items-center justify-center w-60 h-20 rounded-2xl bg-accent/20 text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">
+                            <img src="{{ asset('img/exterior/ext2.JPG') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
+                        </div>
                         <h3 class="font-display text-2xl mb-3">Installation</h3>
                         <p class="text-white/70">Fully equipped technicians for quality on-site installs.</p>
                     </div>
@@ -271,17 +310,6 @@
             </div>
         </section>
 
-        <!-- Our Quality -->
-        <section class="py-16 sm:py-24 bg-cream">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="font-display text-4xl sm:text-5xl text-ink mb-2">It's all about</h2>
-                <h3 class="font-display text-4xl sm:text-5xl lg:text-6xl text-accent mb-6">Our Quality</h3>
-                <p class="text-ink/70 text-lg leading-relaxed mb-8">
-                    Noted for custom signs with durability and value. Tri State Signs &amp; Awnings uses only the highest quality materials and processes. As a registered manufacturer with Underwriters Laboratories, we produce the safest fixtures that adhere to the strictest codes and standards.
-                </p>
-                <span class="inline-block bg-ink text-white font-bold px-8 py-3 rounded-xl text-lg">UL Listed</span>
-            </div>
-        </section>
 
         <!-- Our Work: bento grid -->
         <section class="py-16 sm:py-24 bg-white">
@@ -293,7 +321,8 @@
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <a href="{{ url('/commercial-awnings') }}" class="card-hover rounded-2xl overflow-hidden bg-ink text-white group">
                         <div class="h-40 bg-gradient-to-br from-inklight to-accent/80 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-6xl opacity-80 group-hover:scale-110 transition-transform">storefront</span>
+                            {{-- <span class="material-symbols-outlined text-6xl opacity-80 group-hover:scale-110 transition-transform">storefront</span> --}}
+                            <img src="{{ asset('img/5.jpg') }}" alt="Awnings &amp; Canopies" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6">
                             <h3 class="font-display text-xl mb-1 group-hover:text-accent transition-colors">Awnings &amp; Canopies</h3>
@@ -302,7 +331,9 @@
                     </a>
                     <a href="{{ url('/exterior-signs') }}" class="card-hover rounded-2xl overflow-hidden bg-ink text-white group">
                         <div class="h-40 bg-gradient-to-br from-inklight to-accent/80 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-6xl opacity-80 group-hover:scale-110 transition-transform">text_fields</span>
+                            {{-- <span class="material-symbols-outlined text-6xl opacity-80 group-hover:scale-110 transition-transform">text_fields</span> --}}
+                            <img src="{{ asset('img/3.jpg') }}" alt="Awnings &amp; Canopies" class="w-full h-full object-cover">
+
                         </div>
                         <div class="p-6">
                             <h3 class="font-display text-xl mb-1 group-hover:text-accent transition-colors">Channel Letters</h3>
@@ -311,7 +342,9 @@
                     </a>
                     <a href="{{ url('/installations') }}" class="card-hover rounded-2xl overflow-hidden bg-ink text-white group">
                         <div class="h-40 bg-gradient-to-br from-inklight to-accent/80 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-6xl opacity-80 group-hover:scale-110 transition-transform">construction</span>
+                            {{-- <span class="material-symbols-outlined text-6xl opacity-80 group-hover:scale-110 transition-transform">construction</span> --}}
+                            <img src="{{ asset('img/exterior/ext4.jpg') }}" alt="Awnings &amp; Canopies" class="w-full h-full object-cover">
+
                         </div>
                         <div class="p-6">
                             <h3 class="font-display text-xl mb-1 group-hover:text-accent transition-colors">Sign Installations</h3>
@@ -320,7 +353,9 @@
                     </a>
                     <a href="{{ url('/led-displays') }}" class="card-hover rounded-2xl overflow-hidden bg-ink text-white group">
                         <div class="h-40 bg-gradient-to-br from-inklight to-accent/80 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-6xl opacity-80 group-hover:scale-110 transition-transform">desktop_windows</span>
+                            {{-- <span class="material-symbols-outlined text-6xl opacity-80 group-hover:scale-110 transition-transform">desktop_windows</span> --}}
+                            <img src="{{ asset('img/8.jpg') }}" alt="Awnings &amp; Canopies" class="w-full h-full object-cover">
+
                         </div>
                         <div class="p-6">
                             <h3 class="font-display text-xl mb-1 group-hover:text-accent transition-colors">LED Displays</h3>
@@ -352,45 +387,40 @@
         </section>
 
         <!-- Watch The Pros + 3 cards -->
-        <section class="py-16 sm:py-24 bg-sand">
+        <section class="py-16 sm:py-24 bg-white">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
+                <div class="text-center mb-14">
                     <h2 class="font-display text-4xl sm:text-5xl text-ink mb-4">Watch The Pros at Tri State Signs &amp; Awnings</h2>
-                    <p class="text-ink/70 max-w-2xl mx-auto mb-6">From design and fabrication to installation and service, we're here for you. We pride ourselves on the best possible experience.</p>
-                    <a href="{{ url('/gallery') }}" class="btn-accent text-white font-bold px-8 py-4 rounded-xl inline-flex items-center gap-2 shadow-lg">
-                        View Our Project Gallery <span class="material-symbols-outlined">arrow_forward</span>
+                    <p class="text-ink/70 max-w-2xl mx-auto text-lg">From design and fabrication to installation and service, we're here for you. We pride ourselves on the best possible experience.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="{{ url('contact-us') }}" class="card-hover rounded-2xl overflow-hidden bg-ink text-white group">
+                        <div class="h-40 bg-gradient-to-br from-inklight to-accent/80 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-6xl opacity-80 group-hover:scale-110 transition-transform">storefront</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl mb-1 group-hover:text-accent transition-colors">Same-Day Appointments</h3>
+                            <p class="text-white/70 text-sm">We offer same-day appointments for consultations and assessments.</p>
+                        </div>
                     </a>
-                </div>
-                <div class="max-w-4xl mx-auto mb-14">
-                    <div class="rounded-2xl overflow-hidden shadow-2xl aspect-video bg-ink">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
-                        <img src="{{ asset('img/img1.png') }}" alt="Same-Day Appointments" class="w-full h-48 object-cover" />
-                        <div class="p-6">
-                            <h3 class="font-display text-xl text-ink mb-2">Same-Day Appointments</h3>
-                            <p class="text-ink/70 text-sm mb-4">We offer same-day appointments for consultations and assessments.</p>
-                            <a href="{{ url('contact-us') }}" class="text-accent font-semibold text-sm hover:underline">Learn More →</a>
+                    <a href="{{ url('contact-us') }}" class="card-hover rounded-2xl overflow-hidden bg-ink text-white group">
+                        <div class="h-40 bg-gradient-to-br from-inklight to-accent/80 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-6xl opacity-80 group-hover:scale-110 transition-transform">text_fields</span>
                         </div>
-                    </div>
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
-                        <img src="{{ asset('img/img2.png') }}" alt="Concierge-Level Service" class="w-full h-48 object-cover" />
                         <div class="p-6">
-                            <h3 class="font-display text-xl text-ink mb-2">Concierge-Level Service</h3>
-                            <p class="text-ink/70 text-sm mb-4">Personal attention and expert guidance from consultation to installation.</p>
-                            <a href="{{ url('contact-us') }}" class="text-accent font-semibold text-sm hover:underline">Learn More →</a>
+                            <h3 class="font-display text-xl mb-1 group-hover:text-accent transition-colors">Concierge-Level Service</h3>
+                            <p class="text-white/70 text-sm">Personal attention and expert guidance from consultation to installation.</p>
                         </div>
-                    </div>
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
-                        <img src="{{ asset('img/img3.png') }}" alt="UL Listed" class="w-full h-48 object-cover" />
+                    </a>
+                    <a href="{{ url('contact-us') }}" class="card-hover rounded-2xl overflow-hidden bg-ink text-white group">
+                        <div class="h-40 bg-gradient-to-br from-inklight to-accent/80 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-6xl opacity-80 group-hover:scale-110 transition-transform">desktop_windows</span>
+                        </div>
                         <div class="p-6">
-                            <h3 class="font-display text-xl text-ink mb-2">UL Listed</h3>
-                            <p class="text-ink/70 text-sm mb-4">Safety and quality in every product, adhering to industry standards.</p>
-                            <a href="{{ url('contact-us') }}" class="text-accent font-semibold text-sm hover:underline">Learn More →</a>
+                            <h3 class="font-display text-xl mb-1 group-hover:text-accent transition-colors">UL Listed</h3>
+                            <p class="text-white/70 text-sm">Safety and quality in every product, adhering to industry standards.</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -430,52 +460,7 @@
             </div>
         </section>
 
-        <!-- Testimonials -->
-        <section class="py-16 sm:py-24 bg-gradient-to-b from-ink to-inklight text-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="font-display text-4xl sm:text-5xl mb-4">Here's what our satisfied customers are saying...</h2>
-                    <p class="text-white/70 max-w-2xl mx-auto mb-6">We take pride in exceptional sign and awning services. Your feedback helps us improve and helps others decide. Please leave a review!</p>
-                    <button id="openReviewModal" class="btn-accent text-white font-bold px-6 py-3 rounded-xl inline-flex items-center gap-2">
-                        <span class="material-symbols-outlined">rate_review</span> Write a Review
-                    </button>
-                </div>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur">
-                        <div class="flex items-center justify-between mb-4">
-                            <div>
-                                <h3 class="font-bold text-lg">Brittany D</h3>
-                                <p class="text-white/50 text-sm">5/1/2025</p>
-                            </div>
-                            <div class="flex text-accent">
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                            </div>
-                        </div>
-                        <p class="text-white/80 leading-relaxed">Super easy to work with and they really know their stuff. Permits, custom vinyl, awning — totally transforms the storefront. Definitely recommend!</p>
-                    </div>
-                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur">
-                        <div class="flex items-center justify-between mb-4">
-                            <div>
-                                <h3 class="font-bold text-lg">John M</h3>
-                                <p class="text-white/50 text-sm">4/15/2025</p>
-                            </div>
-                            <div class="flex text-accent">
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-                            </div>
-                        </div>
-                        <p class="text-white/80 leading-relaxed">Excellent experience from start to finish. Professional, responsive, delivered exactly what we needed. New signage looks fantastic. Highly recommended!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+
     </main>
 
     <!-- Footer -->
@@ -546,7 +531,8 @@
                     <button id="closeReviewModal" type="button" class="p-2 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-ink"><span class="material-symbols-outlined">close</span></button>
                 </div>
                 <div class="p-6">
-                    <form id="reviewForm">
+                    <form id="reviewForm" action="{{ route('reviews.storePublic') }}" method="POST">
+                        @csrf
                         <div class="mb-4">
                             <label for="reviewerName" class="block text-sm font-semibold text-ink mb-2">Your Name</label>
                             <input type="text" id="reviewerName" name="name" required placeholder="Enter your name" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
@@ -625,6 +611,74 @@
         }
         updateBusinessStatus();
         setInterval(updateBusinessStatus, 60000);
+
+        // Public Review Form Rating Stars
+        const publicRatingStars = document.querySelectorAll('.public-rating-star');
+        const publicRatingInput = document.getElementById('public_rating');
+        let publicSelectedRating = 0;
+
+        if (publicRatingStars.length > 0) {
+            publicRatingStars.forEach(star => {
+                star.addEventListener('click', () => {
+                    const rating = parseInt(star.getAttribute('data-rating'));
+                    publicSelectedRating = rating;
+                    publicRatingInput.value = rating;
+
+                    // Update star display
+                    publicRatingStars.forEach((s, index) => {
+                        if (index < rating) {
+                            s.classList.remove('text-gray-300');
+                            s.classList.add('text-yellow-400');
+                        } else {
+                            s.classList.remove('text-yellow-400');
+                            s.classList.add('text-gray-300');
+                        }
+                    });
+                });
+
+                // Hover effect
+                star.addEventListener('mouseenter', () => {
+                    const rating = parseInt(star.getAttribute('data-rating'));
+                    publicRatingStars.forEach((s, index) => {
+                        if (index < rating) {
+                            s.classList.add('text-yellow-400');
+                            s.classList.remove('text-gray-300');
+                        }
+                    });
+                });
+
+                star.addEventListener('mouseleave', () => {
+                    if (publicSelectedRating === 0) {
+                        publicRatingStars.forEach(s => {
+                            s.classList.remove('text-yellow-400');
+                            s.classList.add('text-gray-300');
+                        });
+                    } else {
+                        publicRatingStars.forEach((s, index) => {
+                            if (index >= publicSelectedRating) {
+                                s.classList.remove('text-yellow-400');
+                                s.classList.add('text-gray-300');
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Initialize with old rating if exists
+            @if(old('rating'))
+                const oldRating = {{ old('rating') }};
+                if (oldRating > 0) {
+                    publicRatingStars.forEach((s, index) => {
+                        if (index < oldRating) {
+                            s.classList.remove('text-gray-300');
+                            s.classList.add('text-yellow-400');
+                        }
+                    });
+                    publicSelectedRating = oldRating;
+                    publicRatingInput.value = oldRating;
+                }
+            @endif
+        }
     </script>
 </body>
 </html>

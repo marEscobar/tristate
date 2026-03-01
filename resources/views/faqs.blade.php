@@ -370,7 +370,7 @@
 
                 <!-- Modal Body -->
                 <div class="p-6">
-                    <form id="reviewForm">
+                    <form id="reviewForm" action="{{ route('reviews.storePublic') }}" method="POST">
                         <div class="mb-4">
                             <label for="reviewerName"
                                 class="block text-sm font-medium text-text-dark dark:text-text-light mb-2">Your

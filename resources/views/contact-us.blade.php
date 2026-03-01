@@ -362,7 +362,8 @@
                     <button id="closeReviewModal" type="button" class="p-2 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-ink"><span class="material-symbols-outlined">close</span></button>
                 </div>
                 <div class="p-6">
-                    <form id="reviewForm">
+                    <form id="reviewForm" action="{{ route('reviews.storePublic') }}" method="POST">
+                        @csrf
                         <div class="mb-4">
                             <label for="reviewerName" class="block text-sm font-semibold text-ink mb-2">Your Name</label>
                             <input type="text" id="reviewerName" name="name" required placeholder="Enter your name" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" />
