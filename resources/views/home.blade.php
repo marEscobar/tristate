@@ -343,7 +343,7 @@
                     <a href="{{ url('/installations') }}" class="card-hover rounded-2xl overflow-hidden bg-ink text-white group">
                         <div class="h-40 bg-gradient-to-br from-inklight to-accent/80 flex items-center justify-center">
                             {{-- <span class="material-symbols-outlined text-6xl opacity-80 group-hover:scale-110 transition-transform">construction</span> --}}
-                            <img src="{{ asset('img/exterior/ext4.jpg') }}" alt="Awnings &amp; Canopies" class="w-full h-full object-cover">
+                            <img src="{{ asset('img/exterior/ext4.JPG') }}" alt="Awnings &amp; Canopies" class="w-full h-full object-cover">
 
                         </div>
                         <div class="p-6">

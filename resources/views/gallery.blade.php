@@ -219,7 +219,7 @@
                         <img src="{{ asset('img/exterior/ext3.jpg') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext3.jpg') }}', 'Gallery Image')">
                     </div>
                     <div class="col-span-1">
-                        <img src="{{ asset('img/exterior/ext4.jpg') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext4.jpg') }}', 'Gallery Image')">
+                        <img src="{{ asset('img/exterior/ext4.JPG') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext4.JPG') }}', 'Gallery Image')">
                     </div>
                     <div class="col-span-1">
                         <img src="{{ asset('img/exterior/ext5.jpg') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext5.jpg') }}', 'Gallery Image')">
