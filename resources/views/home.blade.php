@@ -155,6 +155,8 @@
                         </a>
                     </div>
                     <p class="mt-6 text-white/60 text-sm">Free custom banner included with your exterior signage/awning order!</p>
+                    <p class="text-4xl"><strong class="text-white/80">Phone:</strong> <a href="tel:7187050333" class="text-accent hover:underline">(718) 705-0333</a></p>
+
                 </div>
             </div>
             <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
@@ -289,14 +291,14 @@
                     </div>
                     <div class="text-center group">
                         <div class="inline-flex items-center justify-center w-60 h-20 rounded-2xl bg-accent/20 text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">
-                            <img src="{{ asset('img/exterior/ext9.JPG') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
+                            <img src="{{ asset('img/exterior/ext12.jpeg') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
                         </div>
                         <h3 class="font-display text-2xl mb-3">Fabrication</h3>
                         <p class="text-white/70">We build signs to last with the finest quality materials.</p>
                     </div>
                     <div class="text-center group">
                         <div class="inline-flex items-center justify-center w-60 h-20 rounded-2xl bg-accent/20 text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">
-                            <img src="{{ asset('img/exterior/ext2.JPG') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
+                            <img src="{{ asset('img/exterior/ext10.jpeg') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
                         </div>
                         <h3 class="font-display text-2xl mb-3">Installation</h3>
                         <p class="text-white/70">Fully equipped technicians for quality on-site installs.</p>
@@ -343,7 +345,7 @@
                     <a href="{{ url('/installations') }}" class="card-hover rounded-2xl overflow-hidden bg-ink text-white group">
                         <div class="h-40 bg-gradient-to-br from-inklight to-accent/80 flex items-center justify-center">
                             {{-- <span class="material-symbols-outlined text-6xl opacity-80 group-hover:scale-110 transition-transform">construction</span> --}}
-                            <img src="{{ asset('img/exterior/ext4.JPG') }}" alt="Awnings &amp; Canopies" class="w-full h-full object-cover">
+                            <img src="{{ asset('img/exterior/ext8.jpeg') }}" alt="Awnings &amp; Canopies" class="w-full h-full object-cover">
 
                         </div>
                         <div class="p-6">
