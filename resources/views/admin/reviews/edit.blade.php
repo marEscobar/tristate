@@ -106,7 +106,7 @@
                         <a href="{{ route('reviews.index') }}" class="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors">
                             Cancel
                         </a>
-                        <button type="submit" class="px-6 py-2 bg-accent hover:bg-accentlight text-white font-semibold rounded-lg transition-colors">
+                        <button type="submit" class="px-6 py-2 bg-accent hover:bg-accentlight text-black font-semibold rounded-lg transition-colors">
                             Update Review
                         </button>
                     </div>

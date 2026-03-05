@@ -121,16 +121,18 @@
 
 <body class="font-sans text-ink bg-white antialiased">
     <!-- Header: minimal, sticky -->
-    <header class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/10">
+    <header class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/10 bg-white/95" style="border-bottom: 0.5rem solid #030f1e;">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 sm:h-20">
                 <a href="{{ url('/') }}" class="flex items-center">
-                    <img src="{{ asset('img/logo.png') }}" alt="Tri State Signs & Awnings" class="h-9 sm:h-10 w-auto" />
+
+                        <img src="{{ asset('img/logo.png') }}" alt="Tri State Signs & Awnings" class="h-9 sm:h-10 w-auto" />
+
                 </a>
                 <nav class="hidden lg:flex items-center gap-1">
-                    <a href="{{ url('/') }}" class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">Home</a>
+                    <a href="{{ url('/') }}" class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">Home</a>
                     <div class="relative group">
-                        <button class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
+                        <button class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
                             Sign Services <span class="material-symbols-outlined text-base">expand_more</span>
                         </button>
                         <div class="absolute left-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
@@ -141,7 +143,7 @@
                         </div>
                     </div>
                     <div class="relative group">
-                        <button class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
+                        <button class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
                             Awning Services <span class="material-symbols-outlined text-base">expand_more</span>
                         </button>
                         <div class="absolute left-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
@@ -151,11 +153,11 @@
                             </div>
                         </div>
                     </div>
-                    <a href="{{ url('/installations') }}" class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">Installations</a>
-                    <a href="{{ url('/led-displays') }}" class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">LED Displays</a>
-                    <a href="{{ url('/permits') }}" class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">Permits</a>
+                    <a href="{{ url('/installations') }}" class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">Installations</a>
+                    <a href="{{ url('/led-displays') }}" class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">LED Displays</a>
+                    <a href="{{ url('/permits') }}" class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">Permits</a>
                     <div class="relative group">
-                        <button class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
+                        <button class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
                             About <span class="material-symbols-outlined text-base">expand_more</span>
                         </button>
                         <div class="absolute left-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
@@ -168,7 +170,7 @@
                         </div>
                     </div>
                     <div class="relative group">
-                        <button class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
+                        <button class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
                             Contact <span class="material-symbols-outlined text-base">expand_more</span>
                         </button>
                         <div class="absolute left-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
@@ -179,13 +181,13 @@
                     </div>
                 </nav>
                 <div class="flex items-center gap-3">
-                    <a href="tel:7187050333" class="hidden sm:flex items-center gap-2 text-white/90 hover:text-accent text-sm font-semibold">
+                    <a href="tel:7187050333" class="hidden sm:flex items-center gap-2 text-primary hover:text-accent text-sm font-semibold">
                         <span class="material-symbols-outlined text-lg">call</span> (718) 705-0333
                     </a>
                     <a href="{{ url('/request-call-back') }}" class="btn-accent text-white font-semibold px-5 py-2.5 rounded-xl text-sm shadow-lg hover:shadow-accent/25 transition-all">
                         Request Call Back
                     </a>
-                    <button id="nav-toggle" class="lg:hidden p-2 rounded-lg text-white hover:bg-white/10" aria-label="Menu">
+                    <button id="nav-toggle" class="lg:hidden p-2 rounded-lg hover:bg-white/10" aria-label="Menu">
                         <span class="material-symbols-outlined text-2xl">menu</span>
                     </button>
                 </div>
@@ -193,19 +195,19 @@
         </div>
         <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-ink/98 backdrop-blur">
             <nav class="max-w-6xl mx-auto px-4 py-4 space-y-1">
-                <a href="{{ url('/') }}" class="block py-2.5 text-white/90 hover:text-accent">Home</a>
-                <a href="{{ url('/exterior-signs') }}" class="block py-2.5 text-white/90 hover:text-accent">Exterior Signs</a>
-                <a href="{{ url('/interior-signs') }}" class="block py-2.5 text-white/90 hover:text-accent">Interior Signs</a>
-                <a href="{{ url('/commercial-awnings') }}" class="block py-2.5 text-white/90 hover:text-accent">Commercial Awnings</a>
-                <a href="{{ url('/residential-awnings') }}" class="block py-2.5 text-white/90 hover:text-accent">Residential Awnings</a>
-                <a href="{{ url('/installations') }}" class="block py-2.5 text-white/90 hover:text-accent">Installations</a>
-                <a href="{{ url('/led-displays') }}" class="block py-2.5 text-white/90 hover:text-accent">LED Displays</a>
-                <a href="{{ url('/permits') }}" class="block py-2.5 text-white/90 hover:text-accent">Permits</a>
-                <a href="{{ url('/gallery') }}" class="block py-2.5 text-white/90 hover:text-accent">Gallery</a>
-                <a href="{{ url('/reviews') }}" class="block py-2.5 text-white/90 hover:text-accent">Reviews</a>
-                <a href="{{ url('/blog') }}" class="block py-2.5 text-white/90 hover:text-accent">Blog</a>
-                <a href="{{ url('/faqs') }}" class="block py-2.5 text-white/90 hover:text-accent">FAQs</a>
-                <a href="{{ url('/request-call-back') }}" class="block py-2.5 text-white/90 hover:text-accent">Request Call Back</a>
+                <a href="{{ url('/') }}" class="block py-2.5 text-primary hover:text-accent">Home</a>
+                <a href="{{ url('/exterior-signs') }}" class="block py-2.5 text-primary hover:text-accent">Exterior Signs</a>
+                <a href="{{ url('/interior-signs') }}" class="block py-2.5 text-primary hover:text-accent">Interior Signs</a>
+                <a href="{{ url('/commercial-awnings') }}" class="block py-2.5 text-primary hover:text-accent">Commercial Awnings</a>
+                <a href="{{ url('/residential-awnings') }}" class="block py-2.5 text-primary hover:text-accent">Residential Awnings</a>
+                <a href="{{ url('/installations') }}" class="block py-2.5 text-primary hover:text-accent">Installations</a>
+                <a href="{{ url('/led-displays') }}" class="block py-2.5 text-primary hover:text-accent">LED Displays</a>
+                <a href="{{ url('/permits') }}" class="block py-2.5 text-primary hover:text-accent">Permits</a>
+                <a href="{{ url('/gallery') }}" class="block py-2.5 text-primary hover:text-accent">Gallery</a>
+                <a href="{{ url('/reviews') }}" class="block py-2.5 text-primary hover:text-accent">Reviews</a>
+                <a href="{{ url('/blog') }}" class="block py-2.5 text-primary hover:text-accent">Blog</a>
+                <a href="{{ url('/faqs') }}" class="block py-2.5 text-primary hover:text-accent">FAQs</a>
+                <a href="{{ url('/request-call-back') }}" class="block py-2.5 text-primary hover:text-accent">Request Call Back</a>
             </nav>
         </div>
     </header>
@@ -512,7 +514,7 @@
 
 
         {{-- section video --}}
-        <section class="py-16 sm:py-20 lg:py-24 bg-gray-100">
+        {{-- <section class="py-16 sm:py-20 lg:py-24 bg-gray-100">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                     <div class="lg:w-1/2 text-center lg:text-left">
@@ -546,7 +548,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
     </main>
     <!-- Image Lightbox Modal -->
     <div id="imageModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="imageModalLabel"
@@ -668,7 +670,7 @@
         <a href="tel:7187050333" class="p-3 text-white/80 hover:text-accent hover:bg-white/5 transition-all" title="Call"><span class="material-symbols-outlined">call</span></a>
         <a href="{{ url('/reviews') }}" class="p-3 text-white/80 hover:text-accent hover:bg-white/5 transition-all" title="Reviews"><span class="material-symbols-outlined">star</span></a>
         <a href="{{ url('request-call-back') }}" class="p-3 text-white/80 hover:text-accent hover:bg-white/5 transition-all" title="Request Call Back"><span class="material-symbols-outlined">mail</span></a>
-        <a href="#" class="p-3 text-white/80 hover:text-accent hover:bg-white/5 transition-all" title="Location"><span class="material-symbols-outlined">location_on</span></a>
+        <a href="https://maps.app.goo.gl/LbQLLg6pd3b1VPPGA" target="_blank"" class="p-3 text-white/80 hover:text-accent hover:bg-white/5 transition-all" title="Location"><span class="material-symbols-outlined">location_on</span></a>
     </div>
 
     <!-- Footer -->

@@ -108,7 +108,7 @@
                     <a href="{{ url('/request-call-back') }}" class="btn-accent text-white font-semibold px-5 py-2.5 rounded-xl text-sm shadow-lg hover:shadow-accent/25 transition-all">
                         Request Call Back
                     </a>
-                    <button id="nav-toggle" class="lg:hidden p-2 rounded-lg text-white hover:bg-white/10" aria-label="Menu">
+                    <button id="nav-toggle" class="lg:hidden p-2 rounded-lg hover:bg-white/10" aria-label="Menu">
                         <span class="material-symbols-outlined text-2xl">menu</span>
                     </button>
                 </div>

@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@1" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -44,16 +46,16 @@
 </head>
 <body class="font-sans text-ink bg-white antialiased">
     <!-- Header: minimal, sticky -->
-    <header class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/10">
+    <header class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/10 bg-white/95" style="border-bottom: 0.5rem solid #030f1e;">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 sm:h-20">
                 <a href="{{ url('/') }}" class="flex items-center">
                     <img src="{{ asset('img/logo.png') }}" alt="Tri State Signs & Awnings" class="h-9 sm:h-10 w-auto" />
                 </a>
                 <nav class="hidden lg:flex items-center gap-1">
-                    <a href="{{ url('/') }}" class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">Home</a>
+                    <a href="{{ url('/') }}" class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">Home</a>
                     <div class="relative group">
-                        <button class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
+                        <button class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
                             Sign Services <span class="material-symbols-outlined text-base">expand_more</span>
                         </button>
                         <div class="absolute left-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
@@ -64,7 +66,7 @@
                         </div>
                     </div>
                     <div class="relative group">
-                        <button class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
+                        <button class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
                             Awning Services <span class="material-symbols-outlined text-base">expand_more</span>
                         </button>
                         <div class="absolute left-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
@@ -74,11 +76,11 @@
                             </div>
                         </div>
                     </div>
-                    <a href="{{ url('/installations') }}" class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">Installations</a>
-                    <a href="{{ url('/led-displays') }}" class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">LED Displays</a>
-                    <a href="{{ url('/permits') }}" class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">Permits</a>
+                    <a href="{{ url('/installations') }}" class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">Installations</a>
+                    <a href="{{ url('/led-displays') }}" class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">LED Displays</a>
+                    <a href="{{ url('/permits') }}" class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all">Permits</a>
                     <div class="relative group">
-                        <button class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
+                        <button class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
                             About <span class="material-symbols-outlined text-base">expand_more</span>
                         </button>
                         <div class="absolute left-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
@@ -91,7 +93,7 @@
                         </div>
                     </div>
                     <div class="relative group">
-                        <button class="px-4 py-2 text-white/90 hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
+                        <button class="px-4 py-2 text-primary hover:text-accent font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center gap-1">
                             Contact <span class="material-symbols-outlined text-base">expand_more</span>
                         </button>
                         <div class="absolute left-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
@@ -102,13 +104,13 @@
                     </div>
                 </nav>
                 <div class="flex items-center gap-3">
-                    <a href="tel:7187050333" class="hidden sm:flex items-center gap-2 text-white/90 hover:text-accent text-sm font-semibold">
+                    <a href="tel:7187050333" class="hidden sm:flex items-center gap-2 text-primary hover:text-accent text-sm font-semibold">
                         <span class="material-symbols-outlined text-lg">call</span> (718) 705-0333
                     </a>
                     <a href="{{ url('/request-call-back') }}" class="btn-accent text-white font-semibold px-5 py-2.5 rounded-xl text-sm shadow-lg hover:shadow-accent/25 transition-all">
                         Request Call Back
                     </a>
-                    <button id="nav-toggle" class="lg:hidden p-2 rounded-lg text-white hover:bg-white/10" aria-label="Menu">
+                    <button id="nav-toggle" class="lg:hidden p-2 rounded-lg  hover:bg-white/10" aria-label="Menu">
                         <span class="material-symbols-outlined text-2xl">menu</span>
                     </button>
                 </div>
@@ -116,19 +118,19 @@
         </div>
         <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-ink/98 backdrop-blur">
             <nav class="max-w-6xl mx-auto px-4 py-4 space-y-1">
-                <a href="{{ url('/') }}" class="block py-2.5 text-white/90 hover:text-accent">Home</a>
-                <a href="{{ url('/exterior-signs') }}" class="block py-2.5 text-white/90 hover:text-accent">Exterior Signs</a>
-                <a href="{{ url('/interior-signs') }}" class="block py-2.5 text-white/90 hover:text-accent">Interior Signs</a>
-                <a href="{{ url('/commercial-awnings') }}" class="block py-2.5 text-white/90 hover:text-accent">Commercial Awnings</a>
-                <a href="{{ url('/residential-awnings') }}" class="block py-2.5 text-white/90 hover:text-accent">Residential Awnings</a>
-                <a href="{{ url('/installations') }}" class="block py-2.5 text-white/90 hover:text-accent">Installations</a>
-                <a href="{{ url('/led-displays') }}" class="block py-2.5 text-white/90 hover:text-accent">LED Displays</a>
-                <a href="{{ url('/permits') }}" class="block py-2.5 text-white/90 hover:text-accent">Permits</a>
-                <a href="{{ url('/gallery') }}" class="block py-2.5 text-white/90 hover:text-accent">Gallery</a>
-                <a href="{{ url('/reviews') }}" class="block py-2.5 text-white/90 hover:text-accent">Reviews</a>
-                <a href="{{ url('/blog') }}" class="block py-2.5 text-white/90 hover:text-accent">Blog</a>
-                <a href="{{ url('/faqs') }}" class="block py-2.5 text-white/90 hover:text-accent">FAQs</a>
-                <a href="{{ url('/request-call-back') }}" class="block py-2.5 text-white/90 hover:text-accent">Request Call Back</a>
+                <a href="{{ url('/') }}" class="block py-2.5 text-primary hover:text-accent">Home</a>
+                <a href="{{ url('/exterior-signs') }}" class="block py-2.5 text-primary hover:text-accent">Exterior Signs</a>
+                <a href="{{ url('/interior-signs') }}" class="block py-2.5 text-primary hover:text-accent">Interior Signs</a>
+                <a href="{{ url('/commercial-awnings') }}" class="block py-2.5 text-primary hover:text-accent">Commercial Awnings</a>
+                <a href="{{ url('/residential-awnings') }}" class="block py-2.5 text-primary hover:text-accent">Residential Awnings</a>
+                <a href="{{ url('/installations') }}" class="block py-2.5 text-primary hover:text-accent">Installations</a>
+                <a href="{{ url('/led-displays') }}" class="block py-2.5 text-primary hover:text-accent">LED Displays</a>
+                <a href="{{ url('/permits') }}" class="block py-2.5 text-primary hover:text-accent">Permits</a>
+                <a href="{{ url('/gallery') }}" class="block py-2.5 text-primary hover:text-accent">Gallery</a>
+                <a href="{{ url('/reviews') }}" class="block py-2.5 text-primary hover:text-accent">Reviews</a>
+                <a href="{{ url('/blog') }}" class="block py-2.5 text-primary hover:text-accent">Blog</a>
+                <a href="{{ url('/faqs') }}" class="block py-2.5 text-primary hover:text-accent">FAQs</a>
+                <a href="{{ url('/request-call-back') }}" class="block py-2.5 text-primary hover:text-accent">Request Call Back</a>
             </nav>
         </div>
     </header>
@@ -144,7 +146,7 @@
                         Custom Signs &amp; Awnings That Have Drawn A Crowd
                     </h1>
                     <p class="text-lg sm:text-xl text-white/70 max-w-2xl mb-10">
-                        Your local one-stop shop for signage needs. Five-year warranty, impossible deadlines? No problem.
+                        Your local one-stop shop for signage needs.
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <a href="{{ url('/request-call-back') }}" class="btn-accent text-white font-bold px-8 py-4 rounded-xl text-lg shadow-xl hover:shadow-2xl transition-all inline-flex items-center gap-2">
@@ -164,10 +166,26 @@
 
         <!-- Top bar: ratings, location, CTA -->
         <div class="bg-ink text-white py-3 px-4">
-            <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
+            <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm" style="display: flex;justify-content: center;">
                 <div class="flex flex-wrap items-center justify-center gap-6">
                     <div class="flex items-center gap-2">
-                        <span class="flex text-accent"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span></span>
+                        <span class="flex text-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>
+                        </span>
                         <span class="font-bold">5.0</span>
                         <a href="{{ url('/reviews') }}" class="text-white/70 hover:text-accent underline">(4 Ratings)</a>
                     </div>
@@ -176,10 +194,7 @@
                         <span>333 Wyandanch Ave, West Babylon, NY</span>
                     </div>
                 </div>
-                <div class="flex items-center gap-4">
-                    <a href="{{ url('/request-call-back') }}" class="text-accent font-bold hover:underline">Request Call Back</a>
-                    <a href="tel:7187050333" class="font-bold">(718) 705-0333</a>
-                </div>
+
             </div>
         </div>
 
@@ -192,7 +207,7 @@
                 <p class="text-ink/70 text-lg leading-relaxed mb-8">
                     Noted for custom signs with durability and value. Tri State Signs &amp; Awnings uses only the highest quality materials and processes. As a registered manufacturer with Underwriters Laboratories, we produce the safest fixtures that adhere to the strictest codes and standards.
                 </p>
-                <span class="inline-block bg-ink text-white font-bold px-8 py-3 rounded-xl text-lg">UL Listed</span>
+                <span class="inline-block bg-ink text-white font-bold px-3 py-3 rounded-xl"><img src="{{ asset('img/certification.png') }}" alt="logo" style="width: 100px; height: 60px;"></span>
             </div>
         </section>
 
@@ -275,7 +290,7 @@
         </section>
 
         <!-- Nationwide: Design / Fabrication / Installation -->
-        <section class="py-16 sm:py-24 bg-ink text-white clip-wedge">
+        <section class="py-16 sm:py-24 bg-ink text-white" >
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
                 <div class="text-center mb-14">
                     <h2 class="font-display text-4xl sm:text-5xl mb-4">Nationwide Service</h2>
@@ -520,7 +535,7 @@
         <a href="tel:7187050333" class="p-3 text-white/80 hover:text-accent hover:bg-white/5 transition-all" title="Call"><span class="material-symbols-outlined">call</span></a>
         <a href="{{ url('/reviews') }}" class="p-3 text-white/80 hover:text-accent hover:bg-white/5 transition-all" title="Reviews"><span class="material-symbols-outlined">star</span></a>
         <a href="{{ url('request-call-back') }}" class="p-3 text-white/80 hover:text-accent hover:bg-white/5 transition-all" title="Request Call Back"><span class="material-symbols-outlined">mail</span></a>
-        <a href="#" class="p-3 text-white/80 hover:text-accent hover:bg-white/5 transition-all" title="Location"><span class="material-symbols-outlined">location_on</span></a>
+        <a href="https://maps.app.goo.gl/LbQLLg6pd3b1VPPGA" target="_blank"" class="p-3 text-white/80 hover:text-accent hover:bg-white/5 transition-all" title="Location"><span class="material-symbols-outlined">location_on</span></a>
     </div>
 
     <!-- Review Modal -->
