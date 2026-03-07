@@ -298,22 +298,22 @@
                 </div>
                 <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
                     <div class="text-center group">
-                        <div class="inline-flex items-center justify-center  w-60 h-20 rounded-2xl bg-accent/20 text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">
-                            <img src="{{ asset('img/design.png') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
+                        <div class="inline-flex items-center justify-center  w-60 h-20 rounded-2xl  text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">
+                            <img src="{{ asset('img/design.png') }}" alt="Design" class="" style="border-radius: 1rem; width: 6.5rem;">
                         </div>
                         <h3 class="font-display text-2xl mb-3">Design</h3>
                         <p class="text-white/70">Custom designed signs with the support of our expert staff.</p>
                     </div>
                     <div class="text-center group">
-                        <div class="inline-flex items-center justify-center w-60 h-20 rounded-2xl bg-accent/20 text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">
-                            <img src="{{ asset('img/fabrication.png') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
+                        <div class="inline-flex items-center justify-center w-60 h-20 rounded-2xl  text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">
+                            <img src="{{ asset('img/fabrication.png') }}" alt="Design" class="" style="border-radius: 1rem;width: 6.5rem; ">
                         </div>
                         <h3 class="font-display text-2xl mb-3">Fabrication</h3>
                         <p class="text-white/70">We build signs to last with the finest quality materials.</p>
                     </div>
                     <div class="text-center group">
-                        <div class="inline-flex items-center justify-center w-60 h-20 rounded-2xl bg-accent/20 text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">
-                            <img src="{{ asset('img/installation.png') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
+                        <div class="inline-flex items-center justify-center w-60 h-20 rounded-2xl  text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">
+                            <img src="{{ asset('img/installation.png') }}" alt="Design" class="" style="border-radius: 1rem; width: 6.5rem;">
                         </div>
                         <h3 class="font-display text-2xl mb-3">Installation</h3>
                         <p class="text-white/70">Fully equipped technicians for quality on-site installs.</p>
@@ -371,7 +371,7 @@
                     <a href="{{ url('/led-displays') }}" class="card-hover rounded-2xl overflow-hidden bg-ink text-white group">
                         <div class="h-40 bg-gradient-to-br from-inklight to-accent/80 flex items-center justify-center">
                             {{-- <span class="material-symbols-outlined text-6xl opacity-80 group-hover:scale-110 transition-transform">desktop_windows</span> --}}
-                            <img src="{{ asset('img/8.jpg') }}" alt="Awnings &amp; Canopies" class="w-full h-full object-cover">
+                            <img src="{{ asset('img/interior/int22.jpg') }}" alt="Awnings &amp; Canopies" class="w-full h-full object-cover">
 
                         </div>
                         <div class="p-6">
