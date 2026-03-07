@@ -299,21 +299,21 @@
                 <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
                     <div class="text-center group">
                         <div class="inline-flex items-center justify-center  w-60 h-20 rounded-2xl bg-accent/20 text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">
-                            <img src="{{ asset('img/interior/int1.JPG') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
+                            <img src="{{ asset('img/design.png') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
                         </div>
                         <h3 class="font-display text-2xl mb-3">Design</h3>
                         <p class="text-white/70">Custom designed signs with the support of our expert staff.</p>
                     </div>
                     <div class="text-center group">
                         <div class="inline-flex items-center justify-center w-60 h-20 rounded-2xl bg-accent/20 text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">
-                            <img src="{{ asset('img/exterior/ext12.jpeg') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
+                            <img src="{{ asset('img/fabrication.png') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
                         </div>
                         <h3 class="font-display text-2xl mb-3">Fabrication</h3>
                         <p class="text-white/70">We build signs to last with the finest quality materials.</p>
                     </div>
                     <div class="text-center group">
                         <div class="inline-flex items-center justify-center w-60 h-20 rounded-2xl bg-accent/20 text-accent font-display text-3xl mb-6 group-hover:bg-accent group-hover:text-white transition-all">
-                            <img src="{{ asset('img/exterior/ext10.jpeg') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
+                            <img src="{{ asset('img/installation.png') }}" alt="Design" class="w-full h-48 object-cover" style="border-radius: 1rem;">
                         </div>
                         <h3 class="font-display text-2xl mb-3">Installation</h3>
                         <p class="text-white/70">Fully equipped technicians for quality on-site installs.</p>

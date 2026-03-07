@@ -41,7 +41,7 @@
         .btn-accent:hover { background: linear-gradient(135deg, #8dd43a 0%, #6ebb1c 100%); }
         .nav-blur { backdrop-filter: blur(12px); background: rgba(15,23,42,0.85); }
         .hero-bg {
-            background-image: url({{ asset('img/8.jpg') }});
+            background-image: url({{ asset('img/interior/int22.jpg') }});
             background-size: cover;
             background-position: center;
             position: relative;
@@ -60,7 +60,7 @@
     </style>
     <style>
         .hero-bg {
-            background-image: url({{ asset('img/8.jpg') }});
+            background-image: url({{ asset('img/interior/int22.jpg') }});
             background-size: cover;
             background-position: center;
             position: relative;
