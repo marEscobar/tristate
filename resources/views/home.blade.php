@@ -143,7 +143,7 @@
                 <div class="max-w-4xl">
                     <p class="text-accent font-semibold text-sm sm:text-base uppercase tracking-widest mb-4">West Babylon, NY • 40+ Years</p>
                     <h1 class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[0.95] mb-6">
-                        Custom Signs &amp; Awnings That Have Drawn A Crowd
+                        Custom Signs &amp; Awnings That Draw A Crowd
                     </h1>
                     <p class="text-lg sm:text-xl text-white/70 max-w-2xl mb-10">
                         Your local one-stop shop for signage needs.
