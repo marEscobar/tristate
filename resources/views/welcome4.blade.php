@@ -40,7 +40,7 @@
 <body class="font-sans text-slate-800 bg-slate-50 antialiased">
     <!-- Top bar: modern, subtle -->
     <div class="border-b border-slate-200/80 bg-white/80 backdrop-blur-sm">
-        <div class="max-w-6xl mx-auto px-6 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm text-slate-600">
+        <div class="max-w-[80rem] mx-auto px-6 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm text-slate-600">
             <div class="flex flex-wrap items-center gap-4 sm:gap-6">
                 <span class="flex items-center gap-2">
                     <span class="flex text-amber-500"><span class="material-symbols-outlined text-base">star</span><span class="material-symbols-outlined text-base">star</span><span class="material-symbols-outlined text-base">star</span><span class="material-symbols-outlined text-base">star</span><span class="material-symbols-outlined text-base">star</span></span>
@@ -61,7 +61,7 @@
 
     <!-- Nav: clean, modern -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
-        <div class="max-w-6xl mx-auto px-6 py-4">
+        <div class="max-w-[80rem] mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <a href="{{ url('/') }}"><img src="{{ asset('img/logo.png') }}" alt="Tri State Signs & Awnings" class="h-9 w-auto" /></a>
                 <nav class="hidden lg:flex items-center gap-1">
@@ -114,7 +114,7 @@
             </div>
         </div>
         <div id="mobile-menu" class="lg:hidden hidden border-t border-slate-200 bg-white">
-            <nav class="max-w-6xl mx-auto px-6 py-4 space-y-0.5">
+            <nav class="max-w-[80rem] mx-auto px-6 py-4 space-y-0.5">
                 <a href="{{ url('/') }}" class="block py-3 text-sm font-medium text-slate-700 hover:text-primary rounded-lg hover:bg-slate-50 px-3">Home</a>
                 <a href="{{ url('/exterior-signs') }}" class="block py-3 text-sm font-medium text-slate-700 hover:text-primary rounded-lg hover:bg-slate-50 px-3">Exterior Signs</a>
                 <a href="{{ url('/interior-signs') }}" class="block py-3 text-sm font-medium text-slate-700 hover:text-primary rounded-lg hover:bg-slate-50 px-3">Interior Signs</a>
@@ -405,7 +405,7 @@
 
     <!-- Footer -->
     <footer class="bg-slate-900 text-white py-14">
-        <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-[80rem] mx-auto px-6">
             <div class="h-px bg-white/10 mb-10"></div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                 <div>

@@ -88,7 +88,7 @@
 <body class="font-sans text-ink bg-white antialiased">
     <!-- Header: minimal, sticky -->
     <header class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/10 bg-white/95" style="border-bottom: 0.5rem solid #030f1e;">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 sm:h-20">
                 <a href="{{ url('/') }}" class="flex items-center">
 
@@ -160,7 +160,7 @@
             </div>
         </div>
         <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-ink/98 backdrop-blur">
-            <nav class="max-w-6xl mx-auto px-4 py-4 space-y-1">
+            <nav class="max-w-[80rem] mx-auto px-4 py-4 space-y-1">
                 <a href="{{ url('/') }}" class="block py-2.5 text-primary hover:text-accent">Home</a>
                 <a href="{{ url('/exterior-signs') }}" class="block py-2.5 text-primary hover:text-accent">Exterior Signs</a>
                 <a href="{{ url('/interior-signs') }}" class="block py-2.5 text-primary hover:text-accent">Interior Signs</a>
@@ -429,7 +429,7 @@
 
                     {{-- column right --}}
                     <div class="text-text-light py-16 sm:py-20 lg:py-24 rounded-lg ">
-                        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                        <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
                             <div class="text-text-light py-4 sm:py-4 lg:py-4 rounded-lg bg-green-700 p-4 text-white">
                                 <h3 class="text-3xl font-bold text-white">Reviews</h3>
                                 <br>
@@ -492,7 +492,7 @@
         </section>
 
         <section class="bg-green-900 py-4 sm:py-10 lg:py-10 text-text-light text-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-center mb-8 sm:mb-6">
                     Contact Tri State Signs  &amp; Awnings
                 </h2>
@@ -501,28 +501,28 @@
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-4 lg:gap-12 items-center">
                     <div class="md:col-span-1">
-                        <img src="{{ asset('img/exterior/ext1.JPG') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext1.JPG') }}', 'Contact')">
+                        <img src="{{ asset('img/exterior/eext1.jpg') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext1.jpg') }}', 'Contact')">
                     </div>
                     <div class="md:col-span-1">
-                        <img src="{{ asset('img/exterior/ext2.JPG') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext2.JPG') }}', 'Contact')">
+                        <img src="{{ asset('img/exterior/eext2.jpg') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext2.jpg') }}', 'Contact')">
                     </div>
                     <div class="md:col-span-1">
-                        <img src="{{ asset('img/exterior/ext3.JPG') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext3.JPG') }}', 'Contact')">
+                        <img src="{{ asset('img/exterior/eext21.jpg') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext21.jpg') }}', 'Contact')">
                     </div>
                     <div class="md:col-span-1">
-                        <img src="{{ asset('img/exterior/ext4.JPG') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext4.JPG') }}', 'Contact')">
+                        <img src="{{ asset('img/exterior/eext23.png') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext23.png') }}', 'Contact')">
                     </div>
                     <div class="md:col-span-1">
-                        <img src="{{ asset('img/exterior/ext9.JPG') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext9.JPG') }}', 'Contact')">
+                        <img src="{{ asset('img/exterior/eext23.jpg') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext23.jpg') }}', 'Contact')">
                     </div>
                     <div class="md:col-span-1">
-                        <img src="{{ asset('img/exterior/ext6.JPG') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext6.JPG') }}', 'Contact')">
+                        <img src="{{ asset('img/exterior/eext6.jpg') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext6.jpg') }}', 'Contact')">
                     </div>
                     <div class="md:col-span-1">
-                        <img src="{{ asset('img/exterior/ext7.JPG') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext7.JPG') }}', 'Contact')">
+                        <img src="{{ asset('img/exterior/eext11.jpg') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext11.jpg') }}', 'Contact')">
                     </div>
                     <div class="md:col-span-1">
-                        <img src="{{ asset('img/exterior/ext8.JPG') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext8.JPG') }}', 'Contact')">
+                        <img src="{{ asset('img/exterior/eext10.jpg') }}" alt="Contact" class="w-full object-cover cursor-pointer hover:opacity-90 transition-opacity" style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext10.jpg') }}', 'Contact')">
                     </div>
 
                 </div>
@@ -532,7 +532,7 @@
 
         {{-- section video --}}
         {{-- <section class="py-16 sm:py-20 lg:py-24 bg-gray-100 dark:bg-primary-dark/40">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                     <div class="lg:w-1/2 text-center lg:text-left">
                         <h2
@@ -703,7 +703,7 @@
 
     <!-- Footer -->
     <footer class="bg-ink text-white py-16 sm:py-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
                 <div>
                     <h3 class="font-display text-xl mb-4">Visit Us</h3>

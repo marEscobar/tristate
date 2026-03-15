@@ -42,7 +42,7 @@
 <body class="font-sans text-gray-900 bg-white antialiased">
     <!-- Top bar: solid -->
     <div class="bg-primary-dark text-white py-2.5 border-b border-white/10">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-sm">
+        <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-sm">
             <div class="flex flex-wrap items-center gap-4 sm:gap-6">
                 <div class="flex items-center gap-1.5">
                     <span class="flex text-amber-300">
@@ -69,7 +69,7 @@
 
     <!-- Nav: primary-dark, compact -->
     <header class="sticky top-0 z-50 bg-primary-dark border-b border-white/10">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-14">
                 <a href="{{ url('/') }}"><img src="{{ asset('img/logo.png') }}" alt="Tri State Signs & Awnings" class="h-8 w-auto brightness-0 invert" /></a>
                 <nav class="hidden lg:flex items-center gap-0.5">
@@ -122,7 +122,7 @@
             </div>
         </div>
         <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-primary-dark">
-            <nav class="max-w-6xl mx-auto px-4 py-4 space-y-0.5">
+            <nav class="max-w-[80rem] mx-auto px-4 py-4 space-y-0.5">
                 <a href="{{ url('/') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">Home</a>
                 <a href="{{ url('/exterior-signs') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">Exterior Signs</a>
                 <a href="{{ url('/interior-signs') }}" class="block py-2.5 px-3 text-white/80 hover:text-white rounded-lg">Interior Signs</a>
@@ -196,7 +196,7 @@
 
         <!-- WEST BABYLON + FORM: zigzag – row1 text+phone | row2 form+benefits, reversed -->
         <section class="py-16 sm:py-24 bg-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Row 1: headline + phone left, visual right -->
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16 lg:mb-24">
                     <div>
@@ -293,7 +293,7 @@
 
         <!-- OUR QUALITY: split – quote left, UL badge + short list right (no aqua) -->
         <section class="py-16 sm:py-24 bg-primary-dark text-white clip-diag-inv">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8 pt-10">
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <div>
                         <h2 class="font-display text-3xl sm:text-4xl mb-2">It's all about</h2>
@@ -316,7 +316,7 @@
 
         <!-- OUR WORK: bento – 1 large + 3 small
         <section class="py-16 sm:py-24 bg-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="font-display text-3xl sm:text-4xl text-gray-900 mb-2">Our Work</h2>
                     <p class="text-gray-600 max-w-2xl mx-auto">We help businesses create innovative solutions. Growth, profitability, and the best service possible.</p>
@@ -374,7 +374,7 @@
 
         <!-- WATCH THE PROS: video + 3 cards with colored LEFT border (no aqua) -->
         <section class="py-16 sm:py-24 bg-slate-50">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="font-display text-3xl sm:text-4xl text-gray-900 mb-2">Watch The Pros at Tri State Signs &amp; Awnings</h2>
                     <p class="text-slate-600 max-w-2xl mx-auto mb-6">From design and fabrication to installation and service. We pride ourselves on the best possible experience.</p>
@@ -416,7 +416,7 @@
 
         <!-- GET A FAST QUOTE: split – trust/contact left, form right (solid bg, no aqua) -->
         <section class="py-16 sm:py-24 bg-slate-100 border-y border-slate-200">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
                     <div class="lg:col-span-2">
                         <h2 class="font-display text-3xl sm:text-4xl text-gray-900 mb-2">GET A FAST QUOTE</h2>
@@ -498,7 +498,7 @@
 
     <!-- Footer: primary-dark, 4 cols -->
     <footer class="bg-primary-dark text-white py-14 sm:py-16">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
                 <div>
                     <h3 class="font-display text-lg mb-4">Visit Us</h3>

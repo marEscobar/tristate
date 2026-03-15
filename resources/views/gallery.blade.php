@@ -88,7 +88,7 @@
 <body class="font-sans text-ink bg-white antialiased">
     <!-- Header: minimal, sticky -->
     <header class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/10 bg-white/95" style="border-bottom: 0.5rem solid #030f1e;">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 sm:h-20">
                 <a href="{{ url('/') }}" class="flex items-center">
 
@@ -160,7 +160,7 @@
             </div>
         </div>
         <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-ink/98 backdrop-blur">
-            <nav class="max-w-6xl mx-auto px-4 py-4 space-y-1">
+            <nav class="max-w-[80rem] mx-auto px-4 py-4 space-y-1">
                 <a href="{{ url('/') }}" class="block py-2.5 text-primary hover:text-accent">Home</a>
                 <a href="{{ url('/exterior-signs') }}" class="block py-2.5 text-primary hover:text-accent">Exterior Signs</a>
                 <a href="{{ url('/interior-signs') }}" class="block py-2.5 text-primary hover:text-accent">Interior Signs</a>
@@ -182,7 +182,7 @@
 
     <main>
         <section class="bg-ink py-2 sm:py-6 lg:py-6 text-white pt-20">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-center mb-8 sm:mb-6">
                     Gallery
                 </h2>
@@ -245,7 +245,7 @@
 
         {{-- section video --}}
         {{-- <section class="py-16 sm:py-20 lg:py-24 bg-gray-100 dark:bg-primary-dark/40">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                     <div class="lg:w-1/2 text-center lg:text-left">
                         <h2
@@ -405,7 +405,7 @@
 
     <!-- Footer -->
     <footer class="bg-ink text-white py-16 sm:py-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
                 <div>
                     <h3 class="font-display text-xl mb-4">Visit Us</h3>

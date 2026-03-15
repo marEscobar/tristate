@@ -45,7 +45,7 @@
 <body class="font-sans text-ink bg-white antialiased">
     <!-- Header: minimal, sticky -->
     <header class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/10">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 sm:h-20">
                 <a href="{{ url('/') }}" class="flex items-center">
                     <img src="{{ asset('img/logo.png') }}" alt="Tri State Signs & Awnings" class="h-9 sm:h-10 w-auto" />
@@ -115,7 +115,7 @@
             </div>
         </div>
         <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-ink/98 backdrop-blur">
-            <nav class="max-w-6xl mx-auto px-4 py-4 space-y-1">
+            <nav class="max-w-[80rem] mx-auto px-4 py-4 space-y-1">
                 <a href="{{ url('/') }}" class="block py-2.5 text-white/90 hover:text-accent">Home</a>
                 <a href="{{ url('/exterior-signs') }}" class="block py-2.5 text-white/90 hover:text-accent">Exterior Signs</a>
                 <a href="{{ url('/interior-signs') }}" class="block py-2.5 text-white/90 hover:text-accent">Interior Signs</a>
@@ -137,7 +137,7 @@
         <!-- Hero: full-viewport, bold typography -->
         <section class="relative min-h-screen flex items-center bg-ink hero-pattern pt-20">
             <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" style="background-image: url('{{ asset('img/1.webp') }}');"></div>
-            <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+            <div class="relative z-10 max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
                 <div class="max-w-4xl">
                     <p class="text-accent font-semibold text-sm sm:text-base uppercase tracking-widest mb-4">West Babylon, NY • 40+ Years</p>
                     <h1 class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[0.95] mb-6">
@@ -162,7 +162,7 @@
 
         <!-- Top bar: ratings, location, CTA -->
         <div class="bg-ink text-white py-3 px-4">
-            <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
+            <div class="max-w-[80rem] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
                 <div class="flex flex-wrap items-center justify-center gap-6">
                     <div class="flex items-center gap-2">
                         <span class="flex text-accent"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span></span>
@@ -183,7 +183,7 @@
 
         <!-- Permit expeditor strip -->
         <section class="bg-sand py-12 sm:py-16">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="font-display text-3xl sm:text-4xl text-ink mb-2">Ask About Our In-House Permit Expeditor</h2>
                 <p class="text-ink/70 mb-8 max-w-2xl mx-auto">Trusted by top national brands for design, fabrication &amp; installation.</p>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
@@ -199,7 +199,7 @@
 
         <!-- West Babylon + Request Call Back: asymmetric -->
         <section class="py-16 sm:py-24 lg:py-32 bg-white overflow-hidden">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
                     <div class="lg:col-span-3">
                         <p class="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Serving the Tri-State Area</p>
@@ -241,7 +241,7 @@
 
         <!-- Nationwide: Design / Fabrication / Installation -->
         <section class="py-16 sm:py-24 bg-ink text-white clip-wedge">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8 pt-8">
                 <div class="text-center mb-14">
                     <h2 class="font-display text-4xl sm:text-5xl mb-4">Nationwide Service</h2>
                     <p class="text-white/70 max-w-2xl mx-auto text-lg">Tri State Signs &amp; Awnings is trusted by top national brands for superior design, fabrication and installation.</p>
@@ -285,7 +285,7 @@
 
         <!-- Our Work: bento grid -->
         <section class="py-16 sm:py-24 bg-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-14">
                     <h2 class="font-display text-4xl sm:text-5xl text-ink mb-4">Our Work</h2>
                     <p class="text-ink/70 max-w-2xl mx-auto text-lg">We help businesses create innovative solutions to improve and advertise. Our goal is growth, profitability and the best service possible.</p>
@@ -333,7 +333,7 @@
 
         <!-- Stats -->
         <section class="py-16 sm:py-20 bg-accent">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid md:grid-cols-3 gap-8 text-center text-white">
                     <div>
                         <div class="font-display text-5xl sm:text-6xl lg:text-7xl mb-2">1000+</div>
@@ -353,7 +353,7 @@
 
         <!-- Watch The Pros + 3 cards -->
         <section class="py-16 sm:py-24 bg-sand">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="font-display text-4xl sm:text-5xl text-ink mb-4">Watch The Pros at Tri State Signs &amp; Awnings</h2>
                     <p class="text-ink/70 max-w-2xl mx-auto mb-6">From design and fabrication to installation and service, we're here for you. We pride ourselves on the best possible experience.</p>
@@ -432,7 +432,7 @@
 
         <!-- Testimonials -->
         <section class="py-16 sm:py-24 bg-gradient-to-b from-ink to-inklight text-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="font-display text-4xl sm:text-5xl mb-4">Here's what our satisfied customers are saying...</h2>
                     <p class="text-white/70 max-w-2xl mx-auto mb-6">We take pride in exceptional sign and awning services. Your feedback helps us improve and helps others decide. Please leave a review!</p>
@@ -470,7 +470,7 @@
 
     <!-- Footer -->
     <footer class="bg-ink text-white py-16 sm:py-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
                 <div>
                     <h3 class="font-display text-xl mb-4">Visit Us</h3>
