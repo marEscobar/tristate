@@ -212,28 +212,28 @@
                 <br><br>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-8 ">
                     <div class="col-span-1">
-                        <img src="{{ asset('img/exterior/ext1.JPG') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext1.JPG') }}', 'Gallery Image')">
+                        <img src="{{ asset('img/exterior/eext1.jpg') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext1.jpg') }}', 'Gallery Image')">
                     </div>
                     <div class="col-span-1">
-                        <img src="{{ asset('img/exterior/ext2.JPG') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext2.JPG') }}', 'Gallery Image')">
+                        <img src="{{ asset('img/exterior/eext10.jpg') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext10.jpg') }}', 'Gallery Image')">
                     </div>
                     <div class="col-span-1">
-                        <img src="{{ asset('img/exterior/ext3.JPG') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext3.JPG') }}', 'Gallery Image')">
+                        <img src="{{ asset('img/exterior/eext3.jpg') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext3.jpg') }}', 'Gallery Image')">
                     </div>
                     <div class="col-span-1">
-                        <img src="{{ asset('img/exterior/ext4.JPG') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext4.JPG') }}', 'Gallery Image')">
+                        <img src="{{ asset('img/exterior/eext4.jpg') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext4.jpg') }}', 'Gallery Image')">
                     </div>
                     <div class="col-span-1">
-                        <img src="{{ asset('img/exterior/ext5.JPG') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext5.JPG') }}', 'Gallery Image')">
+                        <img src="{{ asset('img/exterior/eext5.jpg') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext5.jpg') }}', 'Gallery Image')">
                     </div>
                     <div class="col-span-1">
-                        <img src="{{ asset('img/exterior/ext6.JPG') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext6.JPG') }}', 'Gallery Image')">
+                        <img src="{{ asset('img/exterior/eext6.jpg') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext6.jpg') }}', 'Gallery Image')">
                     </div>
                     <div class="col-span-1">
-                        <img src="{{ asset('img/exterior/ext7.JPG') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext7.JPG') }}', 'Gallery Image')">
+                        <img src="{{ asset('img/exterior/eext17.jpg') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext17.jpg') }}', 'Gallery Image')">
                     </div>
                     <div class="col-span-1">
-                        <img src="{{ asset('img/exterior/ext8.JPG') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/ext8.JPG') }}', 'Gallery Image')">
+                        <img src="{{ asset('img/exterior/eext14.jpg') }}" alt="Gallery Image" class="w-full h-full object-cover"  style="height: 14rem" onclick="openImageModal('{{ asset('img/exterior/eext14.jpg') }}', 'Gallery Image')">
                     </div>
 
 
